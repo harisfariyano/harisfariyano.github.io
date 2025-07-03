@@ -11,11 +11,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const typedElement = document.querySelector('.typed-text');
     if (typedElement) {
         new Typed('.typed-text', {
-            strings: ['Data Analyst', 'Data Integrator', 'Insight Catalyst'],
-            typeSpeed: 50,
-            backSpeed: 20,
+            strings: [,'Data Integrator', 'Insight Catalyst', 'Data Analyst'],
+            typeSpeed: 80,
+            backSpeed: 40,
             backDelay: 1500,
-            startDelay: 500,
+            startDelay: 100,
             loop: true,
             showCursor: true,
             loopCount: false,
