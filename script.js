@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
             typeSpeed: 80,
             backSpeed: 40,
             backDelay: 1500,
-            startDelay: 100,
+            startDelay: 500,
             loop: true,
             showCursor: true,
             loopCount: false,
