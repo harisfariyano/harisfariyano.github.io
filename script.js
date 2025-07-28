@@ -179,3 +179,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
     showCertPage(currentCertPage); // Panggil ini setelah semua definisi fungsi dan variabel
 });
+
+74887363
