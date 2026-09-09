@@ -7,8 +7,8 @@
   }
   body {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    color: #1c1e1b;
-    background-color: #FAF7F2;
+    color: #181C19;
+    background-color: #F8F8F8;
     overflow-x: hidden;
   }
 }
@@ -18,14 +18,14 @@
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #FAF7F2;
+  background: #F8F8F8;
 }
 ::-webkit-scrollbar-thumb {
-  background: #D4C9B8;
+  background: #E5E0D8;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #B2A38E;
+  background: #D1A980;
 }
 
 /* Accordion transition helper */
@@ -40,9 +40,9 @@
   opacity: 1;
 }
 
-/* Typed cursor styling - Vintage Sage */
+/* Typed cursor styling - Vintage Sage #748873 */
 .typed-cursor {
-  color: #3D5647;
+  color: #748873;
   font-weight: 300;
 }
 

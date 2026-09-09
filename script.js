@@ -29,11 +29,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const navbar = document.getElementById('main-nav');
     const handleScroll = () => {
         if (window.scrollY > 20) {
-            navbar?.classList.add('shadow-sm', 'bg-[#FAF7F2]/95');
-            navbar?.classList.remove('bg-[#FAF7F2]/80');
+            navbar?.classList.add('shadow-sm', 'bg-[#F8F8F8]/95');
+            navbar?.classList.remove('bg-[#F8F8F8]/80');
         } else {
-            navbar?.classList.remove('shadow-sm', 'bg-[#FAF7F2]/95');
-            navbar?.classList.add('bg-[#FAF7F2]/80');
+            navbar?.classList.remove('shadow-sm', 'bg-[#F8F8F8]/95');
+            navbar?.classList.add('bg-[#F8F8F8]/80');
         }
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
