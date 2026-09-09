@@ -1,899 +1,1313 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Muhammad Haris Fariyano</title>
-    <meta name="description" content="Personal portfolio website of Muhammad Haris Fariyano, Data Analyst." />
-    <meta property="og:title" content="Muhammad Haris Fariyano" />
-    <meta property="og:description" content="Personal portfolio website of Muhammad Haris Fariyano, Data Analyst." />
+    <title>Muhammad Haris Fariyano - Data Analyst Portfolio</title>
+    <meta name="description" content="Personal portfolio website of Muhammad Haris Fariyano, Data Analyst specializing in Business Intelligence, SQL, Python, Tableau, and Power BI." />
+    <meta name="author" content="Muhammad Haris Fariyano" />
+    <meta name="robots" content="index, follow" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Muhammad Haris Fariyano - Data Analyst Portfolio" />
+    <meta property="og:description" content="Personal portfolio website of Muhammad Haris Fariyano, Data Analyst specializing in Business Intelligence, SQL, Python, Tableau, and Power BI." />
+    <meta property="og:image" content="Images/Main.jpg" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Muhammad Haris Fariyano - Data Analyst Portfolio" />
+    <meta name="twitter:description" content="Personal portfolio website of Muhammad Haris Fariyano, Data Analyst specializing in Business Intelligence, SQL, Python, Tableau, and Power BI." />
 
+    <!-- Schema.org Structured Data (Establishes genuine identity for Safe Browsing crawlers) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://ais-dev-h2w3qxe2djmxaoumqfsd7r-297058602334.asia-east1.run.app/#person",
+          "name": "Muhammad Haris Fariyano",
+          "jobTitle": "Data Analyst",
+          "description": "Insightful, Analytical, and Action-Oriented Data Analyst specializing in Business Intelligence, SQL, Python, Tableau, and Power BI.",
+          "email": "mailto:Muhamamdharisfariyano@gmail.com",
+          "telephone": "+6285892640801",
+          "url": "https://ais-dev-h2w3qxe2djmxaoumqfsd7r-297058602334.asia-east1.run.app",
+          "image": "https://ais-dev-h2w3qxe2djmxaoumqfsd7r-297058602334.asia-east1.run.app/Images/Main.jpg",
+          "sameAs": [
+            "https://www.linkedin.com/in/harisfariyano",
+            "https://github.com/harisfariyano",
+            "https://public.tableau.com/app/profile/muhammad.haris.fariyano/vizzes"
+          ]
+        },
+        {
+          "@type": "ProfilePage",
+          "headline": "Muhammad Haris Fariyano - Data Analyst Portfolio",
+          "description": "Authentic personal professional portfolio of Data Analyst Muhammad Haris Fariyano."
+        }
+      ]
+    }
+    </script>
+
+    <!-- Favicon -->
     <link rel="icon" href="Images/analyst.png" type="image/png" />
-    <link rel="stylesheet" href="style.css" />
+
+    <!-- Google Fonts: Playfair Display (Vintage Serif) & Plus Jakarta Sans (Editorial Clean Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+    <!-- AOS CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
+    <!-- Tailwind CSS CDN with configuration -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        vintage: {
+                            50: '#FAF7F2',
+                            100: '#F4EFE6',
+                            200: '#E6DED1',
+                            300: '#D5C9B7',
+                            400: '#B8A790',
+                            500: '#948067',
+                            600: '#73614C',
+                            700: '#544636',
+                            800: '#382E23',
+                            900: '#211B14',
+                        },
+                        sage: {
+                            50: '#F4F7F5',
+                            100: '#E5EDE7',
+                            200: '#CCDCCF',
+                            300: '#A9C4AE',
+                            400: '#82A588',
+                            500: '#608667',
+                            600: '#4A6D51',
+                            700: '#3D5647',
+                            800: '#324539',
+                            900: '#28362D',
+                        },
+                        brass: {
+                            50: '#FAF6F0',
+                            100: '#F3ECDE',
+                            200: '#E5D6BC',
+                            300: '#D3BD93',
+                            400: '#C0A06B',
+                            500: '#AC854C',
+                            600: '#946D36',
+                            700: '#795528',
+                            800: '#61421E',
+                            900: '#482F14',
+                        },
+                        ink: {
+                            500: '#686F69',
+                            600: '#4E554F',
+                            700: '#383E39',
+                            800: '#252B26',
+                            900: '#181C19',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS Tweaks -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Typed.js -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
 </head>
 
-<body>
+<body class="bg-[#FAF7F2] text-ink-900 antialiased selection:bg-sage-600 selection:text-white">
 
-    <nav>
-        <div class="nav-container">
-            <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
-            </div>
-            <div class="links">
-                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a
-                        href="#home">Home</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150"><a
-                        href="#about">About Me</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a
-                        href="#background">Background</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a
-                        href="#skills">Skills</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a
-                        href="#projects">Project</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"><a
-                        href="#certification">Certification</a></div>
-                <div class="link contact-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a
-                        href="#contact">Contact</a></div>
-            </div>
-            <i class="fa-solid fa-bars hamburg" id="hamburg-icon"></i>
-        </div>
+    <!-- ================= NAVBAR ================= -->
+    <header id="main-nav" class="sticky top-0 z-50 w-full bg-[#FAF7F2]/90 backdrop-blur-md border-b border-vintage-200/90 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
 
-        <div class="dropdown" id="dropdown-menu">
-            <div class="dropdown-links">
-                <a href="#home">Home</a>
-                <a href="#about">About Me</a>
-                <a href="#background">Background</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Project</a>
-                <a href="#certification">Certification</a>
-                <a href="#contact">Contact</a>
-                <i class="fa-solid fa-xmark cancel" id="cancel-icon"></i>
-            </div>
-            <i class="fa-solid fa-xmark cancel" id="cancel-icon"></i>
-        </div>
-    </nav>
+                <!-- Vintage Elegant Brand Signature -->
+                <a href="#home" class="font-serif italic text-xl lg:text-2xl font-bold text-ink-900 tracking-tight hover:text-sage-800 transition-colors group">
+                    <span>Haris Fariyano</span><span class="text-brass-600 not-italic font-sans text-xl ml-0.5 group-hover:text-sage-700 transition-colors">.</span>
+                </a>
 
-    <section id="home">
-        <div class="home-background-wave">
-            <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
-                <defs>
-                    <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" style="stop-color:#E4EBF0;stop-opacity:0.8" />
-                        <stop offset="100%" style="stop-color:#F0F4F7;stop-opacity:0.8" />
-                    </linearGradient>
-                </defs>
-                <path fill="url(#waveGradient)" fill-opacity="0.5"
-                    d="M0,288L48,272C96,256,192,224,288,192C384,160,480,128,576,144C672,160,768,224,864,256C960,288,1056,288,1152,272C1248,256,1344,224,1392,208L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-                </path>
-            </svg>
-        </div>
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center gap-1 lg:gap-2">
+                    <a href="#home" id="nav-link-home" class="px-3.5 py-2 rounded-lg text-sm font-medium text-ink-700 hover:text-sage-800 hover:bg-vintage-100/80 transition-colors">Home</a>
+                    <a href="#about" id="nav-link-about" class="px-3.5 py-2 rounded-lg text-sm font-medium text-ink-700 hover:text-sage-800 hover:bg-vintage-100/80 transition-colors">About</a>
+                    <a href="#background" id="nav-link-background" class="px-3.5 py-2 rounded-lg text-sm font-medium text-ink-700 hover:text-sage-800 hover:bg-vintage-100/80 transition-colors">Background</a>
+                    <a href="#skills" id="nav-link-skills" class="px-3.5 py-2 rounded-lg text-sm font-medium text-ink-700 hover:text-sage-800 hover:bg-vintage-100/80 transition-colors">Skills</a>
+                    <a href="#projects" id="nav-link-projects" class="px-3.5 py-2 rounded-lg text-sm font-medium text-ink-700 hover:text-sage-800 hover:bg-vintage-100/80 transition-colors">Projects</a>
+                    <a href="#certification" id="nav-link-certification" class="px-3.5 py-2 rounded-lg text-sm font-medium text-ink-700 hover:text-sage-800 hover:bg-vintage-100/80 transition-colors">Certifications</a>
+                </nav>
 
-        <div class="main-container">
-            <div class="image" data-aos="zoom-in-right" data-aos-duration="2500" data-aos-delay="200">
-                <img src="Images/Main.jpg" alt="Yuni Astari" />
-            </div>
+                <!-- Desktop Action Button -->
+                <div class="hidden md:flex items-center gap-3">
+                    <a href="#contact" id="nav-btn-contact" class="inline-flex items-center justify-center gap-2 px-4 py-2 text-xs uppercase tracking-wider font-semibold rounded-lg bg-sage-700 text-vintage-50 hover:bg-sage-800 shadow-2xs hover:shadow-sm transition-all">
+                        <span>Get In Touch</span>
+                        <i class="fas fa-arrow-right text-[10px] text-brass-300"></i>
+                    </a>
+                </div>
 
-            <div class="content">
-                <p class="greeting" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="600">Beyond Numbers,
-                    Into Action.</p>
-
-                <h1 class="typewriter" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">Muhammad Haris
-                    Fariyano</h1>
-
-                <div class="typewriter" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">I’m a <span
-                        class="typed-text"> Data Analyst</span></div>
-
-                <p class="tagline" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
-                    <span class="highlight">Insightful, Analytical, and Action-Oriented.</span> With a strong foundation
-                    in mathematics and real-world analytics experience, I support teams in transforming complex data
-                    into clear, actionable insights that drive results.
-                </p>
-
-                <div class="button-group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200">
-                    <a href="https://wa.me/6285892640801" target="_blank" class="btn primary-btn">Hire Me</a>
-                    <a href="https://drive.google.com/file/d/1d8-ScJ1ECU3ytMwQeOfelf5HpFeQsFcy/view?usp=drive_link" target="_blank" class="btn secondary-btn">Download CV <i
-                            class="fas fa-file-alt"></i></a>
+                <!-- Mobile Hamburger Button -->
+                <div class="flex md:hidden">
+                    <button type="button" id="mobile-menu-btn" class="w-10 h-10 rounded-xl border border-vintage-300/80 bg-white/80 text-ink-800 flex items-center justify-center hover:bg-vintage-100 transition-colors focus:outline-none" aria-label="Open menu">
+                        <i class="fas fa-bars-staggered text-sm"></i>
+                    </button>
                 </div>
             </div>
         </div>
-    </section>
+    </header>
 
-    <section id="about">
-        <h2 class="section-heading" data-aos="fade-up" data-aos-duration="1000">About Me</h2>
-        <div class="underline" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"></div>
-
-        <div class="about-container">
-            <div class="about-left-column" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
-                <div class="service-item">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>Data Analysis & Insights</h3>
+    <!-- Mobile Drawer Menu (Vintage Elegant Drawer - Positioned outside header for true viewport fixed positioning) -->
+    <div id="mobile-menu" class="fixed inset-0 z-[100] pointer-events-none opacity-0 invisible transition-all duration-300 md:hidden" aria-hidden="true">
+        <!-- Backdrop Overlay -->
+        <div id="mobile-backdrop" class="fixed inset-0 bg-ink-950/60 backdrop-blur-xs transition-opacity duration-300"></div>
+        
+        <!-- Drawer Content Panel -->
+        <div id="mobile-drawer" class="fixed top-0 right-0 h-full h-[100dvh] w-80 max-w-[85vw] bg-[#FAF7F2] border-l border-vintage-200 shadow-2xl flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-out z-10 overflow-y-auto overscroll-contain">
+            <!-- Top Section (Header + Navigation) -->
+            <div class="flex-1 flex flex-col min-h-0">
+                <!-- Drawer Header -->
+                <div class="flex items-center justify-between p-5 border-b border-vintage-200 bg-[#F4EFE6]/90 shrink-0">
+                    <div class="flex items-center gap-2.5">
+                        <span class="w-9 h-9 rounded-lg bg-sage-800 text-vintage-50 font-serif font-bold text-xs flex items-center justify-center shadow-2xs">HF</span>
+                        <div>
+                            <h3 class="font-serif italic text-sm font-bold text-ink-900 leading-tight">Haris Fariyano</h3>
+                            <p class="text-[10px] font-sans uppercase tracking-widest text-brass-700 font-semibold">Data Analyst</p>
+                        </div>
+                    </div>
+                    <button type="button" id="mobile-menu-close" class="w-8 h-8 rounded-full bg-vintage-200/80 hover:bg-vintage-300 text-ink-800 flex items-center justify-center transition-colors focus:outline-none" aria-label="Close menu">
+                        <i class="fas fa-xmark text-xs"></i>
+                    </button>
                 </div>
-                <div class="service-item">
-                    <i class="fas fa-database"></i>
-                    <h3>Data Wrangling & Modeling</h3>
-                </div>
-                <div class="service-item">
-                    <i class="fas fa-chart-bar"></i>
-                    <h3>Data Visualization & Reporting</h3>
-                </div>
-                <div class="service-item">
-                    <i class="fas fa-brain"></i>
-                    <h3>Strategic Data Consulting</h3>
-                </div>
-            </div>
 
-            <div class="about-right-column" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="600">
-                <p>
-                    Lulusan Sarjana Terapan Teknik Informatika dari Politeknik Harapan Bersama dengan ketertarikan
-                    tinggi pada
-                    bidang Data Analytics. Memiliki pengalaman dalam mengolah dan memvisualisasikan data, membuat
-                    dashboard,
-                    serta mengembangkan model prediktif berbasis Python dan SQL. Aktif mengikuti pelatihan dan bootcamp
-                    di
-                    bidang data analytics seperti dari Dicoding, RevoU, Rakamin, dan Dibimbing.id. Mampu bekerja dengan
-                    tools
-                    seperti BigQuery, Tableau, dan Looker Studio untuk membantu pengambilan keputusan berbasis data.
-                </p>
-
-                <div class="about-social-links">
-                    <a href="https://www.linkedin.com/in/harisfariyano" target="_blank" class="social-icon-only"><i
-                            class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/harisfariyano" target="_blank" class="social-icon-only"><i
-                            class="fab fa-github"></i></a>
-                    <a href="https://public.tableau.com/app/profile/muhammad.haris.fariyano/vizzes" target="_blank"
-                        class="social-icon-only"><i class="fas fa-chart-area"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="background">
-        <div class="section-title" data-aos="fade-up">Where I've Learned & Grown</div>
-        <div class="underline" data-aos="fade-up" data-aos-delay="200"></div>
-        <div class="background-content-wrapper">
-
-            <div id="education" data-aos="fade-right">
-                <h2><i class="fas fa-graduation-cap"></i> Education</h2>
-                <div class="entry">
-                    <h3 class="entry-title">
-                        <div class="entry-title-main-info">
-                            <div class="entry-title-content"> <img src="Images/poltekharber.png" alt="UIN Jakarta Logo"
-                                    class="entry-logo"> <span>Bachelor's Degree, Informatika</span>
+                <!-- Drawer Navigation Items (Scrollable) -->
+                <div class="flex-1 overflow-y-auto px-4 py-5">
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-ink-400 px-3 pb-2.5 block">Menu Navigation</span>
+                    <div class="flex flex-col gap-1.5">
+                        <a href="#home" class="mobile-nav-link flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold text-ink-800 hover:text-sage-800 hover:bg-vintage-100 transition-all group">
+                            <div class="flex items-center gap-3">
+                                <span class="w-7 h-7 rounded-md bg-vintage-100 flex items-center justify-center text-ink-600 group-hover:text-sage-700 group-hover:bg-white text-xs"><i class="fas fa-compass"></i></span>
+                                <span>Home</span>
                             </div>
-                            <span class="entry-subtitle">Politeknik Harapan Bersama | Sep 2021 – Sep 2024</span>
-                        </div>
-                        <span class="toggle-icon">+</span>
-                    </h3>
-                    <div class="entry-details">
-                        <ul>
-                            <li>Staff of Research and Development Department at HIMATIKA UIN Jakarta</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div id="experience" data-aos="fade-left">
-                <h2><i class="fas fa-briefcase"></i> Experience</h2>
-
-                <div class="entry">
-                    <h3 class="entry-title">
-                        <div class="entry-title-main-info">
-                            <div class="entry-title-content">
-                                <img src="Images/muamalatjpg.jpg" alt="Bank Muamalat Logo" class="entry-logo">
-                                <span>Big Data Analytics - Project-Based Internship </span>
+                            <i class="fas fa-chevron-right text-[9px] text-vintage-400 group-hover:text-sage-700 group-hover:translate-x-0.5 transition-all"></i>
+                        </a>
+                        <a href="#about" class="mobile-nav-link flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold text-ink-800 hover:text-sage-800 hover:bg-vintage-100 transition-all group">
+                            <div class="flex items-center gap-3">
+                                <span class="w-7 h-7 rounded-md bg-vintage-100 flex items-center justify-center text-ink-600 group-hover:text-sage-700 group-hover:bg-white text-xs"><i class="fas fa-user-tie"></i></span>
+                                <span>About Me</span>
                             </div>
-                            <span class="entry-subtitle">PT Kimia Farma x Rakamin Academy | Jun 2025 </span>
-                        </div>
-                        <span class="toggle-icon">+</span>
-                    </h3>
-                    <div class="entry-details">
-                        <ul>
-                            <li>Mempelajari konsep Big Data, arsitektur Data Warehouse, dan proses ETL.</li>
-                            <li>Melakukan SQL querying untuk eksplorasi data penjualan dan operasional.</li>
-                            <li>Mengembangkan Data Mart dari data warehouse sebagai basis analisis.</li>
-                            <li>Membangun dashboard menggunakan Looker Studio untuk memvisualisasikan kinerja penjualan.
-                            </li>
-                            <li>Menyampaikan data storytelling untuk menjelaskan insight kepada stakeholder. </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="entry">
-                    <h3 class="entry-title">
-                        <div class="entry-title-main-info">
-                            <div class="entry-title-content">
-                                <img src="Images/" alt="BPR Artha Bersama Logo" class="entry-logo">
-                                <span>Data Analyst - Bootcamp</span>
+                            <i class="fas fa-chevron-right text-[9px] text-vintage-400 group-hover:text-sage-700 group-hover:translate-x-0.5 transition-all"></i>
+                        </a>
+                        <a href="#background" class="mobile-nav-link flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold text-ink-800 hover:text-sage-800 hover:bg-vintage-100 transition-all group">
+                            <div class="flex items-center gap-3">
+                                <span class="w-7 h-7 rounded-md bg-vintage-100 flex items-center justify-center text-ink-600 group-hover:text-sage-700 group-hover:bg-white text-xs"><i class="fas fa-graduation-cap"></i></span>
+                                <span>Background</span>
                             </div>
-                            <span class="entry-subtitle">PT Special Skill Indonesia | Feb 2023 - Mar 2023</span>
+                            <i class="fas fa-chevron-right text-[9px] text-vintage-400 group-hover:text-sage-700 group-hover:translate-x-0.5 transition-all"></i>
+                        </a>
+                        <a href="#skills" class="mobile-nav-link flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold text-ink-800 hover:text-sage-800 hover:bg-vintage-100 transition-all group">
+                            <div class="flex items-center gap-3">
+                                <span class="w-7 h-7 rounded-md bg-vintage-100 flex items-center justify-center text-ink-600 group-hover:text-sage-700 group-hover:bg-white text-xs"><i class="fas fa-layer-group"></i></span>
+                                <span>Skills & Expertise</span>
+                            </div>
+                            <i class="fas fa-chevron-right text-[9px] text-vintage-400 group-hover:text-sage-700 group-hover:translate-x-0.5 transition-all"></i>
+                        </a>
+                        <a href="#projects" class="mobile-nav-link flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold text-ink-800 hover:text-sage-800 hover:bg-vintage-100 transition-all group">
+                            <div class="flex items-center gap-3">
+                                <span class="w-7 h-7 rounded-md bg-vintage-100 flex items-center justify-center text-ink-600 group-hover:text-sage-700 group-hover:bg-white text-xs"><i class="fas fa-chart-column"></i></span>
+                                <span>Featured Projects</span>
+                            </div>
+                            <i class="fas fa-chevron-right text-[9px] text-vintage-400 group-hover:text-sage-700 group-hover:translate-x-0.5 transition-all"></i>
+                        </a>
+                        <a href="#certification" class="mobile-nav-link flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold text-ink-800 hover:text-sage-800 hover:bg-vintage-100 transition-all group">
+                            <div class="flex items-center gap-3">
+                                <span class="w-7 h-7 rounded-md bg-vintage-100 flex items-center justify-center text-ink-600 group-hover:text-sage-700 group-hover:bg-white text-xs"><i class="fas fa-award"></i></span>
+                                <span>Certifications</span>
+                            </div>
+                            <i class="fas fa-chevron-right text-[9px] text-vintage-400 group-hover:text-sage-700 group-hover:translate-x-0.5 transition-all"></i>
+                        </a>
+                        <a href="#contact" class="mobile-nav-link flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold text-ink-800 hover:text-sage-800 hover:bg-vintage-100 transition-all group">
+                            <div class="flex items-center gap-3">
+                                <span class="w-7 h-7 rounded-md bg-vintage-100 flex items-center justify-center text-ink-600 group-hover:text-sage-700 group-hover:bg-white text-xs"><i class="fas fa-paper-plane"></i></span>
+                                <span>Contact</span>
+                            </div>
+                            <i class="fas fa-chevron-right text-[9px] text-vintage-400 group-hover:text-sage-700 group-hover:translate-x-0.5 transition-all"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Drawer Quick Actions & Social Footer (Fixed at bottom of drawer) -->
+            <div class="p-5 border-t border-vintage-200 bg-[#F4EFE6]/80 shrink-0 flex flex-col gap-3">
+                <a href="https://wa.me/6285892640801" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-sage-800 text-vintage-50 text-xs font-semibold hover:bg-sage-900 shadow-2xs transition-colors">
+                    <i class="fab fa-whatsapp text-sm"></i>
+                    <span>Hire Me via WhatsApp</span>
+                </a>
+                <a href="https://drive.google.com/file/d/1d8-ScJ1ECU3ytMwQeOfelf5HpFeQsFcy/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-vintage-300 bg-white/90 text-ink-800 text-xs font-semibold hover:bg-vintage-100 transition-colors">
+                    <i class="fas fa-file-arrow-down text-brass-700"></i>
+                    <span>Download Curriculum Vitae</span>
+                </a>
+
+                <!-- Social Icons Strip -->
+                <div class="pt-2 flex items-center justify-center gap-3 text-vintage-500 border-t border-vintage-200/80 mt-0.5">
+                    <a href="https://www.linkedin.com/in/harisfariyano" target="_blank" rel="noopener noreferrer" class="w-7 h-7 rounded-lg bg-white border border-vintage-200 flex items-center justify-center text-ink-600 hover:text-sage-800 hover:border-sage-400 transition-colors" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in text-xs"></i>
+                    </a>
+                    <a href="https://github.com/harisfariyano" target="_blank" rel="noopener noreferrer" class="w-7 h-7 rounded-lg bg-white border border-vintage-200 flex items-center justify-center text-ink-600 hover:text-sage-800 hover:border-sage-400 transition-colors" aria-label="GitHub">
+                        <i class="fab fa-github text-xs"></i>
+                    </a>
+                    <a href="https://public.tableau.com/app/profile/muhammad.haris.fariyano/vizzes" target="_blank" rel="noopener noreferrer" class="w-7 h-7 rounded-lg bg-white border border-vintage-200 flex items-center justify-center text-ink-600 hover:text-sage-800 hover:border-sage-400 transition-colors" aria-label="Tableau">
+                        <i class="fas fa-chart-area text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- ================= HERO SECTION (VINTAGE ELEGANT) ================= -->
+        <section id="home" class="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-28 border-b border-vintage-200/80 bg-gradient-to-b from-[#FAF7F2] via-[#F4EFE6] to-[#FAF7F2]">
+            <!-- Subtle antique warm ambient glow elements -->
+            <div class="absolute -top-24 -right-24 w-96 h-96 bg-brass-100/40 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute top-1/2 -left-32 w-80 h-80 bg-sage-100/40 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                    
+                    <!-- Hero Content Left -->
+                    <div class="lg:col-span-7 flex flex-col items-start" data-aos="fade-up" data-aos-duration="900">
+                        
+                        <!-- Open to work badge -->
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F4EFE6] border border-vintage-300 text-sage-800 text-xs font-semibold uppercase tracking-wider mb-6 shadow-2xs">
+                            <span class="w-2 h-2 rounded-full bg-sage-600 animate-pulse"></span>
+                            Available for Opportunities & Analytics Projects
                         </div>
-                        <span class="toggle-icon">+</span>
-                    </h3>
-                    <div class="entry-details">
-                        <ul>
-                            <li>Analyzed financial data on deposits and credit accounts</li>
-                            <li>Created interactive dashboards to communicate KPIs and trends</li>
-                            <li>Built a financial dashboard using Looker Studio for better decision-making</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="skills">
-        <div class="section-title" data-aos="fade-up">Skills & Expertise</div>
-        <div class="underline" data-aos="fade-up" data-aos-delay="200"></div>
+                        <p class="font-serif italic text-brass-700 text-lg sm:text-xl mb-2 tracking-wide font-medium">"Beyond Numbers, Into Action."</p>
+                        
+                        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink-900 tracking-tight leading-tight sm:leading-tight mb-4">
+                            Muhammad Haris <br class="hidden sm:inline">
+                            <span class="italic text-sage-700">Fariyano</span>
+                        </h1>
 
-        <div class="skills-container">
-
-            <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
-                <h3>Data Analytics Methods & Techniques</h3>
-                <div class="tabs-container">
-                    <div class="tab-buttons">
-                        <button class="tab-button active" data-tab="core">Core Fundamentals</button>
-                        <button class="tab-button" data-tab="stats">Statistical Analysis</button>
-                        <button class="tab-button" data-tab="advanced">Modeling & Advanced</button>
-                    </div>
-                    <div class="tab-content-wrapper">
-                        <div id="core" class="tab-pane active">
-                            <ul class="skill-list">
-                                <li><i class="fas fa-chart-line skill-icon"></i> Exploratory Data Analysis (EDA)</li>
-                                <li><i class="fas fa-database skill-icon"></i> Data Extraction (CSV, Excel, SQL)</li>
-                                <li><i class="fas fa-broom skill-icon"></i> Data Cleaning & Preprocessing</li>
-                                <li><i class="fas fa-sitemap skill-icon"></i> Data Wrangling</li>
-                                <li><i class="fas fa-users skill-icon"></i> Segmentation / Clustering</li>
-                                <li><i class="fas fa-calendar-alt skill-icon"></i> Cohort Analysis</li>
-                            </ul>
+                        <!-- Dynamic Typing Subtitle -->
+                        <div class="text-xl sm:text-2xl font-medium text-ink-700 mb-6 flex items-center gap-2">
+                            <span>I am a</span>
+                            <span class="typed-text font-serif italic font-bold text-sage-700 underline decoration-brass-400 decoration-2 underline-offset-4"></span>
                         </div>
-                        <div id="stats" class="tab-pane">
-                            <ul class="skill-list">
-                                <li><i class="fas fa-calculator skill-icon"></i> Descriptive Statistics</li>
-                                <li><i class="fas fa-project-diagram skill-icon"></i> Correlation Analysis</li>
-                                <li><i class="fas fa-question-circle skill-icon"></i> Hypothesis Testing</li>
-                                <li><i class="fas fa-square-root-alt skill-icon"></i> T-Test (Independent & Paired)</li>
-                                <li><i class="fas fa-flask skill-icon"></i> A/B Testing</li>
-                                <li><i class="fas fa-chart-bar skill-icon"></i> ANOVA</li>
-                            </ul>
+
+                        <!-- Tagline -->
+                        <p class="text-base sm:text-lg text-ink-700 leading-relaxed max-w-2xl mb-8">
+                            <strong class="text-ink-900 font-semibold">Insightful, Analytical, and Action-Oriented.</strong> With a strong foundation in software engineering and real-world analytics experience, I support teams in transforming complex data into clear, actionable insights that drive measurable results.
+                        </p>
+
+                        <!-- Action Buttons -->
+                        <div class="flex flex-wrap items-center gap-4 w-full sm:w-auto mb-10">
+                            <a href="https://wa.me/6285892640801" target="_blank" rel="noopener noreferrer" id="hero-btn-hire" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-sage-700 text-vintage-50 font-semibold text-sm shadow-2xs hover:bg-sage-800 hover:shadow-sm transition-all">
+                                <i class="fab fa-whatsapp text-base"></i>
+                                <span>Hire Me via WhatsApp</span>
+                            </a>
+                            <a href="https://drive.google.com/file/d/1d8-ScJ1ECU3ytMwQeOfelf5HpFeQsFcy/view?usp=drive_link" target="_blank" rel="noopener noreferrer" id="hero-btn-cv" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white border border-vintage-300 text-ink-800 font-semibold text-sm hover:bg-vintage-100 hover:border-vintage-400 transition-all shadow-2xs">
+                                <i class="fas fa-file-arrow-down text-brass-700"></i>
+                                <span>Download CV</span>
+                            </a>
                         </div>
-                        <div id="advanced" class="tab-pane">
-                            <ul class="skill-list">
-                                <li><i class="fas fa-arrow-right skill-icon"></i> Linear Regression</li>
-                                <li><i class="fas fa-sign-in-alt skill-icon"></i> Logistic Regression</li>
-                                <li><i class="fas fa-layer-group skill-icon"></i> Multilevel / Hierarchical Analysis
-                                </li>
-                                <li><i class="fas fa-tachometer-alt skill-icon"></i> KPI Monitoring & Performance
-                                    Tracking</li>
-                            </ul>
+
+                        <!-- Highlights Ribbon -->
+                        <div class="grid grid-cols-3 gap-4 sm:gap-6 pt-6 border-t border-vintage-200 w-full max-w-xl">
+                            <div>
+                                <span class="block font-serif text-2xl sm:text-3xl font-bold text-ink-900">10+</span>
+                                <span class="text-[11px] font-semibold uppercase tracking-wider text-vintage-500">Data Projects</span>
+                            </div>
+                            <div>
+                                <span class="block font-serif text-2xl sm:text-3xl font-bold text-ink-900">9</span>
+                                <span class="text-[11px] font-semibold uppercase tracking-wider text-vintage-500">Certifications</span>
+                            </div>
+                            <div>
+                                <span class="block font-serif text-2xl sm:text-3xl font-bold text-ink-900">100%</span>
+                                <span class="text-[11px] font-semibold uppercase tracking-wider text-vintage-500">Data-Driven</span>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Hero Visual Right -->
+                    <div class="lg:col-span-5 flex justify-center lg:justify-end" data-aos="zoom-in" data-aos-duration="1000">
+                        <div class="relative w-full max-w-md">
+                            
+                            <!-- Ambient frame background -->
+                            <div class="absolute -inset-1.5 bg-gradient-to-tr from-sage-600/30 to-brass-500/20 rounded-3xl blur-lg opacity-30"></div>
+                            
+                            <div class="relative rounded-3xl overflow-hidden bg-white p-3 shadow-xl border border-vintage-200">
+                                <img src="Images/Main.jpg" alt="Muhammad Haris Fariyano" class="w-full h-auto aspect-[4/5] object-cover rounded-2xl">
+                                
+                                <!-- Floating Micro-Badges -->
+                                <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-4 rounded-xl border border-vintage-200 shadow-md flex items-center justify-between">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 rounded-lg bg-sage-50 border border-sage-200 flex items-center justify-center text-sage-700">
+                                            <i class="fas fa-chart-pie text-lg"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-xs font-semibold text-ink-900">Data Visualization</p>
+                                            <p class="text-[11px] text-vintage-500">Tableau & Looker Studio</p>
+                                        </div>
+                                    </div>
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded text-[10px] font-bold bg-sage-100 text-sage-800 border border-sage-200/60">Ready</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
+        </section>
 
-            <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
-                <h3>Programming & Scripting Languages</h3>
-                <ul class="skill-list">
-                    <li><i class="fas fa-database skill-icon"></i> SQL</li>
-                    <li><i class="fab fa-python skill-icon"></i> Python</li>
-                    <li><i class="fab fa-r-project skill-icon"></i> R</li>
-                    <li><i class="fab fa-html5 skill-icon"></i> HTML</li>
-                    <li><i class="fab fa-css3-alt skill-icon"></i> CSS</li>
-                    <li><i class="fas fa-file-alt skill-icon"></i> Markdown</li>
-                    <li><i class="fab fa-js-square skill-icon"></i> JavaScript</li>
-                </ul>
+        <!-- ================= ABOUT ME SECTION (VINTAGE ELEGANT) ================= -->
+        <section id="about" class="py-20 lg:py-28 bg-[#F4EFE6]/50 border-b border-vintage-200/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                    <span class="text-xs font-bold uppercase tracking-widest text-brass-700 mb-2 block">Who I Am</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-ink-900 tracking-tight">About Me</h2>
+                    <div class="w-16 h-0.5 bg-brass-600 mx-auto mt-4"></div>
+                </div>
+
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- 4 Core Pillars / Services -->
+                    <div class="lg:col-span-6 grid sm:grid-cols-2 gap-4" data-aos="fade-right">
+                        
+                        <div class="p-6 rounded-2xl bg-white border border-vintage-200 hover:border-sage-600/50 hover:shadow-md transition-all duration-300 group">
+                            <div class="w-12 h-12 rounded-xl bg-sage-50 text-sage-700 flex items-center justify-center text-xl mb-4 group-hover:bg-sage-700 group-hover:text-vintage-50 transition-colors">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3 class="font-serif text-base font-bold text-ink-900 mb-1">Data Analysis & Insights</h3>
+                            <p class="text-xs text-ink-700 leading-relaxed">Conducting exploratory data analysis (EDA) to uncover operational performance and market patterns.</p>
+                        </div>
+
+                        <div class="p-6 rounded-2xl bg-white border border-vintage-200 hover:border-sage-600/50 hover:shadow-md transition-all duration-300 group">
+                            <div class="w-12 h-12 rounded-xl bg-sage-50 text-sage-700 flex items-center justify-center text-xl mb-4 group-hover:bg-sage-700 group-hover:text-vintage-50 transition-colors">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h3 class="font-serif text-base font-bold text-ink-900 mb-1">Data Wrangling & Modeling</h3>
+                            <p class="text-xs text-ink-700 leading-relaxed">Cleaning messy data, performing ETL, building data marts, and optimizing SQL queries.</p>
+                        </div>
+
+                        <div class="p-6 rounded-2xl bg-white border border-vintage-200 hover:border-sage-600/50 hover:shadow-md transition-all duration-300 group">
+                            <div class="w-12 h-12 rounded-xl bg-sage-50 text-sage-700 flex items-center justify-center text-xl mb-4 group-hover:bg-sage-700 group-hover:text-vintage-50 transition-colors">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                            <h3 class="font-serif text-base font-bold text-ink-900 mb-1">Data Visualization & BI</h3>
+                            <p class="text-xs text-ink-700 leading-relaxed">Crafting responsive, executive-level interactive dashboards with Tableau, Power BI, and Looker.</p>
+                        </div>
+
+                        <div class="p-6 rounded-2xl bg-white border border-vintage-200 hover:border-sage-600/50 hover:shadow-md transition-all duration-300 group">
+                            <div class="w-12 h-12 rounded-xl bg-sage-50 text-sage-700 flex items-center justify-center text-xl mb-4 group-hover:bg-sage-700 group-hover:text-vintage-50 transition-colors">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3 class="font-serif text-base font-bold text-ink-900 mb-1">Strategic Data Consulting</h3>
+                            <p class="text-xs text-ink-700 leading-relaxed">Bridging technical numbers into strategic recommendations with compelling data storytelling.</p>
+                        </div>
+
+                    </div>
+
+                    <!-- Narrative & Social Connect -->
+                    <div class="lg:col-span-6 flex flex-col justify-center" data-aos="fade-left">
+                        <div class="bg-white p-8 rounded-3xl border border-vintage-200 shadow-2xs">
+                            <h3 class="font-serif text-xl font-bold text-ink-900 mb-4">Dedicated to Empowering Business with Data</h3>
+                            
+                            <p class="text-ink-700 leading-relaxed text-sm sm:text-base mb-6">
+                                Lulusan Sarjana Terapan Teknik Informatika dari Politeknik Harapan Bersama dengan ketertarikan tinggi pada bidang Data Analytics. Memiliki pengalaman dalam mengolah dan memvisualisasikan data, membuat dashboard, serta mengembangkan model prediktif berbasis Python dan SQL.
+                            </p>
+                            <p class="text-ink-700 leading-relaxed text-sm sm:text-base mb-8">
+                                Aktif mengikuti pelatihan dan program intensif di bidang data analytics dari platform terkemuka seperti Dicoding, RevoU, Rakamin Academy, dan Dibimbing.id. Terbiasa bekerja dengan tools analitik mutakhir seperti BigQuery, Tableau, dan Looker Studio untuk memandu pengambilan keputusan berbasis data.
+                            </p>
+
+                            <!-- Social Links -->
+                            <div class="pt-6 border-t border-vintage-200 flex flex-wrap items-center gap-3">
+                                <span class="text-xs font-semibold text-vintage-500 uppercase tracking-wider mr-2">Connect:</span>
+                                
+                                <a href="https://www.linkedin.com/in/harisfariyano" target="_blank" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#FAF7F2] border border-vintage-300 text-ink-800 hover:text-sage-700 hover:border-sage-400 text-xs font-medium transition-all shadow-2xs">
+                                    <i class="fab fa-linkedin text-[#0a66c2] text-sm"></i>
+                                    <span>LinkedIn</span>
+                                </a>
+
+                                <a href="https://github.com/harisfariyano" target="_blank" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#FAF7F2] border border-vintage-300 text-ink-800 hover:text-sage-700 hover:border-sage-400 text-xs font-medium transition-all shadow-2xs">
+                                    <i class="fab fa-github text-ink-900 text-sm"></i>
+                                    <span>GitHub</span>
+                                </a>
+
+                                <a href="https://public.tableau.com/app/profile/muhammad.haris.fariyano/vizzes" target="_blank" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#FAF7F2] border border-vintage-300 text-ink-800 hover:text-sage-700 hover:border-sage-400 text-xs font-medium transition-all shadow-2xs">
+                                    <i class="fas fa-chart-area text-brass-700 text-sm"></i>
+                                    <span>Tableau Public</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= BACKGROUND (EDUCATION & EXPERIENCE) ================= -->
+        <section id="background" class="py-20 lg:py-28 bg-[#FAF7F2] border-b border-vintage-200/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                    <span class="text-xs font-bold uppercase tracking-widest text-brass-700 mb-2 block">Career Journey</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-ink-900 tracking-tight">Where I've Learned & Grown</h2>
+                    <div class="w-16 h-0.5 bg-brass-600 mx-auto mt-4"></div>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-8">
+                    
+                    <!-- Experience Column -->
+                    <div data-aos="fade-right">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 rounded-xl bg-sage-100 text-sage-800 flex items-center justify-center text-lg shadow-2xs">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <h3 class="font-serif text-xl font-bold text-ink-900">Experience</h3>
+                        </div>
+
+                        <div class="space-y-4">
+                            
+                            <!-- Item 1: Kimia Farma -->
+                            <div class="accordion-item accordion-open bg-white rounded-2xl border border-vintage-200 shadow-2xs overflow-hidden transition-all duration-200">
+                                <button type="button" class="accordion-trigger w-full p-5 text-left flex items-start justify-between gap-4 focus:outline-none hover:bg-vintage-50">
+                                    <div class="flex items-start gap-4">
+                                        <img src="Images/muamalatjpg.jpg" alt="PT Kimia Farma" class="w-12 h-12 rounded-xl object-contain border border-vintage-200 p-1 bg-white flex-shrink-0">
+                                        <div>
+                                            <h4 class="font-serif text-base font-bold text-ink-900">Big Data Analytics - Project-Based Internship</h4>
+                                            <p class="text-xs font-semibold text-sage-800">PT Kimia Farma x Rakamin Academy</p>
+                                            <span class="inline-block text-[11px] font-medium text-vintage-500 mt-1">Jun 2025</span>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-icon w-8 h-8 rounded-full bg-vintage-100 text-ink-700 flex items-center justify-center text-xs transition-transform duration-200">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </button>
+                                
+                                <div class="accordion-content px-5 pb-5 pt-1 text-sm text-ink-700">
+                                    <ul class="space-y-2 list-disc list-inside text-xs leading-relaxed text-ink-700">
+                                        <li>Mempelajari konsep Big Data, arsitektur Data Warehouse, dan proses ETL secara komprehensif.</li>
+                                        <li>Melakukan SQL querying mendalam untuk eksplorasi data transaksi penjualan dan performa operasional.</li>
+                                        <li>Mengembangkan Data Mart terstruktur dari data warehouse sebagai basis analisis bisnis.</li>
+                                        <li>Membangun dashboard interaktif menggunakan Looker Studio untuk memvisualisasikan KPI penjualan.</li>
+                                        <li>Menyampaikan data storytelling untuk menjelaskan actionable insights kepada para stakeholder.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Item 2: PT Special Skill Indonesia -->
+                            <div class="accordion-item bg-white rounded-2xl border border-vintage-200 shadow-2xs overflow-hidden transition-all duration-200">
+                                <button type="button" class="accordion-trigger w-full p-5 text-left flex items-start justify-between gap-4 focus:outline-none hover:bg-vintage-50">
+                                    <div class="flex items-start gap-4">
+                                        <div class="w-12 h-12 rounded-xl bg-sage-50 border border-sage-200 flex items-center justify-center text-sage-700 flex-shrink-0">
+                                            <i class="fas fa-chart-line text-lg"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-serif text-base font-bold text-ink-900">Data Analyst - Bootcamp</h4>
+                                            <p class="text-xs font-semibold text-sage-800">PT Special Skill Indonesia</p>
+                                            <span class="inline-block text-[11px] font-medium text-vintage-500 mt-1">Feb 2023 - Mar 2023</span>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-icon w-8 h-8 rounded-full bg-vintage-100 text-ink-700 flex items-center justify-center text-xs transition-transform duration-200">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </button>
+                                
+                                <div class="accordion-content px-5 pb-5 pt-1 text-sm text-ink-700">
+                                    <ul class="space-y-2 list-disc list-inside text-xs leading-relaxed text-ink-700">
+                                        <li>Analyzed complex financial data on deposits, loans, and credit customer accounts.</li>
+                                        <li>Created interactive dashboards to communicate financial KPIs and quarterly trends.</li>
+                                        <li>Built a robust financial dashboard using Looker Studio for enhanced leadership decision-making.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Education Column -->
+                    <div data-aos="fade-left">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 rounded-xl bg-sage-100 text-sage-800 flex items-center justify-center text-lg shadow-2xs">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h3 class="font-serif text-xl font-bold text-ink-900">Education</h3>
+                        </div>
+
+                        <div class="space-y-4">
+                            
+                            <!-- Politeknik Harapan Bersama -->
+                            <div class="accordion-item accordion-open bg-white rounded-2xl border border-vintage-200 shadow-2xs overflow-hidden transition-all duration-200">
+                                <button type="button" class="accordion-trigger w-full p-5 text-left flex items-start justify-between gap-4 focus:outline-none hover:bg-vintage-50">
+                                    <div class="flex items-start gap-4">
+                                        <img src="Images/poltekharber.png" alt="Politeknik Harapan Bersama" class="w-12 h-12 rounded-xl object-contain border border-vintage-200 p-1 bg-white flex-shrink-0">
+                                        <div>
+                                            <h4 class="font-serif text-base font-bold text-ink-900">Bachelor's Degree, Informatika</h4>
+                                            <p class="text-xs font-semibold text-sage-800">Politeknik Harapan Bersama</p>
+                                            <span class="inline-block text-[11px] font-medium text-vintage-500 mt-1">Sep 2021 – Sep 2024</span>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-icon w-8 h-8 rounded-full bg-vintage-100 text-ink-700 flex items-center justify-center text-xs transition-transform duration-200">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </button>
+                                
+                                <div class="accordion-content px-5 pb-5 pt-1 text-sm text-ink-700">
+                                    <ul class="space-y-2 list-disc list-inside text-xs leading-relaxed text-ink-700">
+                                        <li>Fokus studi pada rekayasa perangkat lunak, sistem basis data, algoritma, serta sains data.</li>
+                                        <li>Aktif berkontribusi dalam riset dan inovasi teknologi komputasi mahasiswa.</li>
+                                        <li>Staff of Research and Development Department at HIMATIKA UIN Jakarta.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SKILLS & EXPERTISE (VINTAGE ELEGANT) ================= -->
+        <section id="skills" class="py-20 lg:py-28 bg-[#F4EFE6]/50 border-b border-vintage-200/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                    <span class="text-xs font-bold uppercase tracking-widest text-brass-700 mb-2 block">Technical Repertoire</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-ink-900 tracking-tight">Skills & Capabilities</h2>
+                    <div class="w-16 h-0.5 bg-brass-600 mx-auto mt-4"></div>
+                </div>
+
+                <div class="space-y-12">
+                    
+                    <!-- Category 1: Methods & Techniques with Segmented Tabs -->
+                    <div class="bg-white p-6 sm:p-8 rounded-3xl border border-vintage-200 shadow-2xs" data-aos="fade-up">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+                            <div>
+                                <h3 class="font-serif text-lg font-bold text-ink-900">Data Analytics Methods & Techniques</h3>
+                                <p class="text-xs text-ink-600">Methodological frameworks utilized across the end-to-end data lifecycle</p>
+                            </div>
+
+                            <!-- Tabs Switcher -->
+                            <div class="inline-flex p-1 rounded-xl bg-[#EDE6DA] border border-vintage-300 text-xs self-start sm:self-auto">
+                                <button type="button" class="skill-tab-btn px-3.5 py-1.5 rounded-lg font-semibold bg-white text-sage-800 shadow-2xs border-vintage-200 transition-all" data-tab="core">Core Fundamentals</button>
+                                <button type="button" class="skill-tab-btn px-3.5 py-1.5 rounded-lg text-ink-600 hover:text-ink-900 transition-all" data-tab="stats">Statistical Analysis</button>
+                                <button type="button" class="skill-tab-btn px-3.5 py-1.5 rounded-lg text-ink-600 hover:text-ink-900 transition-all" data-tab="advanced">Modeling & Advanced</button>
+                            </div>
+                        </div>
+
+                        <!-- Pane: Core -->
+                        <div id="core" class="skill-tab-pane grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-[#FAF7F2] border border-vintage-200 shadow-2xs">
+                                <i class="fas fa-chart-line text-sage-700"></i>
+                                <span class="text-xs font-semibold text-ink-800">Exploratory Data Analysis (EDA)</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-[#FAF7F2] border border-vintage-200 shadow-2xs">
+                                <i class="fas fa-database text-sage-700"></i>
+                                <span class="text-xs font-semibold text-ink-800">Data Extraction (CSV, Excel, SQL)</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-[#FAF7F2] border border-vintage-200 shadow-2xs">
+                                <i class="fas fa-broom text-sage-700"></i>
+                                <span class="text-xs font-semibold text-ink-800">Data Cleaning & Preprocessing</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-[#FAF7F2] border border-vintage-200 shadow-2xs">
+                                <i class="fas fa-sitemap text-sage-700"></i>
+                                <span class="text-xs font-semibold text-ink-800">Data Wrangling</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-[#FAF7F2] border border-vintage-200 shadow-2xs">
+                                <i class="fas fa-users text-sage-700"></i>
+                                <span class="text-xs font-semibold text-ink-800">Segmentation & Customer Clustering</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-[#FAF7F2] border border-vintage-200 shadow-2xs">
+                                <i class="fas fa-calendar-alt text-sage-700"></i>
+                                <span class="text-xs font-semibold text-ink-800">Cohort Analysis</span>
+                            </div>
+                        </div>
+
+                        <!-- Pane: Stats -->
+                        <div id="stats" class="skill-tab-pane hidden grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-[#FAF7F2] border border-vintage-200 shadow-2xs">
+                                <i class="fas fa-calculator text-sage-700"></i>
+                                <span class="text-xs font-semibold text-ink-800">Descriptive Statistics</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-[#FAF7F2] border border-vintage-200 shadow-2xs">
+                                <i class="fas fa-project-diagram text-sage-700"></i>
+                                <span class="text-xs font-semibold text-ink-800">Correlation Analysis</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-[#FAF7F2] border border-vintage-200 shadow-2xs">
+                                <i class="fas fa-question-circle text-sage-700"></i>
+                                <span class="text-xs font-semibold text-ink-800">Hypothesis Testing</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-[#FAF7F2] border border-vintage-200 shadow-2xs">
+                                <i class="fas fa-square-root-alt text-sage-700"></i>
+                                <span class="text-xs font-semibold text-ink-800">T-Test (Independent & Paired)</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-[#FAF7F2] border border-vintage-200 shadow-2xs">
+                                <i class="fas fa-flask text-sage-700"></i>
+                                <span class="text-xs font-semibold text-ink-800">A/B Testing Experiments</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-[#FAF7F2] border border-vintage-200 shadow-2xs">
+                                <i class="fas fa-chart-bar text-sage-700"></i>
+                                <span class="text-xs font-semibold text-ink-800">ANOVA</span>
+                            </div>
+                        </div>
+
+                        <!-- Pane: Advanced -->
+                        <div id="advanced" class="skill-tab-pane hidden grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-[#FAF7F2] border border-vintage-200 shadow-2xs">
+                                <i class="fas fa-arrow-right text-sage-700"></i>
+                                <span class="text-xs font-semibold text-ink-800">Linear Regression</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-[#FAF7F2] border border-vintage-200 shadow-2xs">
+                                <i class="fas fa-sign-in-alt text-sage-700"></i>
+                                <span class="text-xs font-semibold text-ink-800">Logistic Regression</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-[#FAF7F2] border border-vintage-200 shadow-2xs">
+                                <i class="fas fa-layer-group text-sage-700"></i>
+                                <span class="text-xs font-semibold text-ink-800">Multilevel / Hierarchical Analysis</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-[#FAF7F2] border border-vintage-200 shadow-2xs">
+                                <i class="fas fa-tachometer-alt text-sage-700"></i>
+                                <span class="text-xs font-semibold text-ink-800">KPI Monitoring & Performance Tracking</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category 2, 3, 4 Grid -->
+                    <div class="grid md:grid-cols-3 gap-6" data-aos="fade-up" data-aos-delay="150">
+                        
+                        <!-- Languages -->
+                        <div class="bg-white p-6 rounded-3xl border border-vintage-200 shadow-2xs">
+                            <div class="flex items-center gap-3 mb-5">
+                                <div class="w-9 h-9 rounded-xl bg-sage-100 text-sage-800 flex items-center justify-center text-sm shadow-2xs">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <h3 class="font-serif text-base font-bold text-ink-900">Programming Languages</h3>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FAF7F2] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-database text-sage-700"></i> SQL</span>
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FAF7F2] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fab fa-python text-brass-700"></i> Python</span>
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FAF7F2] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fab fa-r-project text-sage-800"></i> R</span>
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FAF7F2] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fab fa-html5 text-brass-800"></i> HTML</span>
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FAF7F2] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fab fa-css3-alt text-sage-700"></i> CSS</span>
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FAF7F2] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-file-alt text-vintage-500"></i> Markdown</span>
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FAF7F2] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fab fa-js text-brass-700"></i> JavaScript</span>
+                            </div>
+                        </div>
+
+                        <!-- Data & Database Tools -->
+                        <div class="bg-white p-6 rounded-3xl border border-vintage-200 shadow-2xs">
+                            <div class="flex items-center gap-3 mb-5">
+                                <div class="w-9 h-9 rounded-xl bg-sage-100 text-sage-800 flex items-center justify-center text-sm shadow-2xs">
+                                    <i class="fas fa-screwdriver-wrench"></i>
+                                </div>
+                                <h3 class="font-serif text-base font-bold text-ink-900">Analytics & DB Tools</h3>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FAF7F2] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-file-excel text-sage-700"></i> MS Excel</span>
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FAF7F2] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-table-cells text-sage-700"></i> Google Sheets</span>
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FAF7F2] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-code-branch text-brass-700"></i> Google Colab</span>
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FAF7F2] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-laptop-code text-sage-800"></i> RStudio</span>
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FAF7F2] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-code text-ink-700"></i> VS Code</span>
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FAF7F2] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-database text-sage-800"></i> Google BigQuery</span>
+                            </div>
+                        </div>
+
+                        <!-- Visualization Tools -->
+                        <div class="bg-white p-6 rounded-3xl border border-vintage-200 shadow-2xs">
+                            <div class="flex items-center gap-3 mb-5">
+                                <div class="w-9 h-9 rounded-xl bg-sage-100 text-sage-800 flex items-center justify-center text-sm shadow-2xs">
+                                    <i class="fas fa-chart-pie"></i>
+                                </div>
+                                <h3 class="font-serif text-base font-bold text-ink-900">Visualization & BI</h3>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FAF7F2] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-chart-area text-brass-700"></i> Tableau</span>
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FAF7F2] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-chart-line text-sage-700"></i> Looker Studio</span>
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FAF7F2] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-chart-pie text-sage-800"></i> R Shiny</span>
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FAF7F2] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-paint-brush text-brass-800"></i> ggplot2</span>
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FAF7F2] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-chart-simple text-ink-700"></i> Plotly</span>
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FAF7F2] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-bezier-curve text-sage-700"></i> Seaborn</span>
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FAF7F2] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-chart-area text-sage-800"></i> Matplotlib</span>
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FAF7F2] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-file-excel text-brass-700"></i> Excel Charts</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PROJECTS SECTION (VINTAGE ELEGANT) ================= -->
+        <section id="projects" class="py-20 lg:py-28 bg-[#FAF7F2] border-b border-vintage-200/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-12" data-aos="fade-up">
+                    <span class="text-xs font-bold uppercase tracking-widest text-brass-700 mb-2 block">Portfolio Showcase</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-ink-900 tracking-tight">Featured Data Projects</h2>
+                    <div class="w-16 h-0.5 bg-brass-600 mx-auto mt-4"></div>
+                    <p class="text-sm text-ink-600 mt-4">Explore interactive business intelligence dashboards, statistical models, and end-to-end data analytics solutions.</p>
+                </div>
+
+                <!-- Filter Controls -->
+                <div class="flex flex-wrap items-center justify-center gap-2 mb-12" data-aos="fade-up">
+                    <button type="button" class="project-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-sage-800 text-vintage-50 shadow-2xs transition-all" data-filter="all">All Projects</button>
+                    <button type="button" class="project-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-ink-700 border border-vintage-300 hover:bg-vintage-100 transition-all" data-filter="tableau">Tableau</button>
+                    <button type="button" class="project-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-ink-700 border border-vintage-300 hover:bg-vintage-100 transition-all" data-filter="powerbi">Power BI</button>
+                    <button type="button" class="project-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-ink-700 border border-vintage-300 hover:bg-vintage-100 transition-all" data-filter="python">Python & ML</button>
+                </div>
+
+                <!-- Projects Cards Grid (Interactive Pagination via script.js) -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                    
+                    <!-- Card 1: Trading & Analytics -->
+                    <div class="project-card flex flex-col bg-white rounded-2xl border border-vintage-200 shadow-2xs overflow-hidden hover:shadow-md hover:border-sage-600/40 transition-all duration-300 group" data-category="tableau sql" data-aos="fade-up">
+                        <div class="relative overflow-hidden aspect-video bg-vintage-100">
+                            <img src="Images/ProjectTrading.png" alt="Trading & Analytics Dashboard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full text-[11px] font-bold font-serif bg-[#FAF7F2]/95 backdrop-blur-xs text-sage-900 border border-vintage-200/60 shadow-2xs">Tableau</span>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow justify-between">
+                            <div>
+                                <h4 class="font-serif text-base font-bold text-ink-900 mb-2 group-hover:text-sage-800 transition-colors">Trading & Analytics Dashboard</h4>
+                                <p class="text-xs text-ink-600 leading-relaxed mb-4">An interactive dashboard to visualize trading data, track performance metrics, and identify key trends in financial markets.</p>
+                                <div class="flex flex-wrap gap-1.5 mb-6">
+                                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-[#FAF7F2] text-ink-800 border border-vintage-200">SQL</span>
+                                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-sage-100 text-sage-800 border border-sage-200">Tableau</span>
+                                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-[#FAF7F2] text-ink-800 border border-vintage-200">Financial Analysis</span>
+                                </div>
+                            </div>
+                            <a href="https://public.tableau.com/app/profile/muhammad.haris.fariyano/vizzes" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#FAF7F2] border border-vintage-300 hover:bg-sage-800 hover:border-sage-800 hover:text-vintage-50 text-xs font-semibold text-ink-800 shadow-2xs transition-all">
+                                <i class="fas fa-chart-area"></i> View on Tableau Public
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Sales Performance -->
+                    <div class="project-card flex flex-col bg-white rounded-2xl border border-vintage-200 shadow-2xs overflow-hidden hover:shadow-md hover:border-sage-600/40 transition-all duration-300 group" data-category="tableau sql" data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative overflow-hidden aspect-video bg-vintage-100">
+                            <img src="Images/ProjectSales.png" alt="Sales Performance Dashboard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full text-[11px] font-bold font-serif bg-[#FAF7F2]/95 backdrop-blur-xs text-sage-900 border border-vintage-200/60 shadow-2xs">Tableau</span>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow justify-between">
+                            <div>
+                                <h4 class="font-serif text-base font-bold text-ink-900 mb-2 group-hover:text-sage-800 transition-colors">Sales Performance Dashboard</h4>
+                                <p class="text-xs text-ink-600 leading-relaxed mb-4">Interactive dashboard built to track key sales metrics, identify trends, and provide actionable insights for decision-makers.</p>
+                                <div class="flex flex-wrap gap-1.5 mb-6">
+                                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-[#FAF7F2] text-ink-800 border border-vintage-200">SQL</span>
+                                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-sage-100 text-sage-800 border border-sage-200">Tableau</span>
+                                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-[#FAF7F2] text-ink-800 border border-vintage-200">Sales Analytics</span>
+                                </div>
+                            </div>
+                            <a href="https://public.tableau.com/app/profile/muhammad.haris.fariyano/vizzes" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#FAF7F2] border border-vintage-300 hover:bg-sage-800 hover:border-sage-800 hover:text-vintage-50 text-xs font-semibold text-ink-800 shadow-2xs transition-all">
+                                <i class="fas fa-chart-area"></i> View on Tableau Public
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Regional Performance Summary -->
+                    <div class="project-card flex flex-col bg-white rounded-2xl border border-vintage-200 shadow-2xs overflow-hidden hover:shadow-md hover:border-sage-600/40 transition-all duration-300 group" data-category="tableau" data-aos="fade-up" data-aos-delay="200">
+                        <div class="relative overflow-hidden aspect-video bg-vintage-100">
+                            <img src="Images/ProjectRegional.png" alt="Regional Performance Summary" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full text-[11px] font-bold font-serif bg-[#FAF7F2]/95 backdrop-blur-xs text-sage-900 border border-vintage-200/60 shadow-2xs">Tableau</span>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow justify-between">
+                            <div>
+                                <h4 class="font-serif text-base font-bold text-ink-900 mb-2 group-hover:text-sage-800 transition-colors">Regional Performance Summary</h4>
+                                <p class="text-xs text-ink-600 leading-relaxed mb-4">A Tableau dashboard providing an overview of regional performance, highlighting key metrics and geographical insights.</p>
+                                <div class="flex flex-wrap gap-1.5 mb-6">
+                                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-[#FAF7F2] text-ink-800 border border-vintage-200">Excel</span>
+                                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-sage-100 text-sage-800 border border-sage-200">Tableau</span>
+                                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-[#FAF7F2] text-ink-800 border border-vintage-200">Geospatial</span>
+                                </div>
+                            </div>
+                            <a href="https://public.tableau.com/app/profile/muhammad.haris.fariyano/vizzes" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#FAF7F2] border border-vintage-300 hover:bg-sage-800 hover:border-sage-800 hover:text-vintage-50 text-xs font-semibold text-ink-800 shadow-2xs transition-all">
+                                <i class="fas fa-chart-area"></i> View on Tableau Public
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: AdventureWorks Performance Report -->
+                    <div class="project-card hidden flex-col bg-white rounded-2xl border border-vintage-200 shadow-2xs overflow-hidden hover:shadow-md hover:border-sage-600/40 transition-all duration-300 group" data-category="powerbi sql" data-aos="fade-up">
+                        <div class="relative overflow-hidden aspect-video bg-vintage-100">
+                            <img src="Images/AdventureWork.png" alt="AdventureWorks Performance Report" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full text-[11px] font-bold font-serif bg-[#FAF7F2]/95 backdrop-blur-xs text-brass-800 border border-vintage-200/60 shadow-2xs">Power BI</span>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow justify-between">
+                            <div>
+                                <h4 class="font-serif text-base font-bold text-ink-900 mb-2 group-hover:text-sage-800 transition-colors">AdventureWorks Performance Report</h4>
+                                <p class="text-xs text-ink-600 leading-relaxed mb-4">Developed an interactive Power BI report to analyze sales and operational performance for AdventureWorks.</p>
+                                <div class="flex flex-wrap gap-1.5 mb-6">
+                                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-[#FAF7F2] text-ink-800 border border-vintage-200">SQL</span>
+                                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-brass-100 text-brass-800 border border-brass-200">Power BI</span>
+                                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-[#FAF7F2] text-ink-800 border border-vintage-200">Reporting</span>
+                                </div>
+                            </div>
+                            <a href="https://github.com/harisfariyano" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#FAF7F2] border border-vintage-300 hover:bg-sage-800 hover:border-sage-800 hover:text-vintage-50 text-xs font-semibold text-ink-800 shadow-2xs transition-all">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: AdventureWorks Sales Dashboard -->
+                    <div class="project-card hidden flex-col bg-white rounded-2xl border border-vintage-200 shadow-2xs overflow-hidden hover:shadow-md hover:border-sage-600/40 transition-all duration-300 group" data-category="powerbi sql" data-aos="fade-up">
+                        <div class="relative overflow-hidden aspect-video bg-vintage-100">
+                            <img src="Images/SalesDashboard.png" alt="AdventureWorks Sales Dashboard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full text-[11px] font-bold font-serif bg-[#FAF7F2]/95 backdrop-blur-xs text-brass-800 border border-vintage-200/60 shadow-2xs">Power BI</span>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow justify-between">
+                            <div>
+                                <h4 class="font-serif text-base font-bold text-ink-900 mb-2 group-hover:text-sage-800 transition-colors">AdventureWorks Sales Dashboard</h4>
+                                <p class="text-xs text-ink-600 leading-relaxed mb-4">A comprehensive sales dashboard offering deep insights into sales trends, customer behavior, and product performance.</p>
+                                <div class="flex flex-wrap gap-1.5 mb-6">
+                                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-[#FAF7F2] text-ink-800 border border-vintage-200">SQL</span>
+                                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-brass-100 text-brass-800 border border-brass-200">Power BI</span>
+                                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-[#FAF7F2] text-ink-800 border border-vintage-200">Sales Trends</span>
+                                </div>
+                            </div>
+                            <a href="https://github.com/harisfariyano" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#FAF7F2] border border-vintage-300 hover:bg-sage-800 hover:border-sage-800 hover:text-vintage-50 text-xs font-semibold text-ink-800 shadow-2xs transition-all">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 6: Tailwind Traders Global Overview -->
+                    <div class="project-card hidden flex-col bg-white rounded-2xl border border-vintage-200 shadow-2xs overflow-hidden hover:shadow-md hover:border-sage-600/40 transition-all duration-300 group" data-category="powerbi" data-aos="fade-up">
+                        <div class="relative overflow-hidden aspect-video bg-vintage-100">
+                            <img src="Images/Tailwaind.png" alt="Tailwind Traders Global Overview Report" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full text-[11px] font-bold font-serif bg-[#FAF7F2]/95 backdrop-blur-xs text-brass-800 border border-vintage-200/60 shadow-2xs">Power BI</span>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow justify-between">
+                            <div>
+                                <h4 class="font-serif text-base font-bold text-ink-900 mb-2 group-hover:text-sage-800 transition-colors">Tailwind Traders Global Overview Report</h4>
+                                <p class="text-xs text-ink-600 leading-relaxed mb-4">Global overview report for Tailwind Traders built with Power BI, providing KPIs and strategic insights for operations.</p>
+                                <div class="flex flex-wrap gap-1.5 mb-6">
+                                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-[#FAF7F2] text-ink-800 border border-vintage-200">Data Modeling</span>
+                                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-brass-100 text-brass-800 border border-brass-200">Power BI</span>
+                                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-[#FAF7F2] text-ink-800 border border-vintage-200">Global Analysis</span>
+                                </div>
+                            </div>
+                            <a href="https://github.com/harisfariyano/PowerBi/blob/main/Tailwind%20Traders%20Report.pbix" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#FAF7F2] border border-vintage-300 hover:bg-sage-800 hover:border-sage-800 hover:text-vintage-50 text-xs font-semibold text-ink-800 shadow-2xs transition-all">
+                                <i class="fab fa-github"></i> Download .PBIX (GitHub)
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 7: Supply Chain Delay Analysis -->
+                    <div class="project-card hidden flex-col bg-white rounded-2xl border border-vintage-200 shadow-2xs overflow-hidden hover:shadow-md hover:border-sage-600/40 transition-all duration-300 group" data-category="powerbi" data-aos="fade-up">
+                        <div class="relative overflow-hidden aspect-video bg-vintage-100">
+                            <img src="Images/SupplyChain.png" alt="Supply Chain Delay Analysis Dashboard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full text-[11px] font-bold font-serif bg-[#FAF7F2]/95 backdrop-blur-xs text-brass-800 border border-vintage-200/60 shadow-2xs">Power BI</span>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow justify-between">
+                            <div>
+                                <h4 class="font-serif text-base font-bold text-ink-900 mb-2 group-hover:text-sage-800 transition-colors">Supply Chain Delay Analysis Dashboard</h4>
+                                <p class="text-xs text-ink-600 leading-relaxed mb-4">Interactive dashboard analyzing supply chain bottlenecks, tracking order fulfillment times, and transit performance.</p>
+                                <div class="flex flex-wrap gap-1.5 mb-6">
+                                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-brass-100 text-brass-800 border border-brass-200">Power BI</span>
+                                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-[#FAF7F2] text-ink-800 border border-vintage-200">Supply Chain</span>
+                                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-[#FAF7F2] text-ink-800 border border-vintage-200">Logistics KPIs</span>
+                                </div>
+                            </div>
+                            <a href="https://github.com/harisfariyano/PowerBi/blob/main/Supply%20Chain%20Delay%20Analysis%20Dashboard.pbix" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#FAF7F2] border border-vintage-300 hover:bg-sage-800 hover:border-sage-800 hover:text-vintage-50 text-xs font-semibold text-ink-800 shadow-2xs transition-all">
+                                <i class="fab fa-github"></i> Download .PBIX (GitHub)
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 8: Digital Sales Performance -->
+                    <div class="project-card hidden flex-col bg-white rounded-2xl border border-vintage-200 shadow-2xs overflow-hidden hover:shadow-md hover:border-sage-600/40 transition-all duration-300 group" data-category="looker" data-aos="fade-up">
+                        <div class="relative overflow-hidden aspect-video bg-vintage-100">
+                            <img src="Images/DigitalSales.png" alt="Digital Sales Performance Dashboard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full text-[11px] font-bold font-serif bg-[#FAF7F2]/95 backdrop-blur-xs text-sage-900 border border-vintage-200/60 shadow-2xs">Looker Studio</span>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow justify-between">
+                            <div>
+                                <h4 class="font-serif text-base font-bold text-ink-900 mb-2 group-hover:text-sage-800 transition-colors">Digital Sales Performance Dashboard</h4>
+                                <p class="text-xs text-ink-600 leading-relaxed mb-4">Created a comprehensive digital sales dashboard in Looker Studio tracking sales metrics and optimization avenues.</p>
+                                <div class="flex flex-wrap gap-1.5 mb-6">
+                                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-sage-100 text-sage-800 border border-sage-200">Looker Studio</span>
+                                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-[#FAF7F2] text-ink-800 border border-vintage-200">Sales Analytics</span>
+                                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-[#FAF7F2] text-ink-800 border border-vintage-200">Google Ecosystem</span>
+                                </div>
+                            </div>
+                            <a href="https://u/1/reporting/97c85ac1-02b5-4af7-bde6-8e9a242e9b77/page/eUtOF/edit" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#FAF7F2] border border-vintage-300 hover:bg-sage-800 hover:border-sage-800 hover:text-vintage-50 text-xs font-semibold text-ink-800 shadow-2xs transition-all">
+                                <i class="fas fa-arrow-up-right-from-square"></i> Open Live Dashboard
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 9: Employee Attrition Prediction -->
+                    <div class="project-card hidden flex-col bg-white rounded-2xl border border-vintage-200 shadow-2xs overflow-hidden hover:shadow-md hover:border-sage-600/40 transition-all duration-300 group" data-category="python" data-aos="fade-up">
+                        <div class="relative overflow-hidden aspect-video bg-vintage-100">
+                            <img src="Images/HR.png" alt="Employee Attrition Prediction" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full text-[11px] font-bold font-serif bg-[#FAF7F2]/95 backdrop-blur-xs text-brass-800 border border-vintage-200/60 shadow-2xs">Python & ML</span>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow justify-between">
+                            <div>
+                                <h4 class="font-serif text-base font-bold text-ink-900 mb-2 group-hover:text-sage-800 transition-colors">Employee Attrition Prediction with ML</h4>
+                                <p class="text-xs text-ink-600 leading-relaxed mb-4">Applied tree-based machine learning models in Python to predict employee turnover and pinpoint critical retention factors.</p>
+                                <div class="flex flex-wrap gap-1.5 mb-6">
+                                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-brass-100 text-brass-800 border border-brass-200">Python</span>
+                                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-[#FAF7F2] text-ink-800 border border-vintage-200">Machine Learning</span>
+                                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-[#FAF7F2] text-ink-800 border border-vintage-200">HR Analytics</span>
+                                </div>
+                            </div>
+                            <a href="https://drive.google.com/file/d/1BeKEv_lC-J4jcyv7wr5pf8JQ5d7t-GNA" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#FAF7F2] border border-vintage-300 hover:bg-sage-800 hover:border-sage-800 hover:text-vintage-50 text-xs font-semibold text-ink-800 shadow-2xs transition-all">
+                                <i class="fas fa-code"></i> View Notebook (Colab)
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 10: Australia Wildfire EDA -->
+                    <div class="project-card hidden flex-col bg-white rounded-2xl border border-vintage-200 shadow-2xs overflow-hidden hover:shadow-md hover:border-sage-600/40 transition-all duration-300 group" data-category="python" data-aos="fade-up">
+                        <div class="relative overflow-hidden aspect-video bg-vintage-100">
+                            <img src="Images/DataVizPython.png" alt="Analyzing Wildfire Activities in Australia" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full text-[11px] font-bold font-serif bg-[#FAF7F2]/95 backdrop-blur-xs text-brass-800 border border-vintage-200/60 shadow-2xs">Python</span>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow justify-between">
+                            <div>
+                                <h4 class="font-serif text-base font-bold text-ink-900 mb-2 group-hover:text-sage-800 transition-colors">Wildfire Activities in Australia (EDA)</h4>
+                                <p class="text-xs text-ink-600 leading-relaxed mb-4">Investigated patterns and seasonal trends in wildfire activities across Australia using Python, generating key insights.</p>
+                                <div class="flex flex-wrap gap-1.5 mb-6">
+                                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-brass-100 text-brass-800 border border-brass-200">Python</span>
+                                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-[#FAF7F2] text-ink-800 border border-vintage-200">Pandas</span>
+                                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-[#FAF7F2] text-ink-800 border border-vintage-200">Data Analytics</span>
+                                </div>
+                            </div>
+                            <a href="https://drive.google.com/file/d/1jonULRPeMVIzo6ceA9NiILPirrGEdZDy" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#FAF7F2] border border-vintage-300 hover:bg-sage-800 hover:border-sage-800 hover:text-vintage-50 text-xs font-semibold text-ink-800 shadow-2xs transition-all">
+                                <i class="fas fa-code"></i> View Notebook (Colab)
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Projects Pagination -->
+                <div class="flex items-center justify-center gap-3">
+                    <button type="button" id="prevPage" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold bg-white border border-vintage-300 text-ink-800 hover:bg-vintage-100 transition-all shadow-2xs">
+                        <i class="fas fa-chevron-left text-[10px]"></i> Previous
+                    </button>
+                    <span id="pageIndicator" class="px-4 py-2 rounded-xl text-xs font-bold bg-[#EDE6DA] text-ink-900 border border-vintage-300">1 / 4</span>
+                    <button type="button" id="nextPage" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold bg-white border border-vintage-300 text-ink-800 hover:bg-vintage-100 transition-all shadow-2xs">
+                        Next <i class="fas fa-chevron-right text-[10px]"></i>
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= CERTIFICATIONS SECTION (VINTAGE ELEGANT) ================= -->
+        <section id="certification" class="py-20 lg:py-28 bg-[#F4EFE6]/50 border-b border-vintage-200/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-12" data-aos="fade-up">
+                    <span class="text-xs font-bold uppercase tracking-widest text-brass-700 mb-2 block">Verified Credentials</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-ink-900 tracking-tight">Professional Certifications</h2>
+                    <div class="w-16 h-0.5 bg-brass-600 mx-auto mt-4"></div>
+                    <p class="text-sm text-ink-600 mt-4">Industry recognized credentials validating competencies in Data Analytics, Power BI, Tableau, and Machine Learning.</p>
+                </div>
+
+                <!-- Certifications Cards Grid (Interactive Pagination via script.js) -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                    
+                    <!-- Cert 1: IBM Data Analytics Excel & R -->
+                    <div class="certification-card flex flex-col bg-white rounded-2xl border border-vintage-200 p-6 hover:shadow-md hover:border-sage-600/40 transition-all duration-300 justify-between group shadow-2xs" data-aos="fade-up">
+                        <div>
+                            <div class="flex items-center justify-between gap-4 mb-4">
+                                <div class="w-12 h-12 rounded-xl bg-[#FAF7F2] border border-vintage-200 p-2 flex items-center justify-center">
+                                    <img src="Images/ibm.svg" alt="IBM" class="max-h-full max-w-full object-contain">
+                                </div>
+                                <span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-sage-100 text-sage-800 border border-sage-200">IBM</span>
+                            </div>
+                            <h4 class="font-serif text-base font-bold text-ink-900 mb-1 group-hover:text-sage-800 transition-colors">IBM Data Analytics with Excel and R</h4>
+                            <p class="text-xs text-ink-500 font-medium mb-3">Issued: Apr 2025</p>
+                            <p class="text-xs text-ink-600 leading-relaxed mb-4">Developed skills in data wrangling, statistical analysis, and reporting using Excel and R programming language.</p>
+                        </div>
+                        <a href="https://www.coursera.org/account/accomplishments/specialization/7ZX8O3MSOMU0" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#FAF7F2] border border-vintage-300 text-xs font-semibold text-ink-800 hover:bg-sage-800 hover:border-sage-800 hover:text-vintage-50 transition-all shadow-2xs">
+                            <i class="fas fa-award text-brass-700 group-hover:text-vintage-50"></i> View Credential
+                        </a>
+                    </div>
+
+                    <!-- Cert 2: Microsoft Power BI Data Analyst -->
+                    <div class="certification-card flex flex-col bg-white rounded-2xl border border-vintage-200 p-6 hover:shadow-md hover:border-sage-600/40 transition-all duration-300 justify-between group shadow-2xs" data-aos="fade-up" data-aos-delay="100">
+                        <div>
+                            <div class="flex items-center justify-between gap-4 mb-4">
+                                <div class="w-12 h-12 rounded-xl bg-[#FAF7F2] border border-vintage-200 p-2 flex items-center justify-center">
+                                    <img src="Images/microsoft.png" alt="Microsoft" class="max-h-full max-w-full object-contain">
+                                </div>
+                                <span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-brass-100 text-brass-800 border border-brass-200">Microsoft</span>
+                            </div>
+                            <h4 class="font-serif text-base font-bold text-ink-900 mb-1 group-hover:text-sage-800 transition-colors">Microsoft Power BI Data Analyst</h4>
+                            <p class="text-xs text-ink-500 font-medium mb-3">Issued: May 2025</p>
+                            <p class="text-xs text-ink-600 leading-relaxed mb-4">Demonstrated expertise in designing, building, and deploying scalable data models and reports using Power BI.</p>
+                        </div>
+                        <a href="https://www.coursera.org/account/accomplishments/professional-cert/certificate/7V25BBU7468Z" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#FAF7F2] border border-vintage-300 text-xs font-semibold text-ink-800 hover:bg-sage-800 hover:border-sage-800 hover:text-vintage-50 transition-all shadow-2xs">
+                            <i class="fas fa-award text-brass-700 group-hover:text-vintage-50"></i> View Credential
+                        </a>
+                    </div>
+
+                    <!-- Cert 3: Data Modeling in Power BI -->
+                    <div class="certification-card flex flex-col bg-white rounded-2xl border border-vintage-200 p-6 hover:shadow-md hover:border-sage-600/40 transition-all duration-300 justify-between group shadow-2xs" data-aos="fade-up" data-aos-delay="200">
+                        <div>
+                            <div class="flex items-center justify-between gap-4 mb-4">
+                                <div class="w-12 h-12 rounded-xl bg-[#FAF7F2] border border-vintage-200 p-2 flex items-center justify-center">
+                                    <img src="Images/microsoft.png" alt="Microsoft" class="max-h-full max-w-full object-contain">
+                                </div>
+                                <span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-brass-100 text-brass-800 border border-brass-200">Microsoft</span>
+                            </div>
+                            <h4 class="font-serif text-base font-bold text-ink-900 mb-1 group-hover:text-sage-800 transition-colors">Data Modeling in Power BI</h4>
+                            <p class="text-xs text-ink-500 font-medium mb-3">Issued: May 2025</p>
+                            <p class="text-xs text-ink-600 leading-relaxed mb-4">Validated expertise in designing robust data models, optimizing transformations, and creating relationship structures in Power BI.</p>
+                        </div>
+                        <a href="https://www.coursera.org/account/accomplishments/verify/N1GDKU6VEOJY" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#FAF7F2] border border-vintage-300 text-xs font-semibold text-ink-800 hover:bg-sage-800 hover:border-sage-800 hover:text-vintage-50 transition-all shadow-2xs">
+                            <i class="fas fa-award text-brass-700 group-hover:text-vintage-50"></i> View Credential
+                        </a>
+                    </div>
+
+                    <!-- Cert 4: Tableau Data Visualization -->
+                    <div class="certification-card hidden flex-col bg-white rounded-2xl border border-vintage-200 p-6 hover:shadow-md hover:border-sage-600/40 transition-all duration-300 justify-between group shadow-2xs" data-aos="fade-up">
+                        <div>
+                            <div class="flex items-center justify-between gap-4 mb-4">
+                                <div class="w-12 h-12 rounded-xl bg-[#FAF7F2] border border-vintage-200 p-2 flex items-center justify-center">
+                                    <img src="Images/tableau.svg" alt="Tableau" class="max-h-full max-w-full object-contain">
+                                </div>
+                                <span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-vintage-100 text-ink-800 border border-vintage-300">Tableau</span>
+                            </div>
+                            <h4 class="font-serif text-base font-bold text-ink-900 mb-1 group-hover:text-sage-800 transition-colors">Data Visualization with Tableau</h4>
+                            <p class="text-xs text-ink-500 font-medium mb-3">Issued: May 2025</p>
+                            <p class="text-xs text-ink-600 leading-relaxed mb-4">Validated skills in connecting to data sources, building advanced calculated visualizers, and interactive dashboards.</p>
+                        </div>
+                        <a href="https://www.coursera.org/account/accomplishments/records/2P05BJ86MK60" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#FAF7F2] border border-vintage-300 text-xs font-semibold text-ink-800 hover:bg-sage-800 hover:border-sage-800 hover:text-vintage-50 transition-all shadow-2xs">
+                            <i class="fas fa-award text-brass-700 group-hover:text-vintage-50"></i> View Credential
+                        </a>
+                    </div>
+
+                    <!-- Cert 5: Tableau Business Intelligence Analyst -->
+                    <div class="certification-card hidden flex-col bg-white rounded-2xl border border-vintage-200 p-6 hover:shadow-md hover:border-sage-600/40 transition-all duration-300 justify-between group shadow-2xs" data-aos="fade-up">
+                        <div>
+                            <div class="flex items-center justify-between gap-4 mb-4">
+                                <div class="w-12 h-12 rounded-xl bg-[#FAF7F2] border border-vintage-200 p-2 flex items-center justify-center">
+                                    <img src="Images/tableau.svg" alt="Tableau" class="max-h-full max-w-full object-contain">
+                                </div>
+                                <span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-vintage-100 text-ink-800 border border-vintage-300">Tableau</span>
+                            </div>
+                            <h4 class="font-serif text-base font-bold text-ink-900 mb-1 group-hover:text-sage-800 transition-colors">Tableau Business Intelligence Analyst</h4>
+                            <p class="text-xs text-ink-500 font-medium mb-3">Issued: May 2025</p>
+                            <p class="text-xs text-ink-600 leading-relaxed mb-4">Developed expertise in designing executive dashboards, complex analysis, and translating business requirements.</p>
+                        </div>
+                        <a href="https://www.coursera.org/account/accomplishments/verify/DTYL5F5750YA" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#FAF7F2] border border-vintage-300 text-xs font-semibold text-ink-800 hover:bg-sage-800 hover:border-sage-800 hover:text-vintage-50 transition-all shadow-2xs">
+                            <i class="fas fa-award text-brass-700 group-hover:text-vintage-50"></i> View Credential
+                        </a>
+                    </div>
+
+                    <!-- Cert 6: Google Advanced Data Analytics -->
+                    <div class="certification-card hidden flex-col bg-white rounded-2xl border border-vintage-200 p-6 hover:shadow-md hover:border-sage-600/40 transition-all duration-300 justify-between group shadow-2xs" data-aos="fade-up">
+                        <div>
+                            <div class="flex items-center justify-between gap-4 mb-4">
+                                <div class="w-12 h-12 rounded-xl bg-[#FAF7F2] border border-vintage-200 p-2 flex items-center justify-center">
+                                    <img src="Images/google.png" alt="Google" class="max-h-full max-w-full object-contain">
+                                </div>
+                                <span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-sage-100 text-sage-800 border border-sage-200">Google</span>
+                            </div>
+                            <h4 class="font-serif text-base font-bold text-ink-900 mb-1 group-hover:text-sage-800 transition-colors">Google Advanced Data Analytics</h4>
+                            <p class="text-xs text-ink-500 font-medium mb-3">Issued: Jun 2025</p>
+                            <p class="text-xs text-ink-600 leading-relaxed mb-4">Mastered advanced data analytics skills including statistical modeling, machine learning, and Python programming.</p>
+                        </div>
+                        <a href="https://www.coursera.org/account/accomplishments/professional-cert/certificate/9ME42PB9UUDS" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#FAF7F2] border border-vintage-300 text-xs font-semibold text-ink-800 hover:bg-sage-800 hover:border-sage-800 hover:text-vintage-50 transition-all shadow-2xs">
+                            <i class="fas fa-award text-brass-700 group-hover:text-vintage-50"></i> View Credential
+                        </a>
+                    </div>
+
+                    <!-- Cert 7: CFI Advanced Tableau -->
+                    <div class="certification-card hidden flex-col bg-white rounded-2xl border border-vintage-200 p-6 hover:shadow-md hover:border-sage-600/40 transition-all duration-300 justify-between group shadow-2xs" data-aos="fade-up">
+                        <div>
+                            <div class="flex items-center justify-between gap-4 mb-4">
+                                <div class="w-12 h-12 rounded-xl bg-[#FAF7F2] border border-vintage-200 p-2 flex items-center justify-center">
+                                    <img src="Images/CFI.png" alt="CFI" class="max-h-full max-w-full object-contain">
+                                </div>
+                                <span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-brass-100 text-brass-800 border border-brass-200">CFI</span>
+                            </div>
+                            <h4 class="font-serif text-base font-bold text-ink-900 mb-1 group-hover:text-sage-800 transition-colors">Advanced Tableau</h4>
+                            <p class="text-xs text-ink-500 font-medium mb-3">Issued: Jun 2025</p>
+                            <p class="text-xs text-ink-600 leading-relaxed mb-4">Enhanced proficiency in advanced Tableau functionalities, Level of Detail (LOD) expressions, and best practices.</p>
+                        </div>
+                        <a href="https://www.coursera.org/account/accomplishments/specialization/7J10WW1BXY6P" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#FAF7F2] border border-vintage-300 text-xs font-semibold text-ink-800 hover:bg-sage-800 hover:border-sage-800 hover:text-vintage-50 transition-all shadow-2xs">
+                            <i class="fas fa-award text-brass-700 group-hover:text-vintage-50"></i> View Credential
+                        </a>
+                    </div>
+
+                    <!-- Cert 8: IBM Data Analyst (Python) -->
+                    <div class="certification-card hidden flex-col bg-white rounded-2xl border border-vintage-200 p-6 hover:shadow-md hover:border-sage-600/40 transition-all duration-300 justify-between group shadow-2xs" data-aos="fade-up">
+                        <div>
+                            <div class="flex items-center justify-between gap-4 mb-4">
+                                <div class="w-12 h-12 rounded-xl bg-[#FAF7F2] border border-vintage-200 p-2 flex items-center justify-center">
+                                    <img src="Images/ibm.svg" alt="IBM" class="max-h-full max-w-full object-contain">
+                                </div>
+                                <span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-sage-100 text-sage-800 border border-sage-200">IBM</span>
+                            </div>
+                            <h4 class="font-serif text-base font-bold text-ink-900 mb-1 group-hover:text-sage-800 transition-colors">IBM Data Analyst Professional Certificate</h4>
+                            <p class="text-xs text-ink-500 font-medium mb-3">Issued: Jun 2025</p>
+                            <p class="text-xs text-ink-600 leading-relaxed mb-4">Gained practical experience in data analysis using Python, including Pandas, NumPy, Matplotlib, and SQL queries.</p>
+                        </div>
+                        <a href="https://www.coursera.org/account/accomplishments/professional-cert/certificate/5Z4YRN5F8VA7" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#FAF7F2] border border-vintage-300 text-xs font-semibold text-ink-800 hover:bg-sage-800 hover:border-sage-800 hover:text-vintage-50 transition-all shadow-2xs">
+                            <i class="fas fa-award text-brass-700 group-hover:text-vintage-50"></i> View Credential
+                        </a>
+                    </div>
+
+                    <!-- Cert 9: Unilever Supply Chain -->
+                    <div class="certification-card hidden flex-col bg-white rounded-2xl border border-vintage-200 p-6 hover:shadow-md hover:border-sage-600/40 transition-all duration-300 justify-between group shadow-2xs" data-aos="fade-up">
+                        <div>
+                            <div class="flex items-center justify-between gap-4 mb-4">
+                                <div class="w-12 h-12 rounded-xl bg-[#FAF7F2] border border-vintage-200 p-2 flex items-center justify-center">
+                                    <img src="Images/Unilever.webp" alt="Unilever" class="max-h-full max-w-full object-contain">
+                                </div>
+                                <span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-sage-100 text-sage-800 border border-sage-200">Unilever</span>
+                            </div>
+                            <h4 class="font-serif text-base font-bold text-ink-900 mb-1 group-hover:text-sage-800 transition-colors">Unilever Supply Chain Data Analyst</h4>
+                            <p class="text-xs text-ink-500 font-medium mb-3">Issued: Jul 2025</p>
+                            <p class="text-xs text-ink-600 leading-relaxed mb-4">Applied analytics to supply chain datasets, detecting bottlenecks, and optimizing logistics performance.</p>
+                        </div>
+                        <a href="https://www.coursera.org/account/accomplishments/verify/4H7N45M2L172" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#FAF7F2] border border-vintage-300 text-xs font-semibold text-ink-800 hover:bg-sage-800 hover:border-sage-800 hover:text-vintage-50 transition-all shadow-2xs">
+                            <i class="fas fa-award text-brass-700 group-hover:text-vintage-50"></i> View Credential
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Certification Pagination -->
+                <div class="flex items-center justify-center gap-3">
+                    <button type="button" id="prevCertPage" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold bg-white border border-vintage-300 text-ink-800 hover:bg-vintage-100 transition-all shadow-2xs">
+                        <i class="fas fa-chevron-left text-[10px]"></i> Previous
+                    </button>
+                    <span id="certPageIndicator" class="px-4 py-2 rounded-xl text-xs font-bold bg-[#EDE6DA] text-ink-900 border border-vintage-300">1 / 3</span>
+                    <button type="button" id="nextCertPage" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold bg-white border border-vintage-300 text-ink-800 hover:bg-vintage-100 transition-all shadow-2xs">
+                        Next <i class="fas fa-chevron-right text-[10px]"></i>
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= CONTACT SECTION (VINTAGE ELEGANT) ================= -->
+        <section id="contact" class="py-20 lg:py-28 bg-[#FAF7F2]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                    <span class="text-xs font-bold uppercase tracking-widest text-brass-700 mb-2 block">Let's Connect</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-ink-900 tracking-tight">Get In Touch</h2>
+                    <div class="w-16 h-0.5 bg-brass-600 mx-auto mt-4"></div>
+                    <p class="text-sm text-ink-600 mt-4">Have an analytics project, business intelligence opportunity, or collaboration in mind? Feel free to reach out!</p>
+                </div>
+
+                <div class="grid lg:grid-cols-12 gap-8 items-start">
+                    
+                    <!-- Contact Channels Left -->
+                    <div class="lg:col-span-5 space-y-4" data-aos="fade-right">
+                        
+                        <!-- Email Card -->
+                        <a href="mailto:Muhamamdharisfariyano@gmail.com" class="flex items-center gap-4 p-5 rounded-2xl bg-white border border-vintage-200 hover:border-sage-600/50 hover:shadow-md transition-all group">
+                            <div class="w-12 h-12 rounded-xl bg-sage-50 text-sage-800 border border-sage-200 flex items-center justify-center text-lg group-hover:bg-sage-800 group-hover:text-vintage-50 transition-colors">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs font-medium text-ink-400 uppercase tracking-wider">Email</span>
+                                <span class="text-sm font-semibold text-ink-900 group-hover:text-sage-800 transition-colors">Muhamamdharisfariyano@gmail.com</span>
+                            </div>
+                        </a>
+
+                        <!-- WhatsApp Card -->
+                        <a href="https://wa.me/6285892640801" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-5 rounded-2xl bg-white border border-vintage-200 hover:border-sage-600/50 hover:shadow-md transition-all group">
+                            <div class="w-12 h-12 rounded-xl bg-[#F4EFE6] text-sage-800 border border-sage-200 flex items-center justify-center text-lg group-hover:bg-sage-800 group-hover:text-vintage-50 transition-colors">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs font-medium text-ink-400 uppercase tracking-wider">WhatsApp / Mobile</span>
+                                <span class="text-sm font-semibold text-ink-900 group-hover:text-sage-800 transition-colors">+62 858-9264-0801</span>
+                            </div>
+                        </a>
+
+                        <!-- Location Card -->
+                        <div class="flex items-center gap-4 p-5 rounded-2xl bg-white border border-vintage-200">
+                            <div class="w-12 h-12 rounded-xl bg-vintage-100 text-brass-800 border border-vintage-300 flex items-center justify-center text-lg">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs font-medium text-ink-400 uppercase tracking-wider">Location</span>
+                                <span class="text-sm font-semibold text-ink-900">Brebes, Jawa Tengah, Indonesia</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Quick Message Form Right -->
+                    <div class="lg:col-span-7" data-aos="fade-left">
+                        <div class="bg-white p-8 rounded-3xl border border-vintage-200 shadow-sm">
+                            <h3 class="font-serif text-xl font-bold text-ink-900 mb-1">Quick Inquiries</h3>
+                            <p class="text-xs text-ink-500 mb-6">Send a direct message directly to my WhatsApp</p>
+
+                            <form id="quick-contact-form" class="space-y-4">
+                                <div>
+                                    <label for="sender-name" class="block text-xs font-semibold text-ink-800 mb-1.5">Your Name / Company</label>
+                                    <input type="text" id="sender-name" required placeholder="e.g. John Doe / Tech Corp" class="w-full px-4 py-2.5 rounded-xl border border-vintage-200 bg-[#FAF7F2]/60 text-ink-900 placeholder:text-ink-400 text-sm focus:outline-none focus:ring-2 focus:ring-sage-700/20 focus:border-sage-700 transition-all">
+                                </div>
+                                
+                                <div>
+                                    <label for="sender-message" class="block text-xs font-semibold text-ink-800 mb-1.5">Message / Project Details</label>
+                                    <textarea id="sender-message" rows="4" required placeholder="Tell me about your data analytics needs, project scope, or opportunity..." class="w-full px-4 py-2.5 rounded-xl border border-vintage-200 bg-[#FAF7F2]/60 text-ink-900 placeholder:text-ink-400 text-sm focus:outline-none focus:ring-2 focus:ring-sage-700/20 focus:border-sage-700 transition-all resize-none"></textarea>
+                                </div>
+
+                                <button type="submit" class="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-sage-800 text-vintage-50 text-sm font-semibold hover:bg-sage-900 shadow-sm hover:shadow-md transition-all border border-sage-900">
+                                    <i class="fab fa-whatsapp text-base"></i>
+                                    <span>Send Directly via WhatsApp</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================= FOOTER (VINTAGE ELEGANT) ================= -->
+    <footer class="bg-[#241E1A] text-vintage-200 border-t border-vintage-800 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-brass-600 text-vintage-950 font-serif font-bold text-xs flex items-center justify-center">HF</div>
+                <p class="text-xs text-vintage-300">&copy; 2025 Muhammad Haris Fariyano. All Rights Reserved.</p>
             </div>
 
-            <div class="skill-category" data-aos="fade-up" data-aos-delay="500">
-                <h3>Data Analytics & Database Tools</h3>
-                <ul class="skill-list">
-                    <li><i class="fas fa-file-excel skill-icon"></i> Microsoft Excel</li>
-                    <li><i class="fa-solid fa-table-cells skill-icon"></i> Google Sheets</li>
-                    <li><i class="fas fa-code-branch skill-icon"></i> Google Colab</li>
-                    <li><i class="fas fa-laptop-code skill-icon"></i> RStudio</li>
-                    <li><i class="fas fa-code skill-icon"></i> Visual Studio Code</li>
-                    <li><i class="fas fa-database skill-icon"></i> Google BigQuery</li>
-                </ul>
+            <div class="flex items-center gap-4 text-xs font-medium text-vintage-300">
+                <a href="#home" class="hover:text-brass-300 transition-colors">Home</a>
+                <a href="#about" class="hover:text-brass-300 transition-colors">About</a>
+                <a href="#projects" class="hover:text-brass-300 transition-colors">Projects</a>
+                <a href="#certification" class="hover:text-brass-300 transition-colors">Certifications</a>
+                <a href="#contact" class="hover:text-brass-300 transition-colors">Contact</a>
             </div>
-
-            <div class="skill-category" data-aos="fade-up" data-aos-delay="600">
-                <h3>Data Visualization Tools & Libraries</h3>
-                <ul class="skill-list">
-                    <li><i class="fas fa-chart-area skill-icon"></i> Tableau</li>
-                    <li><i class="fas fa-chart-line skill-icon"></i> Looker Studio</li>
-                    <li><i class="fas fa-chart-pie skill-icon"></i> R Shiny</li>
-                    <li><i class="fas fa-paint-brush skill-icon"></i> ggplot2</li>
-                    <li><i class="fa-solid fa-chart-simple skill-icon"></i> plotly</li>
-                    <li><i class="fas fa-bezier-curve skill-icon"></i> seaborn</li>
-                    <li><i class="fas fa-chart-area skill-icon"></i> matplotlib</li>
-                    <li><i class="fas fa-file-excel skill-icon"></i> Excel Charts</li>
-                </ul>
-            </div>
-
         </div>
-    </section>
-
-    <section id="projects">
-        <div class="section-title" data-aos="fade-up">My Data Projects</div>
-        <div class="underline" data-aos="fade-up" data-aos-delay="200"></div>
-
-        <div class="projects-container">
-
-            <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-                <div class="project-image">
-                    <img src="Images/ProjectTrading.png" alt="Trading & Analytics Dashboard">
-                    <div class="project-overlay">
-                        <a href=""
-                            target="_blank" class="overlay-button">
-                            <i class="fas fa-external-link-alt"></i> View Dashboard
-                        </a>
-                    </div>
-                </div>
-                <div class="project-details">
-                    <h4 class="project-title">Trading & Analytics Dashboard</h4>
-                    <p class="project-description">An interactive dashboard to visualize trading data, track performance
-                        metrics, and identify key trends in financial markets.</p>
-                    <div class="project-tech">
-                        <span class="tech-item"><i class="fas fa-database"></i> SQL</span>
-                        <span class="tech-item"><i class="fas fa-chart-area"></i> Tableau</span>
-                        <span class="tech-item"><i class="fas fa-lightbulb"></i> Financial Analysis</span>
-                    </div>
-                    <div class="project-links">
-                        <a href=""
-                            target="_blank" class="project-link-btn">
-                            <i class="fas fa-eye"></i> Tableau Public
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card" data-aos="fade-up" data-aos-delay="400">
-                <div class="project-image">
-                    <img src="Images/ProjectSales.png" alt="Sales Performance Dashboard">
-                    <div class="project-overlay">
-                        <a href=""
-                            target="_blank" class="overlay-button">
-                            <i class="fas fa-external-link-alt"></i> View Dashboard
-                        </a>
-                    </div>
-                </div>
-                <div class="project-details">
-                    <h4 class="project-title">Sales Performance Dashboard</h4>
-                    <p class="project-description">Interactive dashboard built to track key sales metrics, identify
-                        trends, and provide actionable insights for decision-makers using Tableau.</p>
-                    <div class="project-tech">
-                        <span class="tech-item"><i class="fas fa-database"></i> SQL</span>
-                        <span class="tech-item"><i class="fas fa-chart-area"></i> Tableau</span>
-                        <span class="tech-item"><i class="fas fa-lightbulb"></i> Data Analysis</span>
-                    </div>
-                    <div class="project-links">
-                        <a href=""
-                            target="_blank" class="project-link-btn">
-                            <i class="fas fa-eye"></i> Tableau Public
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card" data-aos="fade-up" data-aos-delay="500">
-                <div class="project-image">
-                    <img src="Images/ProjectRegional.png" alt="Regional Performance Summary">
-                    <div class="project-overlay">
-                        <a href=""
-                            target="_blank" class="overlay-button">
-                            <i class="fas fa-external-link-alt"></i> View Dashboard
-                        </a>
-                    </div>
-                </div>
-                <div class="project-details">
-                    <h4 class="project-title">Regional Performance Summary</h4>
-                    <p class="project-description">A Tableau dashboard providing an overview of regional performance,
-                        highlighting key metrics and geographical insights for business strategy.</p>
-                    <div class="project-tech">
-                        <span class="tech-item"><i class="fas fa-table"></i> Excel</span>
-                        <span class="tech-item"><i class="fas fa-chart-area"></i> Tableau</span>
-                        <span class="tech-item"><i class="fas fa-map-marked-alt"></i> Geospatial Analysis</span>
-                    </div>
-                    <div class="project-links">
-                        <a href=""
-                            target="_blank" class="project-link-btn">
-                            <i class="fas fa-eye"></i> Tableau Public
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-                <div class="project-image">
-                    <img src="Images/AdventureWork.png" alt="AdventureWorks Performance Report">
-                    <div class="project-overlay">
-                        <a href=""
-                            target="_blank" class="overlay-button">
-                            <i class="fab fa-github"></i> View Report (GitHub)
-                        </a>
-                    </div>
-                </div>
-                <div class="project-details">
-                    <h4 class="project-title">AdventureWorks Performance Report</h4>
-                    <p class="project-description">Developed an interactive Power BI report to analyze sales and
-                        operational performance for AdventureWorks, providing key business insights.</p>
-                    <div class="project-tech">
-                        <span class="tech-item"><i class="fas fa-database"></i> SQL</span>
-                        <span class="tech-item"><i class="fab fa-microsoft powerbi-icon"></i> Power BI</span>
-                        <span class="tech-item"><i class="fas fa-chart-bar"></i> Reporting</span>
-                    </div>
-                    <div class="project-links">
-                        <a href=""
-                            target="_blank" class="project-link-btn">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card" data-aos="fade-up" data-aos-delay="400">
-                <div class="project-image">
-                    <img src="Images/SalesDashboard.png" alt="AdventureWorks Sales Dashboard">
-                    <div class="project-overlay">
-                        <a href="" target="_blank"
-                            class="overlay-button">
-                            <i class="fab fa-github"></i> View Dashboard (GitHub)
-                        </a>
-                    </div>
-                </div>
-                <div class="project-details">
-                    <h4 class="project-title">AdventureWorks Sales Dashboard</h4>
-                    <p class="project-description">A comprehensive sales dashboard in Power BI, offering deep insights
-                        into sales trends, customer behavior, and product performance.</p>
-                    <div class="project-tech">
-                        <span class="tech-item"><i class="fas fa-database"></i> SQL</span>
-                        <span class="tech-item"><i class="fab fa-microsoft powerbi-icon"></i> Power BI</span>
-                        <span class="tech-item"><i class="fas fa-chart-line"></i> Sales Analysis</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="" target="_blank"
-                            class="project-link-btn">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card" data-aos="fade-up" data-aos-delay="500">
-                <div class="project-image">
-                    <img src="Images/Tailwaind.png" alt="Tailwind Traders Global Overview Report">
-                    <div class="project-overlay">
-                        <a href=""
-                            target="_blank" class="overlay-button">
-                            <i class="fab fa-github"></i> View Report (GitHub)
-                        </a>
-                    </div>
-                </div>
-                <div class="project-details">
-                    <h4 class="project-title">Tailwind Traders Global Overview Report</h4>
-                    <p class="project-description">Global overview report for Tailwind Traders built with Power BI,
-                        providing key performance indicators and strategic insights for business operations.</p>
-                    <div class="project-tech">
-                        <span class="tech-item"><i class="fas fa-table"></i> Data Modeling</span>
-                        <span class="tech-item"><i class="fab fa-microsoft powerbi-icon"></i> Power BI</span>
-                        <span class="tech-item"><i class="fas fa-globe"></i> Global Analysis</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/harisfariyano/PowerBi/blob/main/Tailwind%20Traders%20Report.pbix"
-                            target="_blank" class="project-link-btn">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card" data-aos="fade-up" data-aos-delay="600">
-                <div class="project-image">
-                    <img src="Images/SupplyChain.png" alt="Supply Chain Delay Analysis Dashboard">
-                    <div class="project-overlay">
-                        <a href="https://github.com/harisfariyano/PowerBi/blob/main/Supply%20Chain%20Delay%20Analysis%20Dashboard.pbix"
-                            target="_blank" class="overlay-button">
-                            <i class="fas fa-chart-bar"></i> View Dashboard (Power BI)
-                        </a>
-                    </div>
-                </div>
-                <div class="project-details">
-                    <h4 class="project-title">Supply Chain Delay Analysis Dashboard</h4>
-                    <p class="project-description">Developed an interactive Power BI dashboard to analyze and visualize
-                        supply chain delays, providing key insights into bottlenecks and performance metrics.</p>
-                    <div class="project-tech">
-                        <span class="tech-item"><i class="fas fa-chart-bar"></i> Power BI</span>
-                        <span class="tech-item"><i class="fas fa-truck"></i> Supply Chain</span>
-                        <span class="tech-item"><i class="fas fa-tachometer-alt"></i> Dashboarding</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/harisfariyano/PowerBi/blob/main/Supply%20Chain%20Delay%20Analysis%20Dashboard.pbix"
-                            target="_blank" class="project-link-btn">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card" data-aos="fade-up" data-aos-delay="700">
-                <div class="project-image">
-                    <img src="Images/DigitalSales.png" alt="Digital Sales Performance Dashboard">
-                    <div class="project-overlay">
-                        <a href="https://u/1/reporting/97c85ac1-02b5-4af7-bde6-8e9a242e9b77/page/eUtOF/edit"
-                            target="_blank" class="overlay-button">
-                            <i class="fas fa-chart-line"></i> View Dashboard (Looker Studio)
-                        </a>
-                    </div>
-                </div>
-                <div class="project-details">
-                    <h4 class="project-title">Digital Sales Performance Dashboard</h4>
-                    <p class="project-description">Created a comprehensive digital sales performance dashboard using
-                        Looker Studio to track key sales metrics, identify trends, and provide actionable insights for
-                        optimization.</p>
-                    <div class="project-tech">
-                        <span class="tech-item"><i class="fas fa-chart-line"></i> Looker Studio</span>
-                        <span class="tech-item"><i class="fas fa-shopping-cart"></i> Sales Analytics</span>
-                        <span class="tech-item"><i class="fab fa-google"></i> Google Ecosystem</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://u/1/reporting/97c85ac1-02b5-4af7-bde6-8e9a242e9b77/page/eUtOF/edit"
-                            target="_blank" class="project-link-btn">
-                            <i class="fas fa-external-link-alt"></i> View Live
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card" data-aos="fade-up" data-aos-delay="800">
-                <div class="project-image">
-                    <img src="Images/HR.png" alt="Employee Attrition Prediction">
-                    <div class="project-overlay">
-                        <a href="/drive/1BeKEv_lC-J4jcyv7wr5pf8JQ5d7t-GNA#scrollTo=Dfnvw1HZsfbd"
-                            target="_blank" class="overlay-button">
-                            <i class="fab fa-google"></i> View Notebook (Colab)
-                        </a>
-                    </div>
-                </div>
-                <div class="project-details">
-                    <h4 class="project-title">Employee Attrition Prediction Using Tree-Based Machine Learning</h4>
-                    <p class="project-description">Applied tree-based machine learning models to predict employee
-                        attrition, leveraging data analysis and predictive modeling techniques to identify key factors
-                        influencing turnover.</p>
-                    <div class="project-tech">
-                        <span class="tech-item"><i class="fab fa-python"></i> Python</span>
-                        <span class="tech-item"><i class="fas fa-brain"></i> Machine Learning</span>
-                        <span class="tech-item"><i class="fas fa-tree"></i> Tree-Based Models</span>
-                        <span class="tech-item"><i class="fas fa-user-times"></i> HR Analytics</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="/drive/1BeKEv_lC-J4jcyv7wr5pf8JQ5d7t-GNA"
-                            target="_blank" class="project-link-btn">
-                            <i class="fas fa-external-link-alt"></i> View Notebook
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-                <div class="project-image">
-                    <img src="Images/DataVizPython.png" alt="Analyzing Wildfire Activities in Australia">
-                    <div class="project-overlay">
-                        <a href="/drive/1jonULRPeMVIzo6ceA9NiILPirrGEdZDy"
-                            target="_blank" class="overlay-button">
-                            <i class="fas fa-code"></i> View Code (Colab)
-                        </a>
-                    </div>
-                </div>
-                <div class="project-details">
-                    <h4 class="project-title">Analyzing Wildfire Activities in Australia</h4>
-                    <p class="project-description">Exploratory data analysis project using Python to investigate
-                        patterns and trends in wildfire activities across Australia, generating key insights and
-                        visualizations.</p>
-                    <div class="project-tech">
-                        <span class="tech-item"><i class="fab fa-python"></i> Python</span>
-                        <span class="tech-item"><i class="fas fa-chart-line"></i> Pandas</span>
-                        <span class="tech-item"><i class="fas fa-flask"></i> Data Analysis</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="/drive/1jonULRPeMVIzo6ceA9NiILPirrGEdZDy"
-                            target="_blank" class="project-link-btn">
-                            <i class="fas fa-flask"></i> Colab Notebook
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card" data-aos="fade-up" data-aos-delay="400">
-                <div class="project-image">
-                    <img src="Images/Resesi.png" alt="Create Visualizations using Matplotlib, Seaborn and Folium">
-                    <div class="project-overlay">
-                        <a href="/drive/15BjKA_4kbmhnVXm8q2ARGAMsdxel8-xF"
-                            target="_blank" class="overlay-button">
-                            <i class="fas fa-code"></i> View Code (Colab)
-                        </a>
-                    </div>
-                </div>
-                <div class="project-details">
-                    <h4 class="project-title">Visualizing Automotive Sales Trends in Recession Eras with Python</h4>
-                    <p class="project-description">A project focused on generating various data visualizations using
-                        Python libraries such as Matplotlib, Seaborn for statistical plots, and Folium for interactive
-                        geospatial maps, to analyze historical trends in automobile sales during different recession
-                        periods.</p>
-                    <div class="project-tech">
-                        <span class="tech-item"><i class="fab fa-python"></i> Python</span>
-                        <span class="tech-item"><i class="fas fa-chart-bar"></i> Matplotlib</span>
-                        <span class="tech-item"><i class="fas fa-chart-line"></i> Seaborn</span>
-                        <span class="tech-item"><i class="fas fa-map-marked-alt"></i> Folium</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="/drive/15BjKA_4kbmhnVXm8q2ARGAMsdxel8-xF"
-                            target="_blank" class="project-link-btn">
-                            <i class="fas fa-flask"></i> Colab Notebook
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card" data-aos="fade-up" data-aos-delay="500">
-                <div class="project-image">
-                    <img src="Images/DSWithR.png" alt="Predicting Precipitation at JFK Airport">
-                    <div class="project-overlay">
-                        <a href="https://github.com/harisfariyano/IBM-DataAnalyst-R/blob/main/Data%20Analysis%20with%20R.Rmd"
-                            target="_blank" class="overlay-button">
-                            <i class="fas fa-code"></i> View Code (GitHub)
-                        </a>
-                    </div>
-                </div>
-                <div class="project-details">
-                    <h4 class="project-title">Predicting Precipitation at JFK Airport Using Weather Data Analysis in R
-                    </h4>
-                    <p class="project-description">Data analysis project in R to explore weather patterns and build a
-                        predictive model for precipitation at JFK Airport, showcasing statistical analysis and
-                        forecasting skills.</p>
-                    <div class="project-tech">
-                        <span class="tech-item"><i class="fab fa-r-project"></i> R</span>
-                        <span class="tech-item"><i class="fas fa-cloud-rain"></i> Weather Data</span>
-                        <span class="tech-item"><i class="fas fa-chart-line"></i> Predictive Modeling</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/harisfariyano/IBM-DataAnalyst-R/blob/main/Data%20Analysis%20with%20R.Rmd"
-                            target="_blank" class="project-link-btn">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pagination-container">
-                <button class="pagination-btn" id="prevPage">Previous</button>
-                <span id="pageIndicator">1</span>
-                <button class="pagination-btn" id="nextPage">Next</button>
-            </div>
-        </div>
-    </section>
-
-    <section id="certification">
-        <h2 class="section-title" data-aos="fade-up">My Certifications</h2>
-        <div class="underline" data-aos="fade-up" data-aos-delay="200"></div>
-
-        <div class="certification-container">
-
-            <div class="certification-card" data-aos="fade-up" data-aos-delay="300">
-                <div class="cert-logo">
-                    <img src="Images/ibm.svg" alt="IBM Logo">
-                </div>
-                <div class="cert-details">
-                    <h4 class="cert-title">IBM Data Analytics with Excel and R</h4>
-                    <p class="cert-provider">IBM</p>
-                    <p class="cert-description">Developed skills in data wrangling, statistical analysis, and reporting
-                        using Excel and R programming language.</p>
-                    <div class="cert-date">Issued: Apr 2025</div>
-                    <div class="cert-links">
-                        <a href="https://www.coursera.org/account/accomplishments/specialization/7ZX8O3MSOMU0"
-                            target="_blank" class="cert-link-btn"><i class="fas fa-award"></i> View Credential</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="certification-card" data-aos="fade-up" data-aos-delay="400">
-                <div class="cert-logo">
-                    <img src="Images/microsoft.png" alt="Microsoft Logo">
-                </div>
-                <div class="cert-details">
-                    <h4 class="cert-title">Microsoft Power BI Data Analyst</h4>
-                    <p class="cert-provider">Microsoft Certified</p>
-                    <p class="cert-description">Demonstrated expertise in designing, building, and deploying scalable
-                        data models and reports using Power BI.</p>
-                    <div class="cert-date">Issued: May 2025</div>
-                    <div class="cert-links">
-                        <a href="https:/.org/account/accomplishments/professional-cert/certificate/7V25BBU7468Z"
-                            target="_blank" class="cert-link-btn"><i class="fas fa-award"></i> View Credential</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="certification-card" data-aos="fade-up" data-aos-delay="500">
-                <div class="cert-logo">
-                    <img src="Images/microsoft.png" alt="Microsoft Logo">
-                </div>
-                <div class="cert-details">
-                    <h4 class="cert-title">Data Modeling in Power BI</h4>
-                    <p class="cert-provider">Microsoft Certified</p>
-                    <p class="cert-description">Validated expertise in designing and implementing robust data models,
-                        optimizing data transformations, and creating effective relationships for advanced analytics in
-                        Power BI.</p>
-                    <div class="cert-date">Issued: May 2025</div>
-                    <div class="cert-links">
-                        <a href="https://www.coursera.org/account/accomplishments/verify/N1GDKU6VEOJY" target="_blank"
-                            class="cert-link-btn"><i class="fas fa-award"></i> View Credential</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="certification-card" data-aos="fade-up" data-aos-delay="600">
-                <div class="cert-logo">
-                    <img src="Images/tableau.svg" alt="Tableau Logo">
-                </div>
-                <div class="cert-details">
-                    <h4 class="cert-title">Data Visualization with Tableau</h4>
-                    <p class="cert-provider">Tableau Learning Partner</p>
-                    <p class="cert-description">Validated skills in connecting to data, building advanced
-                        visualizations, and creating interactive dashboards in Tableau.</p>
-                    <div class="cert-date">Issued: May 2025</div>
-                    <div class="cert-links">
-                        <a href="https://www.org/account/accomplishments/records/2P05BJ86MK60" target="_blank"
-                            class="cert-link-btn"><i class="fas fa-award"></i> View Credential</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="certification-card" data-aos="fade-up" data-aos-delay="700">
-                <div class="cert-logo">
-                    <img src="Images/tableau.svg" alt="Tableau Logo">
-                </div>
-                <div class="cert-details">
-                    <h4 class="cert-title">Tableau Business Intelligence Analyst</h4>
-                    <p class="cert-provider">Coursera</p>
-                    <p class="cert-description">Developed expertise in designing and implementing advanced dashboards,
-                        performing complex data analysis, and translating business requirements into insightful
-                        visualizations using Tableau for strategic decision-making.</p>
-                    <div class="cert-date">Issued: May 2025</div>
-                    <div class="cert-links">
-                        <a href="https://www.coursera.org/account/accomplishments/verify/DTYL5F5750YA" target="_blank"
-                            class="cert-link-btn"><i class="fas fa-award"></i> View Credential</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="certification-card" data-aos="fade-up" data-aos-delay="800">
-                <div class="cert-logo">
-                    <img src="Images/google.png" alt="Google Logo">
-                </div>
-                <div class="cert-details">
-                    <h4 class="cert-title">Google Advanced Data Analytics Professional Certificate</h4>
-                    <p class="cert-provider">Google Career Certificates</p>
-                    <p class="cert-description">Mastered advanced data analytics skills including statistical modeling,
-                        machine learning, and programming for complex data problems.</p>
-                    <div class="cert-date">Issued: Jun 2025</div>
-                    <div class="cert-links">
-                        <a href="https://www.coursera.org/account/accomplishments/professional-cert/certificate/9ME42PB9UUDS"
-                            target="_blank" class="cert-link-btn"><i class="fas fa-award"></i> View Credential</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="certification-card" data-aos="fade-up" data-aos-delay="900">
-                <div class="cert-logo">
-                    <img src="Images/CFI.png" alt="CFI Logo">
-                </div>
-                <div class="cert-details">
-                    <h4 class="cert-title">Advanced Tableau</h4>
-                    <p class="cert-provider">Corporate Finance Institute (CFI)</p>
-                    <p class="cert-description">Enhanced proficiency in advanced Tableau functionalities and best
-                        practices for compelling data visualization.</p>
-                    <div class="cert-date">Issued: Jun 2025</div>
-                    <div class="cert-links">
-                        <a href="https://www.coursera.org/account/accomplishments/specialization/7J10WW1BXY6P"
-                            target="_blank" class="cert-link-btn"><i class="fas fa-award"></i> View Credential</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="certification-card" data-aos="fade-up" data-aos-delay="1000">
-                <div class="cert-logo">
-                    <img src="Images/ibm.svg" alt="IBM Logo">
-                </div>
-                <div class="cert-details">
-                    <h4 class="cert-title">IBM Data Analyst Professional Certificate (Python)</h4>
-                    <p class="cert-provider">IBM</p>
-                    <p class="cert-description">Gained practical experience in data analysis using Python, including
-                        libraries like Pandas, NumPy, and Matplotlib.</p>
-                    <div class="cert-date">Issued: Jun 2025</div>
-                    <div class="cert-links">
-                        <a href="https://www.coursera.org/account/accomplishments/professional-cert/certificate/5Z4YRN5F8VA7"
-                            target="_blank" class="cert-link-btn"><i class="fas fa-award"></i> View Credential</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="certification-card" data-aos="fade-up" data-aos-delay="1100">
-                <div class="cert-logo">
-                    <img src="Images/Unilever.webp" alt="Unilever Logo">
-                </div>
-                <div class="cert-details">
-                    <h4 class="cert-title">Unilever Supply Chain Data Analyst</h4>
-                    <p class="cert-provider">Unilever x Coursera</p>
-                    <p class="cert-description">Gained practical skills in analyzing supply chain data, identifying
-                        inefficiencies, and supporting data-driven decisions to optimize logistics and operations.</p>
-                    <div class="cert-date">Issued: Jul 2025</div>
-                    <div class="cert-links">
-                        <a href="https://www.coursera.org/account/accomplishments/verify/4H7N45M2L172" target="_blank"
-                            class="cert-link-btn"><i class="fas fa-award"></i> View Credential</a>
-                    </div>
-                </div>
-            </div>
-            <div class="cert-pagination-container">
-                <button class="pagination-btn" id="prevCertPage">Previous</button>
-                <span id="certPageIndicator">1</span>
-                <button class="pagination-btn" id="nextCertPage">Next</button>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="section-title" data-aos="fade-up">Get In Touch</div>
-        <div class="underline" data-aos="fade-up" data-aos-delay="200"></div>
-
-        <p class="contact-intro" data-aos="fade-up" data-aos-delay="300">
-            I'm currently open to new opportunities in data analysis, whether full-time, freelance, or collaborative.
-            Feel free to reach out if you'd like to connect!
-        </p>
-
-        <div class="contact-content-wrapper">
-
-            <!-- Contact Form
-            <div class="contact-form-wrapper" data-aos="fade-right" data-aos-delay="400">
-                <form action="https://formspree.io/f/mrbklwpb" method="POST" class="contact-form">
-                    <input type="text" name="name" placeholder="Your Name" required class="form-input">
-                    <input type="email" name="_replyto" placeholder="Your Email" required class="form-input">
-                    <input type="text" name="subject" placeholder="Subject" class="form-input">
-                    <textarea name="message" rows="5" placeholder="Your Message" required
-                        class="form-textarea"></textarea>
-                    <button type="submit" class="submit-button">Send Message <i class="fas fa-paper-plane"></i></button>
-                </form>
-            </div> -->
-
-            <!-- Contact Info -->
-            <div class="contact-info-wrapper" data-aos="fade-up" data-aos-delay="500">
-                <div class="info-item">
-                    <i class="fas fa-envelope contact-icon"></i>
-                    <a href="mailto:Muhamamdharisfariyano@gmail.com">Muhamamdharisfariyano@gmail.com</a>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-phone-alt contact-icon"></i>
-                    <a href="https://wa.me/6285892640801" target="_blank">+62 858-9264-0801</a>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-map-marker-alt contact-icon"></i>
-                    <span>Brebes, Indonesia</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="simple-footer">
-        <p>&copy; 2025 Muhammad Haris Fariyano. All Rights Reserved.</p>
     </footer>
 
+    <!-- AOS JS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init({ offset: 0 }); 
-    </script>
-    <script src="script.js"></script>
 
+    <!-- Custom Script -->
+    <script src="script.js"></script>
 </body>
 
 </html>

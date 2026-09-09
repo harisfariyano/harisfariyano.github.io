@@ -8,6 +8,15 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const PORT = 3000;
 
+// Security response headers to prevent MIME sniffing, clickjacking, and enhance reputation
+app.use((req, res, next) => {
+  res.setHeader('X-Content-Type-Options', 'nosniff');
+  res.setHeader('X-XSS-Protection', '1; mode=block');
+  res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+  res.setHeader('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
+  next();
+});
+
 // Serve static assets from project root
 app.use(express.static(__dirname));
 
