@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const typedElement = document.querySelector('.typed-text');
     if (typedElement) {
         new Typed('.typed-text', {
-            strings: [,'Data Analyst','Insight Catalyst','Data Integrator',],
+            strings: ['Data Analyst', 'Insight Catalyst', 'Data Integrator'],
             typeSpeed: 80,
             backSpeed: 40,
             backDelay: 1500,
