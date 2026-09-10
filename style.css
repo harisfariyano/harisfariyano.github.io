@@ -52,3 +52,225 @@
   height: 100dvh;
 }
 
+/* ==========================================================================
+   VINTAGE DARK MODE PALETTE
+   Harmonious dark vintage obsidian & sage tones
+   Canvas: #131614
+   Cards/Surfaces: #1B211D
+   Elevated/Nested Surfaces: #222924
+   Borders: #2D3730
+   Text Main: #F2EEE9
+   Text Muted: #A2ACA2
+   Sage Accent: #8DA38C
+   Brass Accent: #D1A980
+   ========================================================================== */
+
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark body {
+  background-color: #131614 !important;
+  color: #E2DDD5 !important;
+}
+
+/* Scrollbar in Dark Mode */
+html.dark ::-webkit-scrollbar-track {
+  background: #131614;
+}
+html.dark ::-webkit-scrollbar-thumb {
+  background: #2D3730;
+}
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: #748873;
+}
+
+/* Navbar in Dark Mode */
+html.dark #main-nav {
+  background-color: rgba(19, 22, 20, 0.92) !important;
+  border-color: rgba(45, 55, 48, 0.85) !important;
+}
+
+/* Mobile Drawer in Dark Mode */
+html.dark #mobile-drawer {
+  background-color: #161B18 !important;
+  border-color: #2D3730 !important;
+}
+html.dark #mobile-drawer > div:first-child > div:first-child {
+  background-color: #1B211D !important;
+  border-color: #2D3730 !important;
+}
+html.dark #mobile-drawer > div:last-child {
+  background-color: #181E1A !important;
+  border-color: #2D3730 !important;
+}
+
+/* Section Backgrounds in Dark Mode */
+html.dark #home {
+  background: linear-gradient(180deg, #131614 0%, #1A211D 50%, #131614 100%) !important;
+  border-color: #27312A !important;
+}
+html.dark #about,
+html.dark #skills,
+html.dark #certification {
+  background-color: #171C19 !important;
+  border-color: #27312A !important;
+}
+html.dark #background,
+html.dark #projects,
+html.dark #contact {
+  background-color: #131614 !important;
+  border-color: #27312A !important;
+}
+
+/* Cards & Surfaces in Dark Mode */
+html.dark .bg-white {
+  background-color: #1B211D !important;
+  border-color: #2D3730 !important;
+}
+html.dark .bg-white\/95,
+html.dark .bg-white\/90,
+html.dark .bg-white\/80 {
+  background-color: rgba(27, 33, 29, 0.92) !important;
+  border-color: #2D3730 !important;
+}
+
+/* Nested Container Backgrounds */
+html.dark .bg-\[\#F8F8F8\],
+html.dark .bg-\[\#F8F8F8\]\/60,
+html.dark .bg-\[\#F8F8F8\]\/80,
+html.dark .bg-\[\#F8F8F8\]\/90,
+html.dark .bg-\[\#F8F8F8\]\/95 {
+  background-color: #181E1A !important;
+  border-color: #2D3730 !important;
+}
+
+html.dark .bg-\[\#E5E0D8\],
+html.dark .bg-\[\#E5E0D8\]\/30,
+html.dark .bg-\[\#E5E0D8\]\/40,
+html.dark .bg-\[\#E5E0D8\]\/50 {
+  background-color: #222924 !important;
+  border-color: #2D3730 !important;
+}
+
+html.dark .bg-vintage-50 {
+  background-color: #181E1A !important;
+}
+html.dark .bg-vintage-100,
+html.dark .bg-vintage-100\/80 {
+  background-color: #222924 !important;
+  border-color: #2D3730 !important;
+}
+
+/* Typography in Dark Mode */
+html.dark .text-ink-900 {
+  color: #F4EFEA !important;
+}
+html.dark .text-ink-800 {
+  color: #E2DDD5 !important;
+}
+html.dark .text-ink-700 {
+  color: #B5BFB5 !important;
+}
+html.dark .text-ink-600 {
+  color: #98A398 !important;
+}
+html.dark .text-ink-400 {
+  color: #7A857A !important;
+}
+html.dark .text-vintage-500 {
+  color: #9AA399 !important;
+}
+html.dark .text-vintage-400 {
+  color: #7A857A !important;
+}
+
+/* Borders in Dark Mode */
+html.dark .border-vintage-200,
+html.dark .border-vintage-200\/60,
+html.dark .border-vintage-200\/80,
+html.dark .border-vintage-200\/90,
+html.dark .border-vintage-300,
+html.dark .border-vintage-300\/80 {
+  border-color: #2D3730 !important;
+}
+
+/* Brand Accents in Dark Mode */
+html.dark .text-sage-800,
+html.dark .text-sage-700 {
+  color: #8DA38C !important;
+}
+html.dark .text-brass-800,
+html.dark .text-brass-700,
+html.dark .text-brass-600 {
+  color: #D1A980 !important;
+}
+
+html.dark .bg-sage-50 {
+  background-color: #1E2721 !important;
+  color: #A9BBA8 !important;
+}
+html.dark .bg-sage-100 {
+  background-color: #232E27 !important;
+  color: #C6D2C5 !important;
+}
+html.dark .border-sage-200,
+html.dark .border-sage-200\/60 {
+  border-color: #354538 !important;
+}
+
+html.dark .bg-brass-100 {
+  background-color: #2C261E !important;
+  color: #DFC7B0 !important;
+}
+html.dark .border-brass-200 {
+  border-color: #4A3E2F !important;
+}
+
+/* Hover States in Dark Mode */
+html.dark .hover\:bg-vintage-100:hover,
+html.dark .hover\:bg-vintage-100\/80:hover {
+  background-color: #263029 !important;
+}
+html.dark .hover\:bg-vintage-50:hover {
+  background-color: #202722 !important;
+}
+
+/* Inputs & Form Controls in Dark Mode */
+html.dark #sender-name,
+html.dark #sender-message {
+  background-color: #151A17 !important;
+  border-color: #2D3730 !important;
+  color: #F4EFEA !important;
+}
+html.dark #sender-name:focus,
+html.dark #sender-message:focus {
+  border-color: #748873 !important;
+  box-shadow: 0 0 0 2px rgba(116, 136, 115, 0.25) !important;
+}
+
+/* Theme Switcher Active Button Styling */
+.mobile-theme-btn.active-theme {
+  background-color: #FFFFFF;
+  color: #354034;
+  font-weight: 600;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+html.dark .mobile-theme-btn.active-theme {
+  background-color: #263029;
+  color: #A9BBA8;
+  font-weight: 600;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.theme-option-btn.active-theme {
+  background-color: #F0ECE5;
+  color: #354034;
+  font-weight: 600;
+}
+html.dark .theme-option-btn.active-theme {
+  background-color: #263029;
+  color: #A9BBA8;
+  font-weight: 600;
+}
+

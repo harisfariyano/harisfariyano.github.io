@@ -29,15 +29,177 @@ document.addEventListener('DOMContentLoaded', function () {
     const navbar = document.getElementById('main-nav');
     const handleScroll = () => {
         if (window.scrollY > 20) {
-            navbar?.classList.add('shadow-sm', 'bg-[#F8F8F8]/95');
-            navbar?.classList.remove('bg-[#F8F8F8]/80');
+            navbar?.classList.add('shadow-sm', 'is-scrolled');
         } else {
-            navbar?.classList.remove('shadow-sm', 'bg-[#F8F8F8]/95');
-            navbar?.classList.add('bg-[#F8F8F8]/80');
+            navbar?.classList.remove('shadow-sm', 'is-scrolled');
         }
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll();
+
+    // === Theme Engine: Dark Mode & System Preference ===
+    const THEME_STORAGE_KEY = 'portfolio-theme';
+    const themeDropdownContainer = document.getElementById('theme-dropdown-container');
+    const themeMenuBtn = document.getElementById('theme-menu-btn');
+    const themeDropdownMenu = document.getElementById('theme-dropdown-menu');
+    const themeOptionBtns = document.querySelectorAll('.theme-option-btn');
+    const mobileThemeBtns = document.querySelectorAll('.mobile-theme-btn');
+    const mobileQuickThemeBtn = document.getElementById('mobile-quick-theme-btn');
+    const themeActiveIcon = document.getElementById('theme-active-icon');
+    const mobileQuickThemeIcon = document.getElementById('mobile-quick-theme-icon');
+    const mobileThemeStatusText = document.getElementById('mobile-theme-status-text');
+
+    const getStoredTheme = () => {
+        return localStorage.getItem(THEME_STORAGE_KEY) || 'system';
+    };
+
+    const getSystemPrefersDark = () => {
+        return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    };
+
+    const updateThemeUI = (theme) => {
+        const isDark = theme === 'dark' || (theme === 'system' && getSystemPrefersDark());
+
+        // Update active class on documentElement
+        if (isDark) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        // Update Desktop active icon
+        if (themeActiveIcon) {
+            if (theme === 'light') {
+                themeActiveIcon.className = 'fas fa-sun text-brass-600 text-xs';
+            } else if (theme === 'dark') {
+                themeActiveIcon.className = 'fas fa-moon text-sage-600 dark:text-sage-400 text-xs';
+            } else {
+                themeActiveIcon.className = 'fas fa-desktop text-ink-600 dark:text-ink-400 text-xs';
+            }
+        }
+
+        // Update Mobile quick button icon
+        if (mobileQuickThemeIcon) {
+            if (theme === 'light') {
+                mobileQuickThemeIcon.className = 'fas fa-sun text-brass-600 text-xs';
+            } else if (theme === 'dark') {
+                mobileQuickThemeIcon.className = 'fas fa-moon text-sage-600 dark:text-sage-400 text-xs';
+            } else {
+                mobileQuickThemeIcon.className = 'fas fa-desktop text-ink-600 dark:text-ink-400 text-xs';
+            }
+        }
+
+        // Update Dropdown checkmarks & active states
+        const allChecks = document.querySelectorAll('.theme-check-light, .theme-check-dark, .theme-check-system');
+        allChecks.forEach(el => el.classList.add('hidden'));
+        const activeCheck = document.querySelector(`.theme-check-${theme}`);
+        if (activeCheck) activeCheck.classList.remove('hidden');
+
+        themeOptionBtns.forEach(btn => {
+            if (btn.dataset.theme === theme) {
+                btn.classList.add('active-theme');
+            } else {
+                btn.classList.remove('active-theme');
+            }
+        });
+
+        // Update Mobile Drawer buttons & status text
+        mobileThemeBtns.forEach(btn => {
+            if (btn.dataset.theme === theme) {
+                btn.classList.add('active-theme');
+            } else {
+                btn.classList.remove('active-theme');
+            }
+        });
+
+        if (mobileThemeStatusText) {
+            if (theme === 'system') {
+                mobileThemeStatusText.textContent = `System (${isDark ? 'Dark' : 'Light'})`;
+            } else {
+                mobileThemeStatusText.textContent = theme.charAt(0).toUpperCase() + theme.slice(1);
+            }
+        }
+    };
+
+    const applyTheme = (theme) => {
+        localStorage.setItem(THEME_STORAGE_KEY, theme);
+        updateThemeUI(theme);
+    };
+
+    // Initialize UI with current theme preference
+    updateThemeUI(getStoredTheme());
+
+    // Listen for System OS theme changes dynamically
+    const systemMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleSystemSchemeChange = () => {
+        if (getStoredTheme() === 'system') {
+            updateThemeUI('system');
+        }
+    };
+    if (systemMediaQuery.addEventListener) {
+        systemMediaQuery.addEventListener('change', handleSystemSchemeChange);
+    } else if (systemMediaQuery.addListener) {
+        systemMediaQuery.addListener(handleSystemSchemeChange);
+    }
+
+    // Desktop Theme Menu Toggle
+    let isThemeMenuOpen = false;
+    const toggleThemeMenu = (open) => {
+        isThemeMenuOpen = typeof open === 'boolean' ? open : !isThemeMenuOpen;
+        if (themeDropdownMenu) {
+            if (isThemeMenuOpen) {
+                themeDropdownMenu.classList.remove('opacity-0', 'invisible', 'scale-95');
+                themeDropdownMenu.classList.add('opacity-100', 'visible', 'scale-100');
+            } else {
+                themeDropdownMenu.classList.add('opacity-0', 'invisible', 'scale-95');
+                themeDropdownMenu.classList.remove('opacity-100', 'visible', 'scale-100');
+            }
+        }
+    };
+
+    themeMenuBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleThemeMenu();
+    });
+
+    document.addEventListener('click', (e) => {
+        if (isThemeMenuOpen && themeDropdownContainer && !themeDropdownContainer.contains(e.target)) {
+            toggleThemeMenu(false);
+        }
+    });
+
+    themeOptionBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const selectedTheme = btn.dataset.theme;
+            if (selectedTheme) {
+                applyTheme(selectedTheme);
+                toggleThemeMenu(false);
+            }
+        });
+    });
+
+    mobileThemeBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const selectedTheme = btn.dataset.theme;
+            if (selectedTheme) {
+                applyTheme(selectedTheme);
+            }
+        });
+    });
+
+    // Mobile quick toggle cycles through: system -> light -> dark -> system
+    mobileQuickThemeBtn?.addEventListener('click', () => {
+        const current = getStoredTheme();
+        let next = 'light';
+        if (current === 'system') {
+            next = 'light';
+        } else if (current === 'light') {
+            next = 'dark';
+        } else if (current === 'dark') {
+            next = 'system';
+        }
+        applyTheme(next);
+    });
 
     // === Mobile Drawer Menu Toggle (Smooth Slide & Backdrop) ===
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
@@ -83,6 +245,44 @@ document.addEventListener('DOMContentLoaded', function () {
         if (e.key === 'Escape' && mobileMenu && !mobileMenu.classList.contains('opacity-0')) {
             toggleMenu(false);
         }
+    });
+
+    // === Clean URL Navigation: Keep Only Domain in Address Bar (No /#projects or /#section) ===
+    const cleanUrlAddressBar = () => {
+        if (window.history && window.history.replaceState) {
+            window.history.replaceState(null, document.title, window.location.pathname + window.location.search);
+        }
+    };
+
+    // Clean hash on page load if one was present in URL
+    if (window.location.hash) {
+        setTimeout(cleanUrlAddressBar, 80);
+    }
+
+    // Intercept all internal anchor navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const hash = this.getAttribute('href');
+            if (hash && hash !== '#') {
+                const targetElement = document.querySelector(hash);
+                if (targetElement) {
+                    e.preventDefault();
+
+                    const nav = document.getElementById('main-nav');
+                    const navHeight = nav ? nav.offsetHeight : 70;
+                    const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                    const offsetPosition = Math.max(0, elementPosition - navHeight + 2);
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+
+                    // Ensure the URL bar remains clean showing only the domain
+                    cleanUrlAddressBar();
+                }
+            }
+        });
     });
 
     // === Skill Category Tabs ===

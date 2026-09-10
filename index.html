@@ -61,10 +61,28 @@
     <!-- AOS CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
+    <!-- Dark Mode Immediate Detector (Prevents FOUC) -->
+    <script>
+        (function () {
+            try {
+                const storedTheme = localStorage.getItem('portfolio-theme') || 'system';
+                const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                if (storedTheme === 'dark' || (storedTheme === 'system' && systemPrefersDark)) {
+                    document.documentElement.classList.add('dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                }
+            } catch (e) {
+                console.warn('Theme detector error:', e);
+            }
+        })();
+    </script>
+
     <!-- Tailwind CSS CDN with configuration -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
@@ -154,16 +172,51 @@
                     <a href="#certification" id="nav-link-certification" class="px-3.5 py-2 rounded-lg text-sm font-medium text-ink-700 hover:text-sage-800 hover:bg-vintage-100/80 transition-colors">Certifications</a>
                 </nav>
 
-                <!-- Desktop Action Button -->
+                <!-- Desktop Action Button & Theme Selector -->
                 <div class="hidden md:flex items-center gap-3">
+                    <!-- Theme Selector Dropdown -->
+                    <div class="relative" id="theme-dropdown-container">
+                        <button type="button" id="theme-menu-btn" class="w-9 h-9 rounded-xl border border-vintage-300 bg-white text-ink-700 flex items-center justify-center hover:bg-vintage-100 hover:text-sage-800 transition-all shadow-2xs focus:outline-none" aria-label="Pilih tema tampilan" title="Theme (Light / Dark / System)">
+                            <i id="theme-active-icon" class="fas fa-desktop text-xs"></i>
+                        </button>
+                        
+                        <!-- Dropdown Menu Popover -->
+                        <div id="theme-dropdown-menu" class="absolute right-0 mt-2 w-36 py-1.5 rounded-xl bg-white border border-vintage-200 shadow-lg opacity-0 invisible transform scale-95 transition-all duration-150 z-50">
+                            <button type="button" class="theme-option-btn w-full px-3 py-2 text-left flex items-center justify-between text-xs font-medium text-ink-800 hover:bg-vintage-100 transition-colors" data-theme="light">
+                                <span class="flex items-center gap-2.5">
+                                    <i class="fas fa-sun text-brass-600 text-xs w-3.5 text-center"></i>
+                                    <span>Light</span>
+                                </span>
+                                <i class="fas fa-check text-[10px] text-sage-700 theme-check-light hidden"></i>
+                            </button>
+                            <button type="button" class="theme-option-btn w-full px-3 py-2 text-left flex items-center justify-between text-xs font-medium text-ink-800 hover:bg-vintage-100 transition-colors" data-theme="dark">
+                                <span class="flex items-center gap-2.5">
+                                    <i class="fas fa-moon text-sage-600 text-xs w-3.5 text-center"></i>
+                                    <span>Dark</span>
+                                </span>
+                                <i class="fas fa-check text-[10px] text-sage-700 theme-check-dark hidden"></i>
+                            </button>
+                            <button type="button" class="theme-option-btn w-full px-3 py-2 text-left flex items-center justify-between text-xs font-medium text-ink-800 hover:bg-vintage-100 transition-colors" data-theme="system">
+                                <span class="flex items-center gap-2.5">
+                                    <i class="fas fa-desktop text-ink-500 text-xs w-3.5 text-center"></i>
+                                    <span>System</span>
+                                </span>
+                                <i class="fas fa-check text-[10px] text-sage-700 theme-check-system hidden"></i>
+                            </button>
+                        </div>
+                    </div>
+
                     <a href="#contact" id="nav-btn-contact" class="inline-flex items-center justify-center gap-2 px-4 py-2 text-xs uppercase tracking-wider font-semibold rounded-lg bg-sage-700 text-vintage-50 hover:bg-sage-800 shadow-2xs hover:shadow-sm transition-all">
                         <span>Get In Touch</span>
                         <i class="fas fa-arrow-right text-[10px] text-brass-300"></i>
                     </a>
                 </div>
 
-                <!-- Mobile Hamburger Button -->
-                <div class="flex md:hidden">
+                <!-- Mobile Header Actions (Quick Theme Toggle + Hamburger) -->
+                <div class="flex md:hidden items-center gap-2">
+                    <button type="button" id="mobile-quick-theme-btn" class="w-10 h-10 rounded-xl border border-vintage-300/80 bg-white/80 text-ink-800 flex items-center justify-center hover:bg-vintage-100 transition-colors focus:outline-none" aria-label="Toggle theme" title="Toggle Theme (Light / Dark / System)">
+                        <i id="mobile-quick-theme-icon" class="fas fa-desktop text-xs"></i>
+                    </button>
                     <button type="button" id="mobile-menu-btn" class="w-10 h-10 rounded-xl border border-vintage-300/80 bg-white/80 text-ink-800 flex items-center justify-center hover:bg-vintage-100 transition-colors focus:outline-none" aria-label="Open menu">
                         <i class="fas fa-bars-staggered text-sm"></i>
                     </button>
@@ -248,6 +301,28 @@
                             </div>
                             <i class="fas fa-chevron-right text-[9px] text-vintage-400 group-hover:text-sage-700 group-hover:translate-x-0.5 transition-all"></i>
                         </a>
+                    </div>
+
+                    <!-- Mobile Drawer Theme Display Switcher -->
+                    <div class="mt-6 pt-4 border-t border-vintage-200/80">
+                        <div class="flex items-center justify-between mb-2 px-1">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-ink-400">Appearance Theme</span>
+                            <span id="mobile-theme-status-text" class="text-[11px] font-semibold text-sage-800 capitalize">System</span>
+                        </div>
+                        <div class="grid grid-cols-3 gap-1.5 p-1 rounded-xl bg-vintage-100 border border-vintage-300/80 text-xs">
+                            <button type="button" class="mobile-theme-btn flex items-center justify-center gap-1.5 py-2 px-1 rounded-lg font-medium transition-all" data-theme="light">
+                                <i class="fas fa-sun text-brass-600 text-xs"></i>
+                                <span>Light</span>
+                            </button>
+                            <button type="button" class="mobile-theme-btn flex items-center justify-center gap-1.5 py-2 px-1 rounded-lg font-medium transition-all" data-theme="dark">
+                                <i class="fas fa-moon text-sage-600 text-xs"></i>
+                                <span>Dark</span>
+                            </button>
+                            <button type="button" class="mobile-theme-btn flex items-center justify-center gap-1.5 py-2 px-1 rounded-lg font-medium transition-all" data-theme="system">
+                                <i class="fas fa-desktop text-ink-600 text-xs"></i>
+                                <span>System</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -950,7 +1025,7 @@
                                     <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-[#F8F8F8] text-ink-800 border border-vintage-200">Google Ecosystem</span>
                                 </div>
                             </div>
-                            <a href="https://u/1/reporting/97c85ac1-02b5-4af7-bde6-8e9a242e9b77/page/eUtOF/edit" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#F8F8F8] border border-vintage-300 hover:bg-sage-800 hover:border-sage-800 hover:text-vintage-50 text-xs font-semibold text-ink-800 shadow-2xs transition-all">
+                            <a href="https://lookerstudio.google.com/reporting/97c85ac1-02b5-4af7-bde6-8e9a242e9b77/page/eUtOF" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#F8F8F8] border border-vintage-300 hover:bg-sage-800 hover:border-sage-800 hover:text-vintage-50 text-xs font-semibold text-ink-800 shadow-2xs transition-all">
                                 <i class="fas fa-arrow-up-right-from-square"></i> Open Live Dashboard
                             </a>
                         </div>
@@ -1292,8 +1367,7 @@
     <!-- ================= FOOTER (VINTAGE ELEGANT) ================= -->
     <footer class="bg-[#241E1A] text-vintage-200 border-t border-vintage-800 py-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div class="flex items-center gap-3">
-                <div class="w-8 h-8 rounded-lg bg-brass-600 text-vintage-950 font-serif font-bold text-xs flex items-center justify-center">HF</div>
+            <div class="flex items-center">
                 <p class="text-xs text-vintage-300">&copy; 2025 Muhammad Haris Fariyano. All Rights Reserved.</p>
             </div>
 
