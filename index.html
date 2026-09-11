@@ -48,18 +48,40 @@
     </script>
 
     <!-- Favicon -->
-    <link rel="icon" href="Images/analyst.png" type="image/png" />
+    <link rel="icon" href="Images/analyst.webp" type="image/webp" />
+    <link rel="alternate icon" href="Images/analyst.png" type="image/png" />
 
-    <!-- Google Fonts: Playfair Display (Vintage Serif) & Plus Jakarta Sans (Editorial Clean Sans) -->
+    <!-- Performance: Resource Preconnections & DNS Prefetch -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="https://unpkg.com">
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <!-- Performance: Preload Critical Hero Image (LCP Optimization) -->
+    <link rel="preload" as="image" href="Images/Main.webp" type="image/webp" fetchpriority="high">
 
-    <!-- AOS CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Google Fonts: Non-render-blocking with font-display: swap -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+    </noscript>
+
+    <!-- Font Awesome: Non-render-blocking -->
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    </noscript>
+
+    <!-- AOS CSS: Non-render-blocking -->
+    <link rel="preload" as="style" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    </noscript>
 
     <!-- Dark Mode Immediate Detector (Prevents FOUC) -->
     <script>
@@ -146,8 +168,8 @@
     <!-- Custom CSS Tweaks -->
     <link rel="stylesheet" href="style.css" />
 
-    <!-- Typed.js -->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
+    <!-- Deferred Typed.js (Eliminate render-blocking) -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" defer></script>
 </head>
 
 <body class="bg-[#F8F8F8] text-ink-900 antialiased selection:bg-sage-600 selection:text-white">
@@ -159,7 +181,7 @@
 
                 <!-- Vintage Elegant Brand Signature -->
                 <a href="#home" class="font-serif italic text-xl lg:text-2xl font-bold text-ink-900 tracking-tight hover:text-sage-800 transition-colors group">
-                    <span>Haris_Fariyano</span><span class="text-brass-600 not-italic font-sans text-xl ml-0.5 group-hover:text-sage-700 transition-colors">.</span>
+                    <span>myportofolio</span><span class="text-brass-600 not-italic font-sans text-xl ml-0.5 group-hover:text-sage-700 transition-colors">.</span>
                 </a>
 
                 <!-- Desktop Navigation Links -->
@@ -364,8 +386,8 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
                     
-                    <!-- Hero Content Left -->
-                    <div class="lg:col-span-7 flex flex-col items-start" data-aos="fade-up" data-aos-duration="900">
+                    <!-- Hero Content Left (Immediate LCP render, no scroll-delay) -->
+                    <div class="lg:col-span-7 flex flex-col items-start">
                         
                         <!-- Open to work badge -->
                         <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E5E0D8]/50 border border-vintage-300 text-sage-800 text-xs font-semibold uppercase tracking-wider mb-6 shadow-2xs">
@@ -420,15 +442,18 @@
                         </div>
                     </div>
 
-                    <!-- Hero Visual Right -->
-                    <div class="lg:col-span-5 flex justify-center lg:justify-end" data-aos="zoom-in" data-aos-duration="1000">
+                    <!-- Hero Visual Right (Instant LCP Paint) -->
+                    <div class="lg:col-span-5 flex justify-center lg:justify-end">
                         <div class="relative w-full max-w-md">
                             
                             <!-- Ambient frame background -->
                             <div class="absolute -inset-1.5 bg-gradient-to-tr from-sage-600/30 to-brass-500/20 rounded-3xl blur-lg opacity-30"></div>
                             
                             <div class="relative rounded-3xl overflow-hidden bg-white p-3 shadow-xl border border-vintage-200">
-                                <img src="Images/Main.jpg" alt="Muhammad Haris Fariyano" class="w-full h-auto aspect-[4/5] object-cover rounded-2xl">
+                                <picture>
+                                    <source srcset="Images/Main.webp" type="image/webp">
+                                    <img src="Images/Main.jpg" alt="Muhammad Haris Fariyano" width="480" height="600" fetchpriority="high" decoding="sync" class="w-full h-auto aspect-[4/5] object-cover rounded-2xl">
+                                </picture>
                                 
                                 <!-- Floating Micro-Badges -->
                                 <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-4 rounded-xl border border-vintage-200 shadow-md flex items-center justify-between">
@@ -566,7 +591,7 @@
                             <div class="accordion-item accordion-open bg-white rounded-2xl border border-vintage-200 shadow-2xs overflow-hidden transition-all duration-200">
                                 <button type="button" class="accordion-trigger w-full p-5 text-left flex items-start justify-between gap-4 focus:outline-none hover:bg-vintage-50">
                                     <div class="flex items-start gap-4">
-                                        <img src="Images/muamalatjpg.jpg" alt="PT Kimia Farma" class="w-12 h-12 rounded-xl object-contain border border-vintage-200 p-1 bg-white flex-shrink-0">
+                                        <img src="Images/muamalatjpg.webp" alt="PT Kimia Farma" width="48" height="48" loading="lazy" decoding="async" class="w-12 h-12 rounded-xl object-contain border border-vintage-200 p-1 bg-white flex-shrink-0">
                                         <div>
                                             <h4 class="font-serif text-base font-bold text-ink-900">Big Data Analytics - Project-Based Internship</h4>
                                             <p class="text-xs font-semibold text-sage-800">PT Kimia Farma x Rakamin Academy</p>
@@ -634,7 +659,7 @@
                             <div class="accordion-item accordion-open bg-white rounded-2xl border border-vintage-200 shadow-2xs overflow-hidden transition-all duration-200">
                                 <button type="button" class="accordion-trigger w-full p-5 text-left flex items-start justify-between gap-4 focus:outline-none hover:bg-vintage-50">
                                     <div class="flex items-start gap-4">
-                                        <img src="Images/poltekharber.png" alt="Politeknik Harapan Bersama" class="w-12 h-12 rounded-xl object-contain border border-vintage-200 p-1 bg-white flex-shrink-0">
+                                        <img src="Images/poltekharber.webp" alt="Politeknik Harapan Bersama" width="48" height="48" loading="lazy" decoding="async" class="w-12 h-12 rounded-xl object-contain border border-vintage-200 p-1 bg-white flex-shrink-0">
                                         <div>
                                             <h4 class="font-serif text-base font-bold text-ink-900">Bachelor's Degree, Informatika</h4>
                                             <p class="text-xs font-semibold text-sage-800">Politeknik Harapan Bersama</p>
@@ -858,7 +883,7 @@
                     <!-- Card 1: Trading & Analytics -->
                     <div class="project-card flex flex-col bg-white rounded-2xl border border-vintage-200 shadow-2xs overflow-hidden hover:shadow-md hover:border-sage-600/40 transition-all duration-300 group" data-category="tableau sql" data-aos="fade-up">
                         <div class="relative overflow-hidden aspect-video bg-vintage-100">
-                            <img src="Images/ProjectTrading.png" alt="Trading & Analytics Dashboard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <img src="Images/ProjectTrading.webp" alt="Trading & Analytics Dashboard" width="640" height="360" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full text-[11px] font-bold font-serif bg-[#F8F8F8]/95 backdrop-blur-xs text-sage-900 border border-vintage-200/60 shadow-2xs">Tableau</span>
                         </div>
                         <div class="p-6 flex flex-col flex-grow justify-between">
@@ -880,7 +905,7 @@
                     <!-- Card 2: Sales Performance -->
                     <div class="project-card flex flex-col bg-white rounded-2xl border border-vintage-200 shadow-2xs overflow-hidden hover:shadow-md hover:border-sage-600/40 transition-all duration-300 group" data-category="tableau sql" data-aos="fade-up" data-aos-delay="100">
                         <div class="relative overflow-hidden aspect-video bg-vintage-100">
-                            <img src="Images/ProjectSales.png" alt="Sales Performance Dashboard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <img src="Images/ProjectSales.webp" alt="Sales Performance Dashboard" width="640" height="360" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full text-[11px] font-bold font-serif bg-[#F8F8F8]/95 backdrop-blur-xs text-sage-900 border border-vintage-200/60 shadow-2xs">Tableau</span>
                         </div>
                         <div class="p-6 flex flex-col flex-grow justify-between">
@@ -902,7 +927,7 @@
                     <!-- Card 3: Regional Performance Summary -->
                     <div class="project-card flex flex-col bg-white rounded-2xl border border-vintage-200 shadow-2xs overflow-hidden hover:shadow-md hover:border-sage-600/40 transition-all duration-300 group" data-category="tableau" data-aos="fade-up" data-aos-delay="200">
                         <div class="relative overflow-hidden aspect-video bg-vintage-100">
-                            <img src="Images/ProjectRegional.png" alt="Regional Performance Summary" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <img src="Images/ProjectRegional.webp" alt="Regional Performance Summary" width="640" height="360" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full text-[11px] font-bold font-serif bg-[#F8F8F8]/95 backdrop-blur-xs text-sage-900 border border-vintage-200/60 shadow-2xs">Tableau</span>
                         </div>
                         <div class="p-6 flex flex-col flex-grow justify-between">
@@ -924,7 +949,7 @@
                     <!-- Card 4: AdventureWorks Performance Report -->
                     <div class="project-card hidden flex-col bg-white rounded-2xl border border-vintage-200 shadow-2xs overflow-hidden hover:shadow-md hover:border-sage-600/40 transition-all duration-300 group" data-category="powerbi sql" data-aos="fade-up">
                         <div class="relative overflow-hidden aspect-video bg-vintage-100">
-                            <img src="Images/AdventureWork.png" alt="AdventureWorks Performance Report" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <img src="Images/AdventureWork.webp" alt="AdventureWorks Performance Report" width="640" height="360" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full text-[11px] font-bold font-serif bg-[#F8F8F8]/95 backdrop-blur-xs text-brass-800 border border-vintage-200/60 shadow-2xs">Power BI</span>
                         </div>
                         <div class="p-6 flex flex-col flex-grow justify-between">
@@ -946,7 +971,7 @@
                     <!-- Card 5: AdventureWorks Sales Dashboard -->
                     <div class="project-card hidden flex-col bg-white rounded-2xl border border-vintage-200 shadow-2xs overflow-hidden hover:shadow-md hover:border-sage-600/40 transition-all duration-300 group" data-category="powerbi sql" data-aos="fade-up">
                         <div class="relative overflow-hidden aspect-video bg-vintage-100">
-                            <img src="Images/SalesDashboard.png" alt="AdventureWorks Sales Dashboard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <img src="Images/SalesDashboard.webp" alt="AdventureWorks Sales Dashboard" width="640" height="360" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full text-[11px] font-bold font-serif bg-[#F8F8F8]/95 backdrop-blur-xs text-brass-800 border border-vintage-200/60 shadow-2xs">Power BI</span>
                         </div>
                         <div class="p-6 flex flex-col flex-grow justify-between">
@@ -968,7 +993,7 @@
                     <!-- Card 6: Tailwind Traders Global Overview -->
                     <div class="project-card hidden flex-col bg-white rounded-2xl border border-vintage-200 shadow-2xs overflow-hidden hover:shadow-md hover:border-sage-600/40 transition-all duration-300 group" data-category="powerbi" data-aos="fade-up">
                         <div class="relative overflow-hidden aspect-video bg-vintage-100">
-                            <img src="Images/Tailwaind.png" alt="Tailwind Traders Global Overview Report" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <img src="Images/Tailwaind.webp" alt="Tailwind Traders Global Overview Report" width="640" height="360" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full text-[11px] font-bold font-serif bg-[#F8F8F8]/95 backdrop-blur-xs text-brass-800 border border-vintage-200/60 shadow-2xs">Power BI</span>
                         </div>
                         <div class="p-6 flex flex-col flex-grow justify-between">
@@ -990,7 +1015,7 @@
                     <!-- Card 7: Supply Chain Delay Analysis -->
                     <div class="project-card hidden flex-col bg-white rounded-2xl border border-vintage-200 shadow-2xs overflow-hidden hover:shadow-md hover:border-sage-600/40 transition-all duration-300 group" data-category="powerbi" data-aos="fade-up">
                         <div class="relative overflow-hidden aspect-video bg-vintage-100">
-                            <img src="Images/SupplyChain.png" alt="Supply Chain Delay Analysis Dashboard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <img src="Images/SupplyChain.webp" alt="Supply Chain Delay Analysis Dashboard" width="640" height="360" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full text-[11px] font-bold font-serif bg-[#F8F8F8]/95 backdrop-blur-xs text-brass-800 border border-vintage-200/60 shadow-2xs">Power BI</span>
                         </div>
                         <div class="p-6 flex flex-col flex-grow justify-between">
@@ -1012,7 +1037,7 @@
                     <!-- Card 8: Digital Sales Performance -->
                     <div class="project-card hidden flex-col bg-white rounded-2xl border border-vintage-200 shadow-2xs overflow-hidden hover:shadow-md hover:border-sage-600/40 transition-all duration-300 group" data-category="looker" data-aos="fade-up">
                         <div class="relative overflow-hidden aspect-video bg-vintage-100">
-                            <img src="Images/DigitalSales.png" alt="Digital Sales Performance Dashboard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <img src="Images/DigitalSales.webp" alt="Digital Sales Performance Dashboard" width="640" height="360" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full text-[11px] font-bold font-serif bg-[#F8F8F8]/95 backdrop-blur-xs text-sage-900 border border-vintage-200/60 shadow-2xs">Looker Studio</span>
                         </div>
                         <div class="p-6 flex flex-col flex-grow justify-between">
@@ -1034,7 +1059,7 @@
                     <!-- Card 9: Employee Attrition Prediction -->
                     <div class="project-card hidden flex-col bg-white rounded-2xl border border-vintage-200 shadow-2xs overflow-hidden hover:shadow-md hover:border-sage-600/40 transition-all duration-300 group" data-category="python" data-aos="fade-up">
                         <div class="relative overflow-hidden aspect-video bg-vintage-100">
-                            <img src="Images/HR.png" alt="Employee Attrition Prediction" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <img src="Images/HR.webp" alt="Employee Attrition Prediction" width="640" height="360" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full text-[11px] font-bold font-serif bg-[#F8F8F8]/95 backdrop-blur-xs text-brass-800 border border-vintage-200/60 shadow-2xs">Python & ML</span>
                         </div>
                         <div class="p-6 flex flex-col flex-grow justify-between">
@@ -1056,7 +1081,7 @@
                     <!-- Card 10: Australia Wildfire EDA -->
                     <div class="project-card hidden flex-col bg-white rounded-2xl border border-vintage-200 shadow-2xs overflow-hidden hover:shadow-md hover:border-sage-600/40 transition-all duration-300 group" data-category="python" data-aos="fade-up">
                         <div class="relative overflow-hidden aspect-video bg-vintage-100">
-                            <img src="Images/DataVizPython.png" alt="Analyzing Wildfire Activities in Australia" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <img src="Images/DataVizPython.webp" alt="Analyzing Wildfire Activities in Australia" width="640" height="360" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full text-[11px] font-bold font-serif bg-[#F8F8F8]/95 backdrop-blur-xs text-brass-800 border border-vintage-200/60 shadow-2xs">Python</span>
                         </div>
                         <div class="p-6 flex flex-col flex-grow justify-between">
@@ -1110,7 +1135,7 @@
                         <div>
                             <div class="flex items-center justify-between gap-4 mb-4">
                                 <div class="w-12 h-12 rounded-xl bg-[#F8F8F8] border border-vintage-200 p-2 flex items-center justify-center">
-                                    <img src="Images/ibm.svg" alt="IBM" class="max-h-full max-w-full object-contain">
+                                    <img src="Images/ibm.svg" alt="IBM" width="48" height="48" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
                                 </div>
                                 <span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-sage-100 text-sage-800 border border-sage-200">IBM</span>
                             </div>
@@ -1128,7 +1153,7 @@
                         <div>
                             <div class="flex items-center justify-between gap-4 mb-4">
                                 <div class="w-12 h-12 rounded-xl bg-[#F8F8F8] border border-vintage-200 p-2 flex items-center justify-center">
-                                    <img src="Images/microsoft.png" alt="Microsoft" class="max-h-full max-w-full object-contain">
+                                    <img src="Images/microsoft.webp" alt="Microsoft" width="48" height="48" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
                                 </div>
                                 <span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-brass-100 text-brass-800 border border-brass-200">Microsoft</span>
                             </div>
@@ -1146,7 +1171,7 @@
                         <div>
                             <div class="flex items-center justify-between gap-4 mb-4">
                                 <div class="w-12 h-12 rounded-xl bg-[#F8F8F8] border border-vintage-200 p-2 flex items-center justify-center">
-                                    <img src="Images/microsoft.png" alt="Microsoft" class="max-h-full max-w-full object-contain">
+                                    <img src="Images/microsoft.webp" alt="Microsoft" width="48" height="48" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
                                 </div>
                                 <span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-brass-100 text-brass-800 border border-brass-200">Microsoft</span>
                             </div>
@@ -1164,7 +1189,7 @@
                         <div>
                             <div class="flex items-center justify-between gap-4 mb-4">
                                 <div class="w-12 h-12 rounded-xl bg-[#F8F8F8] border border-vintage-200 p-2 flex items-center justify-center">
-                                    <img src="Images/tableau.svg" alt="Tableau" class="max-h-full max-w-full object-contain">
+                                    <img src="Images/tableau.svg" alt="Tableau" width="48" height="48" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
                                 </div>
                                 <span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-vintage-100 text-ink-800 border border-vintage-300">Tableau</span>
                             </div>
@@ -1182,7 +1207,7 @@
                         <div>
                             <div class="flex items-center justify-between gap-4 mb-4">
                                 <div class="w-12 h-12 rounded-xl bg-[#F8F8F8] border border-vintage-200 p-2 flex items-center justify-center">
-                                    <img src="Images/tableau.svg" alt="Tableau" class="max-h-full max-w-full object-contain">
+                                    <img src="Images/tableau.svg" alt="Tableau" width="48" height="48" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
                                 </div>
                                 <span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-vintage-100 text-ink-800 border border-vintage-300">Tableau</span>
                             </div>
@@ -1200,7 +1225,7 @@
                         <div>
                             <div class="flex items-center justify-between gap-4 mb-4">
                                 <div class="w-12 h-12 rounded-xl bg-[#F8F8F8] border border-vintage-200 p-2 flex items-center justify-center">
-                                    <img src="Images/google.png" alt="Google" class="max-h-full max-w-full object-contain">
+                                    <img src="Images/google.webp" alt="Google" width="48" height="48" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
                                 </div>
                                 <span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-sage-100 text-sage-800 border border-sage-200">Google</span>
                             </div>
@@ -1218,7 +1243,7 @@
                         <div>
                             <div class="flex items-center justify-between gap-4 mb-4">
                                 <div class="w-12 h-12 rounded-xl bg-[#F8F8F8] border border-vintage-200 p-2 flex items-center justify-center">
-                                    <img src="Images/CFI.png" alt="CFI" class="max-h-full max-w-full object-contain">
+                                    <img src="Images/CFI.webp" alt="CFI" width="48" height="48" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
                                 </div>
                                 <span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-brass-100 text-brass-800 border border-brass-200">CFI</span>
                             </div>
@@ -1236,7 +1261,7 @@
                         <div>
                             <div class="flex items-center justify-between gap-4 mb-4">
                                 <div class="w-12 h-12 rounded-xl bg-[#F8F8F8] border border-vintage-200 p-2 flex items-center justify-center">
-                                    <img src="Images/ibm.svg" alt="IBM" class="max-h-full max-w-full object-contain">
+                                    <img src="Images/ibm.svg" alt="IBM" width="48" height="48" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
                                 </div>
                                 <span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-sage-100 text-sage-800 border border-sage-200">IBM</span>
                             </div>
@@ -1254,7 +1279,7 @@
                         <div>
                             <div class="flex items-center justify-between gap-4 mb-4">
                                 <div class="w-12 h-12 rounded-xl bg-[#F8F8F8] border border-vintage-200 p-2 flex items-center justify-center">
-                                    <img src="Images/Unilever.webp" alt="Unilever" class="max-h-full max-w-full object-contain">
+                                    <img src="Images/Unilever.webp" alt="Unilever" width="48" height="48" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
                                 </div>
                                 <span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-sage-100 text-sage-800 border border-sage-200">Unilever</span>
                             </div>
@@ -1381,11 +1406,11 @@
         </div>
     </footer>
 
-    <!-- AOS JS -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- AOS JS (Deferred) -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
 
-    <!-- Custom Script -->
-    <script src="script.js"></script>
+    <!-- Custom Script (Deferred) -->
+    <script src="script.js" defer></script>
 </body>
 
 </html>
