@@ -1,16 +1,57 @@
 @import "tailwindcss";
 
 /* Custom Base & Utility Tweaks */
-@layer base {
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (min-width: 768px) {
   html {
-    scroll-behavior: smooth;
+    scrollbar-gutter: stable;
   }
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #181C19;
+  background-color: #F8F8F8;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* Safe Area Inset Support for Modern Mobile Devices */
+@supports (padding: max(0px)) {
   body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    color: #181C19;
-    background-color: #F8F8F8;
-    overflow-x: hidden;
+    padding-left: max(0px, env(safe-area-inset-left));
+    padding-right: max(0px, env(safe-area-inset-right));
   }
+  #mobile-drawer {
+    padding-top: max(0px, env(safe-area-inset-top));
+    padding-bottom: max(0px, env(safe-area-inset-bottom));
+  }
+}
+
+/* Utility to hide scrollbars for horizontal scroll tabs on mobile */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+main,
+section {
+  max-width: 100%;
+  overflow-x: clip;
 }
 
 /* Custom Vintage Scrollbar */
@@ -50,6 +91,67 @@
 #mobile-drawer {
   height: 100vh;
   height: 100dvh;
+}
+
+/* ==========================================================================
+   ELEGANT EYE-COMFORT THEME MODE TRANSITIONS
+   Cinematic 5-second ultra-smooth transition with twilight eye-comfort shield
+   ========================================================================== */
+
+html,
+body,
+#main-nav,
+#mobile-drawer,
+section,
+footer {
+  transition: background-color 5s cubic-bezier(0.35, 0, 0.15, 1),
+              border-color 5s cubic-bezier(0.35, 0, 0.15, 1),
+              color 5s cubic-bezier(0.35, 0, 0.15, 1);
+}
+
+/* Universal 5s Transition State across ALL DOM elements */
+html.theme-transitioning,
+html.theme-transitioning *,
+html.theme-transitioning *::before,
+html.theme-transitioning *::after {
+  transition: background-color 5s cubic-bezier(0.35, 0, 0.15, 1) !important,
+              border-color 5s cubic-bezier(0.35, 0, 0.15, 1) !important,
+              color 5s cubic-bezier(0.35, 0, 0.15, 1) !important,
+              fill 5s cubic-bezier(0.35, 0, 0.15, 1) !important,
+              stroke 5s cubic-bezier(0.35, 0, 0.15, 1) !important,
+              box-shadow 5s cubic-bezier(0.35, 0, 0.15, 1) !important,
+              text-decoration-color 5s cubic-bezier(0.35, 0, 0.15, 1) !important;
+  transition-delay: 0s !important;
+}
+
+/* Eye-Comfort Twilight Shield: Softens the luminance delta to prevent eye shock */
+html.theme-transitioning::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events-none;
+  z-index: 99999;
+  background: radial-gradient(circle at 50% 30%, rgba(217, 185, 155, 0.14), rgba(27, 33, 29, 0.10) 80%);
+  animation: eyeComfortVeil 5s cubic-bezier(0.35, 0, 0.15, 1) forwards;
+}
+
+@keyframes eyeComfortVeil {
+  0% { opacity: 0; }
+  25% { opacity: 0.85; }
+  65% { opacity: 0.55; }
+  100% { opacity: 0; }
+}
+
+/* Theme toggle icon interactive micro-animation */
+#theme-active-icon,
+#mobile-quick-theme-icon {
+  display: inline-block;
+  transition: transform 1.2s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.6s ease;
+}
+
+.theme-icon-rotate {
+  transform: rotate(360deg) scale(0.85);
+  opacity: 0.6;
 }
 
 /* ==========================================================================
@@ -107,7 +209,8 @@ html.dark #mobile-drawer > div:last-child {
 
 /* Section Backgrounds in Dark Mode */
 html.dark #home {
-  background: linear-gradient(180deg, #131614 0%, #1A211D 50%, #131614 100%) !important;
+  background-color: #131614 !important;
+  background-image: none !important;
   border-color: #27312A !important;
 }
 html.dark #about,

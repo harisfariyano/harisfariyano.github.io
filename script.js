@@ -121,19 +121,54 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     };
 
-    const applyTheme = (theme) => {
-        localStorage.setItem(THEME_STORAGE_KEY, theme);
-        updateThemeUI(theme);
+    let themeTransitionTimer = null;
+
+    const animateThemeIcon = () => {
+        if (themeActiveIcon) {
+            themeActiveIcon.classList.remove('theme-icon-rotate');
+            void themeActiveIcon.offsetWidth;
+            themeActiveIcon.classList.add('theme-icon-rotate');
+            setTimeout(() => themeActiveIcon.classList.remove('theme-icon-rotate'), 1200);
+        }
+        if (mobileQuickThemeIcon) {
+            mobileQuickThemeIcon.classList.remove('theme-icon-rotate');
+            void mobileQuickThemeIcon.offsetWidth;
+            mobileQuickThemeIcon.classList.add('theme-icon-rotate');
+            setTimeout(() => mobileQuickThemeIcon.classList.remove('theme-icon-rotate'), 1200);
+        }
     };
 
-    // Initialize UI with current theme preference
-    updateThemeUI(getStoredTheme());
+    const applyTheme = (theme, isUserAction = true) => {
+        localStorage.setItem(THEME_STORAGE_KEY, theme);
+
+        if (isUserAction) {
+            animateThemeIcon();
+            
+            // Prime the 5-second universal eye-comfort transition
+            document.documentElement.classList.add('theme-transitioning');
+            void document.documentElement.offsetWidth; // Force reflow to commit transition properties
+
+            updateThemeUI(theme);
+
+            // Keep the eye-comfort transition state active for 5.2 seconds
+            clearTimeout(themeTransitionTimer);
+            themeTransitionTimer = setTimeout(() => {
+                document.documentElement.classList.remove('theme-transitioning');
+            }, 5200);
+        } else {
+            // Initial page load: set theme instantly without transition delay
+            updateThemeUI(theme);
+        }
+    };
+
+    // Initialize UI with current theme preference (instant, no initial flash)
+    applyTheme(getStoredTheme(), false);
 
     // Listen for System OS theme changes dynamically
     const systemMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     const handleSystemSchemeChange = () => {
         if (getStoredTheme() === 'system') {
-            updateThemeUI('system');
+            applyTheme('system', true);
         }
     };
     if (systemMediaQuery.addEventListener) {
@@ -217,7 +252,13 @@ document.addEventListener('DOMContentLoaded', function () {
             mobileMenu.setAttribute('aria-hidden', 'false');
             mobileDrawer.classList.remove('translate-x-full');
             mobileDrawer.classList.add('translate-x-0');
+            const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
             document.body.style.overflow = 'hidden';
+            if (scrollbarWidth > 0) {
+                document.body.style.paddingRight = `${scrollbarWidth}px`;
+                const navbar = document.getElementById('main-nav');
+                if (navbar) navbar.style.paddingRight = `${scrollbarWidth}px`;
+            }
         } else {
             mobileDrawer.classList.remove('translate-x-0');
             mobileDrawer.classList.add('translate-x-full');
@@ -230,6 +271,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             }, 300);
             document.body.style.overflow = '';
+            document.body.style.paddingRight = '';
+            const navbar = document.getElementById('main-nav');
+            if (navbar) navbar.style.paddingRight = '';
         }
     };
 

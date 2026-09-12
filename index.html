@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth overflow-x-hidden max-w-full">
 
 <head>
     <meta charset="UTF-8" />
@@ -56,8 +56,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="dns-prefetch" href="https://unpkg.com">
-    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
 
     <!-- Performance: Preload Critical Hero Image (LCP Optimization) -->
     <link rel="preload" as="image" href="Images/Main.webp" type="image/webp" fetchpriority="high">
@@ -69,18 +69,19 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
     </noscript>
 
-    <!-- Font Awesome: Non-render-blocking -->
+
+    <!-- Font Awesome: Non-render-blocking with preload -->
     <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" media="print" onload="this.media='all'">
     <noscript>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
     </noscript>
 
-    <!-- AOS CSS: Non-render-blocking -->
-    <link rel="preload" as="style" href="https://unpkg.com/aos@next/dist/aos.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" media="print" onload="this.media='all'">
+    <!-- AOS (Animate on Scroll) CSS: Non-render-blocking with preload -->
+    <link rel="preload" as="style" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" media="print" onload="this.media='all'">
     <noscript>
-        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     </noscript>
 
     <!-- Dark Mode Immediate Detector (Prevents FOUC) -->
@@ -167,12 +168,9 @@
 
     <!-- Custom CSS Tweaks -->
     <link rel="stylesheet" href="style.css" />
-
-    <!-- Deferred Typed.js (Eliminate render-blocking) -->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" defer></script>
 </head>
 
-<body class="bg-[#F8F8F8] text-ink-900 antialiased selection:bg-sage-600 selection:text-white">
+<body class="bg-[#F8F8F8] text-ink-900 antialiased selection:bg-sage-600 selection:text-white overflow-x-hidden max-w-full relative">
 
     <!-- ================= NAVBAR ================= -->
     <header id="main-nav" class="sticky top-0 z-50 w-full bg-[#F8F8F8]/90 backdrop-blur-md border-b border-vintage-200/90 transition-all duration-300">
@@ -185,17 +183,17 @@
                 </a>
 
                 <!-- Desktop Navigation Links -->
-                <nav class="hidden md:flex items-center gap-1 lg:gap-2">
-                    <a href="#home" id="nav-link-home" class="px-3.5 py-2 rounded-lg text-sm font-medium text-ink-700 hover:text-sage-800 hover:bg-vintage-100/80 transition-colors">Home</a>
-                    <a href="#about" id="nav-link-about" class="px-3.5 py-2 rounded-lg text-sm font-medium text-ink-700 hover:text-sage-800 hover:bg-vintage-100/80 transition-colors">About</a>
-                    <a href="#background" id="nav-link-background" class="px-3.5 py-2 rounded-lg text-sm font-medium text-ink-700 hover:text-sage-800 hover:bg-vintage-100/80 transition-colors">Background</a>
-                    <a href="#skills" id="nav-link-skills" class="px-3.5 py-2 rounded-lg text-sm font-medium text-ink-700 hover:text-sage-800 hover:bg-vintage-100/80 transition-colors">Skills</a>
-                    <a href="#projects" id="nav-link-projects" class="px-3.5 py-2 rounded-lg text-sm font-medium text-ink-700 hover:text-sage-800 hover:bg-vintage-100/80 transition-colors">Projects</a>
-                    <a href="#certification" id="nav-link-certification" class="px-3.5 py-2 rounded-lg text-sm font-medium text-ink-700 hover:text-sage-800 hover:bg-vintage-100/80 transition-colors">Certifications</a>
+                <nav class="hidden lg:flex items-center gap-1 xl:gap-2">
+                    <a href="#home" id="nav-link-home" class="px-3 xl:px-3.5 py-2 rounded-lg text-sm font-medium text-ink-700 hover:text-sage-800 hover:bg-vintage-100/80 transition-colors">Home</a>
+                    <a href="#about" id="nav-link-about" class="px-3 xl:px-3.5 py-2 rounded-lg text-sm font-medium text-ink-700 hover:text-sage-800 hover:bg-vintage-100/80 transition-colors">About</a>
+                    <a href="#background" id="nav-link-background" class="px-3 xl:px-3.5 py-2 rounded-lg text-sm font-medium text-ink-700 hover:text-sage-800 hover:bg-vintage-100/80 transition-colors">Background</a>
+                    <a href="#skills" id="nav-link-skills" class="px-3 xl:px-3.5 py-2 rounded-lg text-sm font-medium text-ink-700 hover:text-sage-800 hover:bg-vintage-100/80 transition-colors">Skills</a>
+                    <a href="#projects" id="nav-link-projects" class="px-3 xl:px-3.5 py-2 rounded-lg text-sm font-medium text-ink-700 hover:text-sage-800 hover:bg-vintage-100/80 transition-colors">Projects</a>
+                    <a href="#certification" id="nav-link-certification" class="px-3 xl:px-3.5 py-2 rounded-lg text-sm font-medium text-ink-700 hover:text-sage-800 hover:bg-vintage-100/80 transition-colors">Certifications</a>
                 </nav>
 
                 <!-- Desktop Action Button & Theme Selector -->
-                <div class="hidden md:flex items-center gap-3">
+                <div class="hidden lg:flex items-center gap-3">
                     <!-- Theme Selector Dropdown -->
                     <div class="relative" id="theme-dropdown-container">
                         <button type="button" id="theme-menu-btn" class="w-9 h-9 rounded-xl border border-vintage-300 bg-white text-ink-700 flex items-center justify-center hover:bg-vintage-100 hover:text-sage-800 transition-all shadow-2xs focus:outline-none" aria-label="Pilih tema tampilan" title="Theme (Light / Dark / System)">
@@ -234,12 +232,16 @@
                     </a>
                 </div>
 
-                <!-- Mobile Header Actions (Quick Theme Toggle + Hamburger) -->
-                <div class="flex md:hidden items-center gap-2">
-                    <button type="button" id="mobile-quick-theme-btn" class="w-10 h-10 rounded-xl border border-vintage-300/80 bg-white/80 text-ink-800 flex items-center justify-center hover:bg-vintage-100 transition-colors focus:outline-none" aria-label="Toggle theme" title="Toggle Theme (Light / Dark / System)">
+                <!-- Mobile & Tablet Header Actions (Quick Theme Toggle + Compact CTA + Hamburger) -->
+                <div class="flex lg:hidden items-center gap-2">
+                    <button type="button" id="mobile-quick-theme-btn" class="w-10 h-10 rounded-xl border border-vintage-300/80 bg-white/80 text-ink-800 flex items-center justify-center hover:bg-vintage-100 transition-colors focus:outline-none min-w-[40px] min-h-[40px]" aria-label="Toggle theme" title="Toggle Theme (Light / Dark / System)">
                         <i id="mobile-quick-theme-icon" class="fas fa-desktop text-xs"></i>
                     </button>
-                    <button type="button" id="mobile-menu-btn" class="w-10 h-10 rounded-xl border border-vintage-300/80 bg-white/80 text-ink-800 flex items-center justify-center hover:bg-vintage-100 transition-colors focus:outline-none" aria-label="Open menu">
+                    <a href="#contact" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 text-xs uppercase tracking-wider font-semibold rounded-lg bg-sage-700 text-vintage-50 hover:bg-sage-800 transition-all shadow-2xs min-h-[40px]">
+                        <span>Get In Touch</span>
+                        <i class="fas fa-arrow-right text-[9px] text-brass-300"></i>
+                    </a>
+                    <button type="button" id="mobile-menu-btn" class="w-10 h-10 rounded-xl border border-vintage-300/80 bg-white/80 text-ink-800 flex items-center justify-center hover:bg-vintage-100 transition-colors focus:outline-none min-w-[40px] min-h-[40px]" aria-label="Open menu">
                         <i class="fas fa-bars-staggered text-sm"></i>
                     </button>
                 </div>
@@ -248,7 +250,7 @@
     </header>
 
     <!-- Mobile Drawer Menu (Vintage Elegant Drawer - Positioned outside header for true viewport fixed positioning) -->
-    <div id="mobile-menu" class="fixed inset-0 z-[100] pointer-events-none opacity-0 invisible transition-all duration-300 md:hidden" aria-hidden="true">
+    <div id="mobile-menu" class="fixed inset-0 z-[100] overflow-hidden pointer-events-none opacity-0 invisible transition-all duration-300 lg:hidden" aria-hidden="true">
         <!-- Backdrop Overlay -->
         <div id="mobile-backdrop" class="fixed inset-0 bg-ink-950/60 backdrop-blur-xs transition-opacity duration-300"></div>
         
@@ -257,7 +259,7 @@
             <!-- Top Section (Header + Navigation) -->
             <div class="flex-1 flex flex-col min-h-0">
                 <!-- Drawer Header -->
-                <div class="flex items-center justify-between p-5 border-b border-vintage-200 bg-[#E5E0D8]/40 shrink-0">
+                <div class="flex items-center justify-between p-4 sm:p-5 border-b border-vintage-200 bg-[#E5E0D8]/40 shrink-0">
                     <div class="flex items-center gap-2.5">
                         <span class="w-9 h-9 rounded-lg bg-sage-800 text-vintage-50 font-serif font-bold text-xs flex items-center justify-center shadow-2xs">HF</span>
                         <div>
@@ -265,58 +267,58 @@
                             <p class="text-[10px] font-sans uppercase tracking-widest text-brass-700 font-semibold">Data Analyst</p>
                         </div>
                     </div>
-                    <button type="button" id="mobile-menu-close" class="w-8 h-8 rounded-full bg-vintage-200/80 hover:bg-vintage-300 text-ink-800 flex items-center justify-center transition-colors focus:outline-none" aria-label="Close menu">
+                    <button type="button" id="mobile-menu-close" class="w-9 h-9 rounded-full bg-vintage-200/80 hover:bg-vintage-300 text-ink-800 flex items-center justify-center transition-colors focus:outline-none min-w-[36px] min-h-[36px]" aria-label="Close menu">
                         <i class="fas fa-xmark text-xs"></i>
                     </button>
                 </div>
 
                 <!-- Drawer Navigation Items (Scrollable) -->
-                <div class="flex-1 overflow-y-auto px-4 py-5">
+                <div class="flex-1 overflow-y-auto px-4 py-4 sm:py-5">
                     <span class="text-[10px] font-bold uppercase tracking-widest text-ink-400 px-3 pb-2.5 block">Menu Navigation</span>
                     <div class="flex flex-col gap-1.5">
-                        <a href="#home" class="mobile-nav-link flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold text-ink-800 hover:text-sage-800 hover:bg-vintage-100 transition-all group">
+                        <a href="#home" class="mobile-nav-link flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold text-ink-800 hover:text-sage-800 hover:bg-vintage-100 transition-all group min-h-[44px]">
                             <div class="flex items-center gap-3">
                                 <span class="w-7 h-7 rounded-md bg-vintage-100 flex items-center justify-center text-ink-600 group-hover:text-sage-700 group-hover:bg-white text-xs"><i class="fas fa-compass"></i></span>
                                 <span>Home</span>
                             </div>
                             <i class="fas fa-chevron-right text-[9px] text-vintage-400 group-hover:text-sage-700 group-hover:translate-x-0.5 transition-all"></i>
                         </a>
-                        <a href="#about" class="mobile-nav-link flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold text-ink-800 hover:text-sage-800 hover:bg-vintage-100 transition-all group">
+                        <a href="#about" class="mobile-nav-link flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold text-ink-800 hover:text-sage-800 hover:bg-vintage-100 transition-all group min-h-[44px]">
                             <div class="flex items-center gap-3">
                                 <span class="w-7 h-7 rounded-md bg-vintage-100 flex items-center justify-center text-ink-600 group-hover:text-sage-700 group-hover:bg-white text-xs"><i class="fas fa-user-tie"></i></span>
                                 <span>About Me</span>
                             </div>
                             <i class="fas fa-chevron-right text-[9px] text-vintage-400 group-hover:text-sage-700 group-hover:translate-x-0.5 transition-all"></i>
                         </a>
-                        <a href="#background" class="mobile-nav-link flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold text-ink-800 hover:text-sage-800 hover:bg-vintage-100 transition-all group">
+                        <a href="#background" class="mobile-nav-link flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold text-ink-800 hover:text-sage-800 hover:bg-vintage-100 transition-all group min-h-[44px]">
                             <div class="flex items-center gap-3">
                                 <span class="w-7 h-7 rounded-md bg-vintage-100 flex items-center justify-center text-ink-600 group-hover:text-sage-700 group-hover:bg-white text-xs"><i class="fas fa-graduation-cap"></i></span>
                                 <span>Background</span>
                             </div>
                             <i class="fas fa-chevron-right text-[9px] text-vintage-400 group-hover:text-sage-700 group-hover:translate-x-0.5 transition-all"></i>
                         </a>
-                        <a href="#skills" class="mobile-nav-link flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold text-ink-800 hover:text-sage-800 hover:bg-vintage-100 transition-all group">
+                        <a href="#skills" class="mobile-nav-link flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold text-ink-800 hover:text-sage-800 hover:bg-vintage-100 transition-all group min-h-[44px]">
                             <div class="flex items-center gap-3">
                                 <span class="w-7 h-7 rounded-md bg-vintage-100 flex items-center justify-center text-ink-600 group-hover:text-sage-700 group-hover:bg-white text-xs"><i class="fas fa-layer-group"></i></span>
                                 <span>Skills & Expertise</span>
                             </div>
                             <i class="fas fa-chevron-right text-[9px] text-vintage-400 group-hover:text-sage-700 group-hover:translate-x-0.5 transition-all"></i>
                         </a>
-                        <a href="#projects" class="mobile-nav-link flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold text-ink-800 hover:text-sage-800 hover:bg-vintage-100 transition-all group">
+                        <a href="#projects" class="mobile-nav-link flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold text-ink-800 hover:text-sage-800 hover:bg-vintage-100 transition-all group min-h-[44px]">
                             <div class="flex items-center gap-3">
                                 <span class="w-7 h-7 rounded-md bg-vintage-100 flex items-center justify-center text-ink-600 group-hover:text-sage-700 group-hover:bg-white text-xs"><i class="fas fa-chart-column"></i></span>
                                 <span>Featured Projects</span>
                             </div>
                             <i class="fas fa-chevron-right text-[9px] text-vintage-400 group-hover:text-sage-700 group-hover:translate-x-0.5 transition-all"></i>
                         </a>
-                        <a href="#certification" class="mobile-nav-link flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold text-ink-800 hover:text-sage-800 hover:bg-vintage-100 transition-all group">
+                        <a href="#certification" class="mobile-nav-link flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold text-ink-800 hover:text-sage-800 hover:bg-vintage-100 transition-all group min-h-[44px]">
                             <div class="flex items-center gap-3">
                                 <span class="w-7 h-7 rounded-md bg-vintage-100 flex items-center justify-center text-ink-600 group-hover:text-sage-700 group-hover:bg-white text-xs"><i class="fas fa-award"></i></span>
                                 <span>Certifications</span>
                             </div>
                             <i class="fas fa-chevron-right text-[9px] text-vintage-400 group-hover:text-sage-700 group-hover:translate-x-0.5 transition-all"></i>
                         </a>
-                        <a href="#contact" class="mobile-nav-link flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold text-ink-800 hover:text-sage-800 hover:bg-vintage-100 transition-all group">
+                        <a href="#contact" class="mobile-nav-link flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold text-ink-800 hover:text-sage-800 hover:bg-vintage-100 transition-all group min-h-[44px]">
                             <div class="flex items-center gap-3">
                                 <span class="w-7 h-7 rounded-md bg-vintage-100 flex items-center justify-center text-ink-600 group-hover:text-sage-700 group-hover:bg-white text-xs"><i class="fas fa-paper-plane"></i></span>
                                 <span>Contact</span>
@@ -326,21 +328,21 @@
                     </div>
 
                     <!-- Mobile Drawer Theme Display Switcher -->
-                    <div class="mt-6 pt-4 border-t border-vintage-200/80">
+                    <div class="mt-5 pt-4 border-t border-vintage-200/80">
                         <div class="flex items-center justify-between mb-2 px-1">
                             <span class="text-[10px] font-bold uppercase tracking-widest text-ink-400">Appearance Theme</span>
                             <span id="mobile-theme-status-text" class="text-[11px] font-semibold text-sage-800 capitalize">System</span>
                         </div>
                         <div class="grid grid-cols-3 gap-1.5 p-1 rounded-xl bg-vintage-100 border border-vintage-300/80 text-xs">
-                            <button type="button" class="mobile-theme-btn flex items-center justify-center gap-1.5 py-2 px-1 rounded-lg font-medium transition-all" data-theme="light">
+                            <button type="button" class="mobile-theme-btn flex items-center justify-center gap-1.5 py-2.5 px-1 rounded-lg font-medium transition-all min-h-[40px]" data-theme="light">
                                 <i class="fas fa-sun text-brass-600 text-xs"></i>
                                 <span>Light</span>
                             </button>
-                            <button type="button" class="mobile-theme-btn flex items-center justify-center gap-1.5 py-2 px-1 rounded-lg font-medium transition-all" data-theme="dark">
+                            <button type="button" class="mobile-theme-btn flex items-center justify-center gap-1.5 py-2.5 px-1 rounded-lg font-medium transition-all min-h-[40px]" data-theme="dark">
                                 <i class="fas fa-moon text-sage-600 text-xs"></i>
                                 <span>Dark</span>
                             </button>
-                            <button type="button" class="mobile-theme-btn flex items-center justify-center gap-1.5 py-2 px-1 rounded-lg font-medium transition-all" data-theme="system">
+                            <button type="button" class="mobile-theme-btn flex items-center justify-center gap-1.5 py-2.5 px-1 rounded-lg font-medium transition-all min-h-[40px]" data-theme="system">
                                 <i class="fas fa-desktop text-ink-600 text-xs"></i>
                                 <span>System</span>
                             </button>
@@ -350,25 +352,25 @@
             </div>
 
             <!-- Drawer Quick Actions & Social Footer (Fixed at bottom of drawer) -->
-            <div class="p-5 border-t border-vintage-200 bg-[#E5E0D8]/40 shrink-0 flex flex-col gap-3">
-                <a href="https://wa.me/6285892640801" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-sage-800 text-vintage-50 text-xs font-semibold hover:bg-sage-900 shadow-2xs transition-colors">
+            <div class="p-4 sm:p-5 border-t border-vintage-200 bg-[#E5E0D8]/40 shrink-0 flex flex-col gap-2.5">
+                <a href="https://wa.me/6285892640801" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-sage-800 text-vintage-50 text-xs font-semibold hover:bg-sage-900 shadow-2xs transition-colors min-h-[44px]">
                     <i class="fab fa-whatsapp text-sm"></i>
                     <span>Hire Me via WhatsApp</span>
                 </a>
-                <a href="https://drive.google.com/file/d/1d8-ScJ1ECU3ytMwQeOfelf5HpFeQsFcy/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-vintage-300 bg-white/90 text-ink-800 text-xs font-semibold hover:bg-vintage-100 transition-colors">
+                <a href="https://drive.google.com/file/d/1d8-ScJ1ECU3ytMwQeOfelf5HpFeQsFcy/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl border border-vintage-300 bg-white/90 text-ink-800 text-xs font-semibold hover:bg-vintage-100 transition-colors min-h-[44px]">
                     <i class="fas fa-file-arrow-down text-brass-700"></i>
                     <span>Download Curriculum Vitae</span>
                 </a>
 
                 <!-- Social Icons Strip -->
                 <div class="pt-2 flex items-center justify-center gap-3 text-vintage-500 border-t border-vintage-200/80 mt-0.5">
-                    <a href="https://www.linkedin.com/in/harisfariyano" target="_blank" rel="noopener noreferrer" class="w-7 h-7 rounded-lg bg-white border border-vintage-200 flex items-center justify-center text-ink-600 hover:text-sage-800 hover:border-sage-400 transition-colors" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/harisfariyano" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-white border border-vintage-200 flex items-center justify-center text-ink-600 hover:text-sage-800 hover:border-sage-400 transition-colors" aria-label="LinkedIn">
                         <i class="fab fa-linkedin-in text-xs"></i>
                     </a>
-                    <a href="https://github.com/harisfariyano" target="_blank" rel="noopener noreferrer" class="w-7 h-7 rounded-lg bg-white border border-vintage-200 flex items-center justify-center text-ink-600 hover:text-sage-800 hover:border-sage-400 transition-colors" aria-label="GitHub">
+                    <a href="https://github.com/harisfariyano" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-white border border-vintage-200 flex items-center justify-center text-ink-600 hover:text-sage-800 hover:border-sage-400 transition-colors" aria-label="GitHub">
                         <i class="fab fa-github text-xs"></i>
                     </a>
-                    <a href="https://public.tableau.com/app/profile/muhammad.haris.fariyano/vizzes" target="_blank" rel="noopener noreferrer" class="w-7 h-7 rounded-lg bg-white border border-vintage-200 flex items-center justify-center text-ink-600 hover:text-sage-800 hover:border-sage-400 transition-colors" aria-label="Tableau">
+                    <a href="https://public.tableau.com/app/profile/muhammad.haris.fariyano/vizzes" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-white border border-vintage-200 flex items-center justify-center text-ink-600 hover:text-sage-800 hover:border-sage-400 transition-colors" aria-label="Tableau">
                         <i class="fas fa-chart-area text-xs"></i>
                     </a>
                 </div>
@@ -376,97 +378,97 @@
         </div>
     </div>
 
-    <main>
+    <main class="relative w-full max-w-full overflow-x-hidden">
         <!-- ================= HERO SECTION (VINTAGE ELEGANT) ================= -->
-        <section id="home" class="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-28 border-b border-vintage-200/80 bg-gradient-to-b from-[#F8F8F8] via-[#E5E0D8]/30 to-[#F8F8F8]">
+        <section id="home" class="relative overflow-hidden pt-8 pb-16 sm:pt-12 sm:pb-20 lg:pt-20 lg:pb-28 border-b border-vintage-200/80 bg-[#F8F8F8]">
             <!-- Subtle antique warm ambient glow elements -->
             <div class="absolute -top-24 -right-24 w-96 h-96 bg-brass-100/40 rounded-full blur-3xl pointer-events-none"></div>
             <div class="absolute top-1/2 -left-32 w-80 h-80 bg-sage-100/40 rounded-full blur-3xl pointer-events-none"></div>
 
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                <div class="grid md:grid-cols-12 gap-8 lg:gap-8 xl:gap-12 items-center">
                     
                     <!-- Hero Content Left (Immediate LCP render, no scroll-delay) -->
-                    <div class="lg:col-span-7 flex flex-col items-start">
+                    <div class="md:col-span-7 lg:col-span-7 flex flex-col items-start">
                         
                         <!-- Open to work badge -->
-                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E5E0D8]/50 border border-vintage-300 text-sage-800 text-xs font-semibold uppercase tracking-wider mb-6 shadow-2xs">
-                            <span class="w-2 h-2 rounded-full bg-sage-600 animate-pulse"></span>
-                            Available for Opportunities & Analytics Projects
+                        <div class="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-[#E5E0D8]/50 border border-vintage-300 text-sage-800 text-[10px] sm:text-xs font-semibold uppercase tracking-wider mb-4 sm:mb-6 shadow-2xs max-w-full">
+                            <span class="w-2 h-2 rounded-full bg-sage-600 animate-pulse shrink-0"></span>
+                            <span class="truncate">Available for Opportunities & Projects</span>
                         </div>
 
-                        <p class="font-serif italic text-brass-700 text-lg sm:text-xl mb-2 tracking-wide font-medium">"Beyond Numbers, Into Action."</p>
+                        <p class="font-serif italic text-brass-700 text-sm sm:text-lg lg:text-xl mb-1.5 sm:mb-2 tracking-wide font-medium">"Beyond Numbers, Into Action."</p>
                         
-                        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink-900 tracking-tight leading-tight sm:leading-tight mb-4">
+                        <h1 class="font-serif text-3xl sm:text-4xl md:text-3xl lg:text-5xl xl:text-6xl font-bold text-ink-900 tracking-tight leading-tight sm:leading-tight mb-3 sm:mb-4">
                             Muhammad Haris <br class="hidden sm:inline">
                             <span class="italic text-sage-700">Fariyano</span>
                         </h1>
 
                         <!-- Dynamic Typing Subtitle -->
-                        <div class="text-xl sm:text-2xl font-medium text-ink-700 mb-6 flex items-center gap-2">
+                        <div class="text-base sm:text-xl md:text-xl lg:text-2xl font-medium text-ink-700 mb-4 sm:mb-6 flex items-center gap-2 flex-wrap">
                             <span>I am a</span>
                             <span class="typed-text font-serif italic font-bold text-sage-700 underline decoration-brass-400 decoration-2 underline-offset-4"></span>
                         </div>
 
                         <!-- Tagline -->
-                        <p class="text-base sm:text-lg text-ink-700 leading-relaxed max-w-2xl mb-8">
+                        <p class="text-xs sm:text-base lg:text-lg text-ink-700 leading-relaxed max-w-2xl mb-6 sm:mb-8">
                             <strong class="text-ink-900 font-semibold">Insightful, Analytical, and Action-Oriented.</strong> With a strong foundation in software engineering and real-world analytics experience, I support teams in transforming complex data into clear, actionable insights that drive measurable results.
                         </p>
 
-                        <!-- Action Buttons -->
-                        <div class="flex flex-wrap items-center gap-4 w-full sm:w-auto mb-10">
-                            <a href="https://wa.me/6285892640801" target="_blank" rel="noopener noreferrer" id="hero-btn-hire" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-sage-700 text-vintage-50 font-semibold text-sm shadow-2xs hover:bg-sage-800 hover:shadow-sm transition-all">
+                        <!-- Action Buttons (Responsive Column on Mobile, Row on Tablet/Desktop) -->
+                        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 w-full sm:w-auto mb-6 sm:mb-10">
+                            <a href="https://wa.me/6285892640801" target="_blank" rel="noopener noreferrer" id="hero-btn-hire" class="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3.5 rounded-xl bg-sage-700 text-vintage-50 font-semibold text-xs sm:text-sm shadow-2xs hover:bg-sage-800 hover:shadow-sm transition-all min-h-[46px]">
                                 <i class="fab fa-whatsapp text-base"></i>
                                 <span>Hire Me via WhatsApp</span>
                             </a>
-                            <a href="https://drive.google.com/file/d/1d8-ScJ1ECU3ytMwQeOfelf5HpFeQsFcy/view?usp=drive_link" target="_blank" rel="noopener noreferrer" id="hero-btn-cv" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white border border-vintage-300 text-ink-800 font-semibold text-sm hover:bg-vintage-100 hover:border-vintage-400 transition-all shadow-2xs">
+                            <a href="https://drive.google.com/file/d/1d8-ScJ1ECU3ytMwQeOfelf5HpFeQsFcy/view?usp=drive_link" target="_blank" rel="noopener noreferrer" id="hero-btn-cv" class="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3.5 rounded-xl bg-white border border-vintage-300 text-ink-800 font-semibold text-xs sm:text-sm hover:bg-vintage-100 hover:border-vintage-400 transition-all shadow-2xs min-h-[46px]">
                                 <i class="fas fa-file-arrow-down text-brass-700"></i>
                                 <span>Download CV</span>
                             </a>
                         </div>
 
                         <!-- Highlights Ribbon -->
-                        <div class="grid grid-cols-3 gap-4 sm:gap-6 pt-6 border-t border-vintage-200 w-full max-w-xl">
+                        <div class="grid grid-cols-3 gap-2.5 sm:gap-4 lg:gap-6 pt-5 sm:pt-6 border-t border-vintage-200 w-full max-w-xl">
                             <div>
-                                <span class="block font-serif text-2xl sm:text-3xl font-bold text-ink-900">10+</span>
-                                <span class="text-[11px] font-semibold uppercase tracking-wider text-vintage-500">Data Projects</span>
+                                <span class="block font-serif text-lg sm:text-2xl lg:text-3xl font-bold text-ink-900">10+</span>
+                                <span class="text-[9px] sm:text-[11px] font-semibold uppercase tracking-wider text-vintage-500 leading-tight block">Data Projects</span>
                             </div>
                             <div>
-                                <span class="block font-serif text-2xl sm:text-3xl font-bold text-ink-900">9</span>
-                                <span class="text-[11px] font-semibold uppercase tracking-wider text-vintage-500">Certifications</span>
+                                <span class="block font-serif text-lg sm:text-2xl lg:text-3xl font-bold text-ink-900">9</span>
+                                <span class="text-[9px] sm:text-[11px] font-semibold uppercase tracking-wider text-vintage-500 leading-tight block">Certifications</span>
                             </div>
                             <div>
-                                <span class="block font-serif text-2xl sm:text-3xl font-bold text-ink-900">100%</span>
-                                <span class="text-[11px] font-semibold uppercase tracking-wider text-vintage-500">Data-Driven</span>
+                                <span class="block font-serif text-lg sm:text-2xl lg:text-3xl font-bold text-ink-900">100%</span>
+                                <span class="text-[9px] sm:text-[11px] font-semibold uppercase tracking-wider text-vintage-500 leading-tight block">Data-Driven</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Hero Visual Right (Instant LCP Paint) -->
-                    <div class="lg:col-span-5 flex justify-center lg:justify-end">
-                        <div class="relative w-full max-w-md">
+                    <div class="md:col-span-5 lg:col-span-5 flex justify-center md:justify-end mt-4 md:mt-0">
+                        <div class="relative w-full max-w-[280px] sm:max-w-sm md:max-w-[310px] lg:max-w-md">
                             
                             <!-- Ambient frame background -->
                             <div class="absolute -inset-1.5 bg-gradient-to-tr from-sage-600/30 to-brass-500/20 rounded-3xl blur-lg opacity-30"></div>
                             
-                            <div class="relative rounded-3xl overflow-hidden bg-white p-3 shadow-xl border border-vintage-200">
+                            <div class="relative rounded-3xl overflow-hidden bg-white p-2 sm:p-3 shadow-xl border border-vintage-200">
                                 <picture>
                                     <source srcset="Images/Main.webp" type="image/webp">
                                     <img src="Images/Main.jpg" alt="Muhammad Haris Fariyano" width="480" height="600" fetchpriority="high" decoding="sync" class="w-full h-auto aspect-[4/5] object-cover rounded-2xl">
                                 </picture>
                                 
                                 <!-- Floating Micro-Badges -->
-                                <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-4 rounded-xl border border-vintage-200 shadow-md flex items-center justify-between">
-                                    <div class="flex items-center gap-3">
-                                        <div class="w-10 h-10 rounded-lg bg-sage-50 border border-sage-200 flex items-center justify-center text-sage-700">
-                                            <i class="fas fa-chart-pie text-lg"></i>
+                                <div class="absolute bottom-3 left-3 right-3 sm:bottom-6 sm:left-6 sm:right-6 bg-white/95 backdrop-blur-md p-2.5 sm:p-3.5 rounded-xl border border-vintage-200 shadow-md flex items-center justify-between">
+                                    <div class="flex items-center gap-2 sm:gap-3 min-w-0">
+                                        <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-sage-50 border border-sage-200 flex items-center justify-center text-sage-700 shrink-0">
+                                            <i class="fas fa-chart-pie text-sm sm:text-lg"></i>
                                         </div>
-                                        <div>
-                                            <p class="text-xs font-semibold text-ink-900">Data Visualization</p>
-                                            <p class="text-[11px] text-vintage-500">Tableau & Looker Studio</p>
+                                        <div class="min-w-0">
+                                            <p class="text-[10px] sm:text-xs font-semibold text-ink-900 truncate">Data Visualization</p>
+                                            <p class="text-[8px] sm:text-[10px] text-vintage-500 truncate">Tableau & Looker Studio</p>
                                         </div>
                                     </div>
-                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded text-[10px] font-bold bg-sage-100 text-sage-800 border border-sage-200/60">Ready</span>
+                                    <span class="inline-flex items-center px-1.5 sm:px-2 py-0.5 rounded text-[8px] sm:text-[10px] font-bold bg-sage-100 text-sage-800 border border-sage-200/60 shrink-0 ml-1.5">Ready</span>
                                 </div>
                             </div>
                         </div>
@@ -477,47 +479,47 @@
         </section>
 
         <!-- ================= ABOUT ME SECTION (VINTAGE ELEGANT) ================= -->
-        <section id="about" class="py-20 lg:py-28 bg-[#E5E0D8]/30 border-b border-vintage-200/80">
+        <section id="about" class="relative overflow-hidden py-14 sm:py-20 lg:py-28 bg-[#E5E0D8]/30 border-b border-vintage-200/80">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 <!-- Section Header -->
-                <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16" data-aos="fade-up">
                     <span class="text-xs font-bold uppercase tracking-widest text-brass-700 mb-2 block">Who I Am</span>
                     <h2 class="font-serif text-3xl sm:text-4xl font-bold text-ink-900 tracking-tight">About Me</h2>
                     <div class="w-16 h-0.5 bg-brass-600 mx-auto mt-4"></div>
                 </div>
 
-                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="grid lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 items-center">
                     
                     <!-- 4 Core Pillars / Services -->
-                    <div class="lg:col-span-6 grid sm:grid-cols-2 gap-4" data-aos="fade-right">
+                    <div class="lg:col-span-6 grid sm:grid-cols-2 gap-3.5 sm:gap-4" data-aos="fade-right">
                         
-                        <div class="p-6 rounded-2xl bg-white border border-vintage-200 hover:border-sage-600/50 hover:shadow-md transition-all duration-300 group">
-                            <div class="w-12 h-12 rounded-xl bg-sage-50 text-sage-700 flex items-center justify-center text-xl mb-4 group-hover:bg-sage-700 group-hover:text-vintage-50 transition-colors">
+                        <div class="p-5 sm:p-6 rounded-2xl bg-white border border-vintage-200 hover:border-sage-600/50 hover:shadow-md transition-all duration-300 group">
+                            <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-sage-50 text-sage-700 flex items-center justify-center text-lg sm:text-xl mb-3.5 sm:mb-4 group-hover:bg-sage-700 group-hover:text-vintage-50 transition-colors">
                                 <i class="fas fa-chart-line"></i>
                             </div>
                             <h3 class="font-serif text-base font-bold text-ink-900 mb-1">Data Analysis & Insights</h3>
                             <p class="text-xs text-ink-700 leading-relaxed">Conducting exploratory data analysis (EDA) to uncover operational performance and market patterns.</p>
                         </div>
 
-                        <div class="p-6 rounded-2xl bg-white border border-vintage-200 hover:border-sage-600/50 hover:shadow-md transition-all duration-300 group">
-                            <div class="w-12 h-12 rounded-xl bg-sage-50 text-sage-700 flex items-center justify-center text-xl mb-4 group-hover:bg-sage-700 group-hover:text-vintage-50 transition-colors">
+                        <div class="p-5 sm:p-6 rounded-2xl bg-white border border-vintage-200 hover:border-sage-600/50 hover:shadow-md transition-all duration-300 group">
+                            <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-sage-50 text-sage-700 flex items-center justify-center text-lg sm:text-xl mb-3.5 sm:mb-4 group-hover:bg-sage-700 group-hover:text-vintage-50 transition-colors">
                                 <i class="fas fa-database"></i>
                             </div>
                             <h3 class="font-serif text-base font-bold text-ink-900 mb-1">Data Wrangling & Modeling</h3>
                             <p class="text-xs text-ink-700 leading-relaxed">Cleaning messy data, performing ETL, building data marts, and optimizing SQL queries.</p>
                         </div>
 
-                        <div class="p-6 rounded-2xl bg-white border border-vintage-200 hover:border-sage-600/50 hover:shadow-md transition-all duration-300 group">
-                            <div class="w-12 h-12 rounded-xl bg-sage-50 text-sage-700 flex items-center justify-center text-xl mb-4 group-hover:bg-sage-700 group-hover:text-vintage-50 transition-colors">
+                        <div class="p-5 sm:p-6 rounded-2xl bg-white border border-vintage-200 hover:border-sage-600/50 hover:shadow-md transition-all duration-300 group">
+                            <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-sage-50 text-sage-700 flex items-center justify-center text-lg sm:text-xl mb-3.5 sm:mb-4 group-hover:bg-sage-700 group-hover:text-vintage-50 transition-colors">
                                 <i class="fas fa-chart-bar"></i>
                             </div>
                             <h3 class="font-serif text-base font-bold text-ink-900 mb-1">Data Visualization & BI</h3>
                             <p class="text-xs text-ink-700 leading-relaxed">Crafting responsive, executive-level interactive dashboards with Tableau, Power BI, and Looker.</p>
                         </div>
 
-                        <div class="p-6 rounded-2xl bg-white border border-vintage-200 hover:border-sage-600/50 hover:shadow-md transition-all duration-300 group">
-                            <div class="w-12 h-12 rounded-xl bg-sage-50 text-sage-700 flex items-center justify-center text-xl mb-4 group-hover:bg-sage-700 group-hover:text-vintage-50 transition-colors">
+                        <div class="p-5 sm:p-6 rounded-2xl bg-white border border-vintage-200 hover:border-sage-600/50 hover:shadow-md transition-all duration-300 group">
+                            <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-sage-50 text-sage-700 flex items-center justify-center text-lg sm:text-xl mb-3.5 sm:mb-4 group-hover:bg-sage-700 group-hover:text-vintage-50 transition-colors">
                                 <i class="fas fa-brain"></i>
                             </div>
                             <h3 class="font-serif text-base font-bold text-ink-900 mb-1">Strategic Data Consulting</h3>
@@ -528,31 +530,31 @@
 
                     <!-- Narrative & Social Connect -->
                     <div class="lg:col-span-6 flex flex-col justify-center" data-aos="fade-left">
-                        <div class="bg-white p-8 rounded-3xl border border-vintage-200 shadow-2xs">
-                            <h3 class="font-serif text-xl font-bold text-ink-900 mb-4">Dedicated to Empowering Business with Data</h3>
+                        <div class="bg-white p-5 sm:p-8 rounded-2xl sm:rounded-3xl border border-vintage-200 shadow-2xs">
+                            <h3 class="font-serif text-lg sm:text-xl font-bold text-ink-900 mb-3 sm:mb-4">Dedicated to Empowering Business with Data</h3>
                             
-                            <p class="text-ink-700 leading-relaxed text-sm sm:text-base mb-6">
+                            <p class="text-ink-700 leading-relaxed text-xs sm:text-base mb-4 sm:mb-6">
                                 Lulusan Sarjana Terapan Teknik Informatika dari Politeknik Harapan Bersama dengan ketertarikan tinggi pada bidang Data Analytics. Memiliki pengalaman dalam mengolah dan memvisualisasikan data, membuat dashboard, serta mengembangkan model prediktif berbasis Python dan SQL.
                             </p>
-                            <p class="text-ink-700 leading-relaxed text-sm sm:text-base mb-8">
+                            <p class="text-ink-700 leading-relaxed text-xs sm:text-base mb-6 sm:mb-8">
                                 Aktif mengikuti pelatihan dan program intensif di bidang data analytics dari platform terkemuka seperti Dicoding, RevoU, Rakamin Academy, dan Dibimbing.id. Terbiasa bekerja dengan tools analitik mutakhir seperti BigQuery, Tableau, dan Looker Studio untuk memandu pengambilan keputusan berbasis data.
                             </p>
 
                             <!-- Social Links -->
-                            <div class="pt-6 border-t border-vintage-200 flex flex-wrap items-center gap-3">
-                                <span class="text-xs font-semibold text-vintage-500 uppercase tracking-wider mr-2">Connect:</span>
+                            <div class="pt-5 sm:pt-6 border-t border-vintage-200 flex flex-wrap items-center gap-2 sm:gap-3">
+                                <span class="text-[11px] sm:text-xs font-semibold text-vintage-500 uppercase tracking-wider mr-1 sm:mr-2">Connect:</span>
                                 
-                                <a href="https://www.linkedin.com/in/harisfariyano" target="_blank" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#F8F8F8] border border-vintage-300 text-ink-800 hover:text-sage-700 hover:border-sage-400 text-xs font-medium transition-all shadow-2xs">
+                                <a href="https://www.linkedin.com/in/harisfariyano" target="_blank" class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-2 rounded-xl bg-[#F8F8F8] border border-vintage-300 text-ink-800 hover:text-sage-700 hover:border-sage-400 text-xs font-medium transition-all shadow-2xs min-h-[38px]">
                                     <i class="fab fa-linkedin text-[#0a66c2] text-sm"></i>
                                     <span>LinkedIn</span>
                                 </a>
 
-                                <a href="https://github.com/harisfariyano" target="_blank" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#F8F8F8] border border-vintage-300 text-ink-800 hover:text-sage-700 hover:border-sage-400 text-xs font-medium transition-all shadow-2xs">
+                                <a href="https://github.com/harisfariyano" target="_blank" class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-2 rounded-xl bg-[#F8F8F8] border border-vintage-300 text-ink-800 hover:text-sage-700 hover:border-sage-400 text-xs font-medium transition-all shadow-2xs min-h-[38px]">
                                     <i class="fab fa-github text-ink-900 text-sm"></i>
                                     <span>GitHub</span>
                                 </a>
 
-                                <a href="https://public.tableau.com/app/profile/muhammad.haris.fariyano/vizzes" target="_blank" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#F8F8F8] border border-vintage-300 text-ink-800 hover:text-sage-700 hover:border-sage-400 text-xs font-medium transition-all shadow-2xs">
+                                <a href="https://public.tableau.com/app/profile/muhammad.haris.fariyano/vizzes" target="_blank" class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-2 rounded-xl bg-[#F8F8F8] border border-vintage-300 text-ink-800 hover:text-sage-700 hover:border-sage-400 text-xs font-medium transition-all shadow-2xs min-h-[38px]">
                                     <i class="fas fa-chart-area text-brass-700 text-sm"></i>
                                     <span>Tableau Public</span>
                                 </a>
@@ -565,45 +567,45 @@
         </section>
 
         <!-- ================= BACKGROUND (EDUCATION & EXPERIENCE) ================= -->
-        <section id="background" class="py-20 lg:py-28 bg-[#F8F8F8] border-b border-vintage-200/80">
+        <section id="background" class="relative overflow-hidden py-14 sm:py-20 lg:py-28 bg-[#F8F8F8] border-b border-vintage-200/80">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
-                <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16" data-aos="fade-up">
                     <span class="text-xs font-bold uppercase tracking-widest text-brass-700 mb-2 block">Career Journey</span>
                     <h2 class="font-serif text-3xl sm:text-4xl font-bold text-ink-900 tracking-tight">Where I've Learned & Grown</h2>
                     <div class="w-16 h-0.5 bg-brass-600 mx-auto mt-4"></div>
                 </div>
 
-                <div class="grid lg:grid-cols-2 gap-8">
+                <div class="grid lg:grid-cols-2 gap-6 sm:gap-8">
                     
                     <!-- Experience Column -->
                     <div data-aos="fade-right">
-                        <div class="flex items-center gap-3 mb-6">
-                            <div class="w-10 h-10 rounded-xl bg-sage-100 text-sage-800 flex items-center justify-center text-lg shadow-2xs">
+                        <div class="flex items-center gap-3 mb-4 sm:mb-6">
+                            <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-sage-100 text-sage-800 flex items-center justify-center text-base sm:text-lg shadow-2xs">
                                 <i class="fas fa-briefcase"></i>
                             </div>
-                            <h3 class="font-serif text-xl font-bold text-ink-900">Experience</h3>
+                            <h3 class="font-serif text-lg sm:text-xl font-bold text-ink-900">Experience</h3>
                         </div>
 
-                        <div class="space-y-4">
+                        <div class="space-y-3.5 sm:space-y-4">
                             
                             <!-- Item 1: Kimia Farma -->
                             <div class="accordion-item accordion-open bg-white rounded-2xl border border-vintage-200 shadow-2xs overflow-hidden transition-all duration-200">
-                                <button type="button" class="accordion-trigger w-full p-5 text-left flex items-start justify-between gap-4 focus:outline-none hover:bg-vintage-50">
-                                    <div class="flex items-start gap-4">
-                                        <img src="Images/muamalatjpg.webp" alt="PT Kimia Farma" width="48" height="48" loading="lazy" decoding="async" class="w-12 h-12 rounded-xl object-contain border border-vintage-200 p-1 bg-white flex-shrink-0">
-                                        <div>
-                                            <h4 class="font-serif text-base font-bold text-ink-900">Big Data Analytics - Project-Based Internship</h4>
-                                            <p class="text-xs font-semibold text-sage-800">PT Kimia Farma x Rakamin Academy</p>
-                                            <span class="inline-block text-[11px] font-medium text-vintage-500 mt-1">Jun 2025</span>
+                                <button type="button" class="accordion-trigger w-full p-4 sm:p-5 text-left flex items-start justify-between gap-3 sm:gap-4 focus:outline-none hover:bg-vintage-50 min-h-[56px]">
+                                    <div class="flex items-start gap-3 sm:gap-4 min-w-0">
+                                        <img src="Images/muamalatjpg.webp" alt="PT Kimia Farma" width="48" height="48" loading="lazy" decoding="async" class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl object-contain border border-vintage-200 p-1 bg-white shrink-0">
+                                        <div class="min-w-0">
+                                            <h4 class="font-serif text-sm sm:text-base font-bold text-ink-900 leading-snug">Big Data Analytics - Project-Based Internship</h4>
+                                            <p class="text-[11px] sm:text-xs font-semibold text-sage-800 mt-0.5">PT Kimia Farma x Rakamin Academy</p>
+                                            <span class="inline-block text-[10px] sm:text-[11px] font-medium text-vintage-500 mt-1">Jun 2025</span>
                                         </div>
                                     </div>
-                                    <div class="accordion-icon w-8 h-8 rounded-full bg-vintage-100 text-ink-700 flex items-center justify-center text-xs transition-transform duration-200">
+                                    <div class="accordion-icon w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-vintage-100 text-ink-700 flex items-center justify-center text-xs shrink-0 transition-transform duration-200 mt-1">
                                         <i class="fas fa-chevron-down"></i>
                                     </div>
                                 </button>
                                 
-                                <div class="accordion-content px-5 pb-5 pt-1 text-sm text-ink-700">
+                                <div class="accordion-content px-4 sm:px-5 pb-4 sm:pb-5 pt-1 text-sm text-ink-700">
                                     <ul class="space-y-2 list-disc list-inside text-xs leading-relaxed text-ink-700">
                                         <li>Mempelajari konsep Big Data, arsitektur Data Warehouse, dan proses ETL secara komprehensif.</li>
                                         <li>Melakukan SQL querying mendalam untuk eksplorasi data transaksi penjualan dan performa operasional.</li>
@@ -616,23 +618,23 @@
 
                             <!-- Item 2: PT Special Skill Indonesia -->
                             <div class="accordion-item bg-white rounded-2xl border border-vintage-200 shadow-2xs overflow-hidden transition-all duration-200">
-                                <button type="button" class="accordion-trigger w-full p-5 text-left flex items-start justify-between gap-4 focus:outline-none hover:bg-vintage-50">
-                                    <div class="flex items-start gap-4">
-                                        <div class="w-12 h-12 rounded-xl bg-sage-50 border border-sage-200 flex items-center justify-center text-sage-700 flex-shrink-0">
-                                            <i class="fas fa-chart-line text-lg"></i>
+                                <button type="button" class="accordion-trigger w-full p-4 sm:p-5 text-left flex items-start justify-between gap-3 sm:gap-4 focus:outline-none hover:bg-vintage-50 min-h-[56px]">
+                                    <div class="flex items-start gap-3 sm:gap-4 min-w-0">
+                                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-sage-50 border border-sage-200 flex items-center justify-center text-sage-700 shrink-0">
+                                            <i class="fas fa-chart-line text-sm sm:text-lg"></i>
                                         </div>
-                                        <div>
-                                            <h4 class="font-serif text-base font-bold text-ink-900">Data Analyst - Bootcamp</h4>
-                                            <p class="text-xs font-semibold text-sage-800">PT Special Skill Indonesia</p>
-                                            <span class="inline-block text-[11px] font-medium text-vintage-500 mt-1">Feb 2023 - Mar 2023</span>
+                                        <div class="min-w-0">
+                                            <h4 class="font-serif text-sm sm:text-base font-bold text-ink-900 leading-snug">Data Analyst - Bootcamp</h4>
+                                            <p class="text-[11px] sm:text-xs font-semibold text-sage-800 mt-0.5">PT Special Skill Indonesia</p>
+                                            <span class="inline-block text-[10px] sm:text-[11px] font-medium text-vintage-500 mt-1">Feb 2023 - Mar 2023</span>
                                         </div>
                                     </div>
-                                    <div class="accordion-icon w-8 h-8 rounded-full bg-vintage-100 text-ink-700 flex items-center justify-center text-xs transition-transform duration-200">
+                                    <div class="accordion-icon w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-vintage-100 text-ink-700 flex items-center justify-center text-xs shrink-0 transition-transform duration-200 mt-1">
                                         <i class="fas fa-chevron-down"></i>
                                     </div>
                                 </button>
                                 
-                                <div class="accordion-content px-5 pb-5 pt-1 text-sm text-ink-700">
+                                <div class="accordion-content px-4 sm:px-5 pb-4 sm:pb-5 pt-1 text-sm text-ink-700">
                                     <ul class="space-y-2 list-disc list-inside text-xs leading-relaxed text-ink-700">
                                         <li>Analyzed complex financial data on deposits, loans, and credit customer accounts.</li>
                                         <li>Created interactive dashboards to communicate financial KPIs and quarterly trends.</li>
@@ -646,32 +648,32 @@
 
                     <!-- Education Column -->
                     <div data-aos="fade-left">
-                        <div class="flex items-center gap-3 mb-6">
-                            <div class="w-10 h-10 rounded-xl bg-sage-100 text-sage-800 flex items-center justify-center text-lg shadow-2xs">
+                        <div class="flex items-center gap-3 mb-4 sm:mb-6">
+                            <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-sage-100 text-sage-800 flex items-center justify-center text-base sm:text-lg shadow-2xs">
                                 <i class="fas fa-graduation-cap"></i>
                             </div>
-                            <h3 class="font-serif text-xl font-bold text-ink-900">Education</h3>
+                            <h3 class="font-serif text-lg sm:text-xl font-bold text-ink-900">Education</h3>
                         </div>
 
-                        <div class="space-y-4">
+                        <div class="space-y-3.5 sm:space-y-4">
                             
                             <!-- Politeknik Harapan Bersama -->
                             <div class="accordion-item accordion-open bg-white rounded-2xl border border-vintage-200 shadow-2xs overflow-hidden transition-all duration-200">
-                                <button type="button" class="accordion-trigger w-full p-5 text-left flex items-start justify-between gap-4 focus:outline-none hover:bg-vintage-50">
-                                    <div class="flex items-start gap-4">
-                                        <img src="Images/poltekharber.webp" alt="Politeknik Harapan Bersama" width="48" height="48" loading="lazy" decoding="async" class="w-12 h-12 rounded-xl object-contain border border-vintage-200 p-1 bg-white flex-shrink-0">
-                                        <div>
-                                            <h4 class="font-serif text-base font-bold text-ink-900">Bachelor's Degree, Informatika</h4>
-                                            <p class="text-xs font-semibold text-sage-800">Politeknik Harapan Bersama</p>
-                                            <span class="inline-block text-[11px] font-medium text-vintage-500 mt-1">Sep 2021 – Sep 2024</span>
+                                <button type="button" class="accordion-trigger w-full p-4 sm:p-5 text-left flex items-start justify-between gap-3 sm:gap-4 focus:outline-none hover:bg-vintage-50 min-h-[56px]">
+                                    <div class="flex items-start gap-3 sm:gap-4 min-w-0">
+                                        <img src="Images/poltekharber.webp" alt="Politeknik Harapan Bersama" width="48" height="48" loading="lazy" decoding="async" class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl object-contain border border-vintage-200 p-1 bg-white shrink-0">
+                                        <div class="min-w-0">
+                                            <h4 class="font-serif text-sm sm:text-base font-bold text-ink-900 leading-snug">Bachelor's Degree, Informatika</h4>
+                                            <p class="text-[11px] sm:text-xs font-semibold text-sage-800 mt-0.5">Politeknik Harapan Bersama</p>
+                                            <span class="inline-block text-[10px] sm:text-[11px] font-medium text-vintage-500 mt-1">Sep 2021 – Sep 2024</span>
                                         </div>
                                     </div>
-                                    <div class="accordion-icon w-8 h-8 rounded-full bg-vintage-100 text-ink-700 flex items-center justify-center text-xs transition-transform duration-200">
+                                    <div class="accordion-icon w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-vintage-100 text-ink-700 flex items-center justify-center text-xs shrink-0 transition-transform duration-200 mt-1">
                                         <i class="fas fa-chevron-down"></i>
                                     </div>
                                 </button>
                                 
-                                <div class="accordion-content px-5 pb-5 pt-1 text-sm text-ink-700">
+                                <div class="accordion-content px-4 sm:px-5 pb-4 sm:pb-5 pt-1 text-sm text-ink-700">
                                     <ul class="space-y-2 list-disc list-inside text-xs leading-relaxed text-ink-700">
                                         <li>Fokus studi pada rekayasa perangkat lunak, sistem basis data, algoritma, serta sains data.</li>
                                         <li>Aktif berkontribusi dalam riset dan inovasi teknologi komputasi mahasiswa.</li>
@@ -688,167 +690,173 @@
         </section>
 
         <!-- ================= SKILLS & EXPERTISE (VINTAGE ELEGANT) ================= -->
-        <section id="skills" class="py-20 lg:py-28 bg-[#E5E0D8]/30 border-b border-vintage-200/80">
+        <section id="skills" class="relative overflow-hidden py-14 sm:py-20 lg:py-28 bg-[#E5E0D8]/30 border-b border-vintage-200/80">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
-                <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16" data-aos="fade-up">
                     <span class="text-xs font-bold uppercase tracking-widest text-brass-700 mb-2 block">Technical Repertoire</span>
                     <h2 class="font-serif text-3xl sm:text-4xl font-bold text-ink-900 tracking-tight">Skills & Capabilities</h2>
                     <div class="w-16 h-0.5 bg-brass-600 mx-auto mt-4"></div>
                 </div>
 
-                <div class="space-y-12">
+                <div class="space-y-8 sm:space-y-12">
                     
                     <!-- Category 1: Methods & Techniques with Segmented Tabs -->
-                    <div class="bg-white p-6 sm:p-8 rounded-3xl border border-vintage-200 shadow-2xs" data-aos="fade-up">
+                    <div class="bg-white p-5 sm:p-8 rounded-2xl sm:rounded-3xl border border-vintage-200 shadow-2xs" data-aos="fade-up">
                         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
                             <div>
-                                <h3 class="font-serif text-lg font-bold text-ink-900">Data Analytics Methods & Techniques</h3>
-                                <p class="text-xs text-ink-600">Methodological frameworks utilized across the end-to-end data lifecycle</p>
+                                <h3 class="font-serif text-base sm:text-lg font-bold text-ink-900">Data Analytics Methods & Techniques</h3>
+                                <p class="text-xs text-ink-600 mt-0.5">Methodological frameworks utilized across the end-to-end data lifecycle</p>
                             </div>
 
                             <!-- Tabs Switcher -->
-                            <div class="inline-flex p-1 rounded-xl bg-[#E5E0D8] border border-vintage-300 text-xs self-start sm:self-auto">
-                                <button type="button" class="skill-tab-btn px-3.5 py-1.5 rounded-lg font-semibold bg-white text-sage-800 shadow-2xs border-vintage-200 transition-all" data-tab="core">Core Fundamentals</button>
-                                <button type="button" class="skill-tab-btn px-3.5 py-1.5 rounded-lg text-ink-600 hover:text-ink-900 transition-all" data-tab="stats">Statistical Analysis</button>
-                                <button type="button" class="skill-tab-btn px-3.5 py-1.5 rounded-lg text-ink-600 hover:text-ink-900 transition-all" data-tab="advanced">Modeling & Advanced</button>
+                            <div class="flex items-center overflow-x-auto max-w-full p-1 rounded-xl bg-[#E5E0D8] border border-vintage-300 text-xs no-scrollbar gap-1 w-full sm:w-auto">
+                                <button type="button" class="skill-tab-btn whitespace-nowrap px-3 sm:px-3.5 py-2 rounded-lg font-semibold bg-white text-sage-800 shadow-2xs border-vintage-200 transition-all shrink-0 flex-1 sm:flex-initial text-center min-h-[36px]" data-tab="core">
+                                    <span>Core <span class="hidden sm:inline">Fundamentals</span></span>
+                                </button>
+                                <button type="button" class="skill-tab-btn whitespace-nowrap px-3 sm:px-3.5 py-2 rounded-lg text-ink-600 hover:text-ink-900 transition-all shrink-0 flex-1 sm:flex-initial text-center min-h-[36px]" data-tab="stats">
+                                    <span>Statistical <span class="hidden sm:inline">Analysis</span></span>
+                                </button>
+                                <button type="button" class="skill-tab-btn whitespace-nowrap px-3 sm:px-3.5 py-2 rounded-lg text-ink-600 hover:text-ink-900 transition-all shrink-0 flex-1 sm:flex-initial text-center min-h-[36px]" data-tab="advanced">
+                                    <span>Modeling <span class="hidden sm:inline">& Advanced</span></span>
+                                </button>
                             </div>
                         </div>
 
                         <!-- Pane: Core -->
-                        <div id="core" class="skill-tab-pane grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-                            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-[#F8F8F8] border border-vintage-200 shadow-2xs">
-                                <i class="fas fa-chart-line text-sage-700"></i>
+                        <div id="core" class="skill-tab-pane grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5 sm:gap-3">
+                            <div class="flex items-center gap-2.5 sm:gap-3 p-3 sm:p-3.5 rounded-xl bg-[#F8F8F8] border border-vintage-200 shadow-2xs">
+                                <i class="fas fa-chart-line text-sage-700 text-sm"></i>
                                 <span class="text-xs font-semibold text-ink-800">Exploratory Data Analysis (EDA)</span>
                             </div>
-                            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-[#F8F8F8] border border-vintage-200 shadow-2xs">
-                                <i class="fas fa-database text-sage-700"></i>
+                            <div class="flex items-center gap-2.5 sm:gap-3 p-3 sm:p-3.5 rounded-xl bg-[#F8F8F8] border border-vintage-200 shadow-2xs">
+                                <i class="fas fa-database text-sage-700 text-sm"></i>
                                 <span class="text-xs font-semibold text-ink-800">Data Extraction (CSV, Excel, SQL)</span>
                             </div>
-                            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-[#F8F8F8] border border-vintage-200 shadow-2xs">
-                                <i class="fas fa-broom text-sage-700"></i>
+                            <div class="flex items-center gap-2.5 sm:gap-3 p-3 sm:p-3.5 rounded-xl bg-[#F8F8F8] border border-vintage-200 shadow-2xs">
+                                <i class="fas fa-broom text-sage-700 text-sm"></i>
                                 <span class="text-xs font-semibold text-ink-800">Data Cleaning & Preprocessing</span>
                             </div>
-                            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-[#F8F8F8] border border-vintage-200 shadow-2xs">
-                                <i class="fas fa-sitemap text-sage-700"></i>
+                            <div class="flex items-center gap-2.5 sm:gap-3 p-3 sm:p-3.5 rounded-xl bg-[#F8F8F8] border border-vintage-200 shadow-2xs">
+                                <i class="fas fa-sitemap text-sage-700 text-sm"></i>
                                 <span class="text-xs font-semibold text-ink-800">Data Wrangling</span>
                             </div>
-                            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-[#F8F8F8] border border-vintage-200 shadow-2xs">
-                                <i class="fas fa-users text-sage-700"></i>
+                            <div class="flex items-center gap-2.5 sm:gap-3 p-3 sm:p-3.5 rounded-xl bg-[#F8F8F8] border border-vintage-200 shadow-2xs">
+                                <i class="fas fa-users text-sage-700 text-sm"></i>
                                 <span class="text-xs font-semibold text-ink-800">Segmentation & Customer Clustering</span>
                             </div>
-                            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-[#F8F8F8] border border-vintage-200 shadow-2xs">
-                                <i class="fas fa-calendar-alt text-sage-700"></i>
+                            <div class="flex items-center gap-2.5 sm:gap-3 p-3 sm:p-3.5 rounded-xl bg-[#F8F8F8] border border-vintage-200 shadow-2xs">
+                                <i class="fas fa-calendar-alt text-sage-700 text-sm"></i>
                                 <span class="text-xs font-semibold text-ink-800">Cohort Analysis</span>
                             </div>
                         </div>
 
                         <!-- Pane: Stats -->
-                        <div id="stats" class="skill-tab-pane hidden grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-                            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-[#F8F8F8] border border-vintage-200 shadow-2xs">
-                                <i class="fas fa-calculator text-sage-700"></i>
+                        <div id="stats" class="skill-tab-pane hidden grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5 sm:gap-3">
+                            <div class="flex items-center gap-2.5 sm:gap-3 p-3 sm:p-3.5 rounded-xl bg-[#F8F8F8] border border-vintage-200 shadow-2xs">
+                                <i class="fas fa-calculator text-sage-700 text-sm"></i>
                                 <span class="text-xs font-semibold text-ink-800">Descriptive Statistics</span>
                             </div>
-                            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-[#F8F8F8] border border-vintage-200 shadow-2xs">
-                                <i class="fas fa-project-diagram text-sage-700"></i>
+                            <div class="flex items-center gap-2.5 sm:gap-3 p-3 sm:p-3.5 rounded-xl bg-[#F8F8F8] border border-vintage-200 shadow-2xs">
+                                <i class="fas fa-project-diagram text-sage-700 text-sm"></i>
                                 <span class="text-xs font-semibold text-ink-800">Correlation Analysis</span>
                             </div>
-                            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-[#F8F8F8] border border-vintage-200 shadow-2xs">
-                                <i class="fas fa-question-circle text-sage-700"></i>
+                            <div class="flex items-center gap-2.5 sm:gap-3 p-3 sm:p-3.5 rounded-xl bg-[#F8F8F8] border border-vintage-200 shadow-2xs">
+                                <i class="fas fa-question-circle text-sage-700 text-sm"></i>
                                 <span class="text-xs font-semibold text-ink-800">Hypothesis Testing</span>
                             </div>
-                            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-[#F8F8F8] border border-vintage-200 shadow-2xs">
-                                <i class="fas fa-square-root-alt text-sage-700"></i>
+                            <div class="flex items-center gap-2.5 sm:gap-3 p-3 sm:p-3.5 rounded-xl bg-[#F8F8F8] border border-vintage-200 shadow-2xs">
+                                <i class="fas fa-square-root-alt text-sage-700 text-sm"></i>
                                 <span class="text-xs font-semibold text-ink-800">T-Test (Independent & Paired)</span>
                             </div>
-                            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-[#F8F8F8] border border-vintage-200 shadow-2xs">
-                                <i class="fas fa-flask text-sage-700"></i>
+                            <div class="flex items-center gap-2.5 sm:gap-3 p-3 sm:p-3.5 rounded-xl bg-[#F8F8F8] border border-vintage-200 shadow-2xs">
+                                <i class="fas fa-flask text-sage-700 text-sm"></i>
                                 <span class="text-xs font-semibold text-ink-800">A/B Testing Experiments</span>
                             </div>
-                            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-[#F8F8F8] border border-vintage-200 shadow-2xs">
-                                <i class="fas fa-chart-bar text-sage-700"></i>
+                            <div class="flex items-center gap-2.5 sm:gap-3 p-3 sm:p-3.5 rounded-xl bg-[#F8F8F8] border border-vintage-200 shadow-2xs">
+                                <i class="fas fa-chart-bar text-sage-700 text-sm"></i>
                                 <span class="text-xs font-semibold text-ink-800">ANOVA</span>
                             </div>
                         </div>
 
                         <!-- Pane: Advanced -->
-                        <div id="advanced" class="skill-tab-pane hidden grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-                            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-[#F8F8F8] border border-vintage-200 shadow-2xs">
-                                <i class="fas fa-arrow-right text-sage-700"></i>
+                        <div id="advanced" class="skill-tab-pane hidden grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5 sm:gap-3">
+                            <div class="flex items-center gap-2.5 sm:gap-3 p-3 sm:p-3.5 rounded-xl bg-[#F8F8F8] border border-vintage-200 shadow-2xs">
+                                <i class="fas fa-arrow-right text-sage-700 text-sm"></i>
                                 <span class="text-xs font-semibold text-ink-800">Linear Regression</span>
                             </div>
-                            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-[#F8F8F8] border border-vintage-200 shadow-2xs">
-                                <i class="fas fa-sign-in-alt text-sage-700"></i>
+                            <div class="flex items-center gap-2.5 sm:gap-3 p-3 sm:p-3.5 rounded-xl bg-[#F8F8F8] border border-vintage-200 shadow-2xs">
+                                <i class="fas fa-sign-in-alt text-sage-700 text-sm"></i>
                                 <span class="text-xs font-semibold text-ink-800">Logistic Regression</span>
                             </div>
-                            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-[#F8F8F8] border border-vintage-200 shadow-2xs">
-                                <i class="fas fa-layer-group text-sage-700"></i>
+                            <div class="flex items-center gap-2.5 sm:gap-3 p-3 sm:p-3.5 rounded-xl bg-[#F8F8F8] border border-vintage-200 shadow-2xs">
+                                <i class="fas fa-layer-group text-sage-700 text-sm"></i>
                                 <span class="text-xs font-semibold text-ink-800">Multilevel / Hierarchical Analysis</span>
                             </div>
-                            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-[#F8F8F8] border border-vintage-200 shadow-2xs">
-                                <i class="fas fa-tachometer-alt text-sage-700"></i>
+                            <div class="flex items-center gap-2.5 sm:gap-3 p-3 sm:p-3.5 rounded-xl bg-[#F8F8F8] border border-vintage-200 shadow-2xs">
+                                <i class="fas fa-tachometer-alt text-sage-700 text-sm"></i>
                                 <span class="text-xs font-semibold text-ink-800">KPI Monitoring & Performance Tracking</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Category 2, 3, 4 Grid -->
-                    <div class="grid md:grid-cols-3 gap-6" data-aos="fade-up" data-aos-delay="150">
+                    <div class="grid md:grid-cols-3 gap-5 sm:gap-6" data-aos="fade-up" data-aos-delay="150">
                         
                         <!-- Languages -->
-                        <div class="bg-white p-6 rounded-3xl border border-vintage-200 shadow-2xs">
-                            <div class="flex items-center gap-3 mb-5">
-                                <div class="w-9 h-9 rounded-xl bg-sage-100 text-sage-800 flex items-center justify-center text-sm shadow-2xs">
+                        <div class="bg-white p-5 sm:p-6 rounded-2xl sm:rounded-3xl border border-vintage-200 shadow-2xs">
+                            <div class="flex items-center gap-3 mb-4 sm:mb-5">
+                                <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-sage-100 text-sage-800 flex items-center justify-center text-xs sm:text-sm shadow-2xs">
                                     <i class="fas fa-code"></i>
                                 </div>
-                                <h3 class="font-serif text-base font-bold text-ink-900">Programming Languages</h3>
+                                <h3 class="font-serif text-sm sm:text-base font-bold text-ink-900">Programming Languages</h3>
                             </div>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#F8F8F8] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-database text-sage-700"></i> SQL</span>
-                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#F8F8F8] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fab fa-python text-brass-700"></i> Python</span>
-                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#F8F8F8] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fab fa-r-project text-sage-800"></i> R</span>
-                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#F8F8F8] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fab fa-html5 text-brass-800"></i> HTML</span>
-                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#F8F8F8] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fab fa-css3-alt text-sage-700"></i> CSS</span>
-                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#F8F8F8] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-file-alt text-vintage-500"></i> Markdown</span>
-                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#F8F8F8] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fab fa-js text-brass-700"></i> JavaScript</span>
+                            <div class="flex flex-wrap gap-1.5 sm:gap-2">
+                                <span class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg bg-[#F8F8F8] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-database text-sage-700"></i> SQL</span>
+                                <span class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg bg-[#F8F8F8] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fab fa-python text-brass-700"></i> Python</span>
+                                <span class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg bg-[#F8F8F8] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fab fa-r-project text-sage-800"></i> R</span>
+                                <span class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg bg-[#F8F8F8] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fab fa-html5 text-brass-800"></i> HTML</span>
+                                <span class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg bg-[#F8F8F8] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fab fa-css3-alt text-sage-700"></i> CSS</span>
+                                <span class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg bg-[#F8F8F8] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-file-alt text-vintage-500"></i> Markdown</span>
+                                <span class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg bg-[#F8F8F8] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fab fa-js text-brass-700"></i> JavaScript</span>
                             </div>
                         </div>
 
                         <!-- Data & Database Tools -->
-                        <div class="bg-white p-6 rounded-3xl border border-vintage-200 shadow-2xs">
-                            <div class="flex items-center gap-3 mb-5">
-                                <div class="w-9 h-9 rounded-xl bg-sage-100 text-sage-800 flex items-center justify-center text-sm shadow-2xs">
+                        <div class="bg-white p-5 sm:p-6 rounded-2xl sm:rounded-3xl border border-vintage-200 shadow-2xs">
+                            <div class="flex items-center gap-3 mb-4 sm:mb-5">
+                                <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-sage-100 text-sage-800 flex items-center justify-center text-xs sm:text-sm shadow-2xs">
                                     <i class="fas fa-screwdriver-wrench"></i>
                                 </div>
-                                <h3 class="font-serif text-base font-bold text-ink-900">Analytics & DB Tools</h3>
+                                <h3 class="font-serif text-sm sm:text-base font-bold text-ink-900">Analytics & DB Tools</h3>
                             </div>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#F8F8F8] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-file-excel text-sage-700"></i> MS Excel</span>
-                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#F8F8F8] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-table-cells text-sage-700"></i> Google Sheets</span>
-                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#F8F8F8] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-code-branch text-brass-700"></i> Google Colab</span>
-                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#F8F8F8] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-laptop-code text-sage-800"></i> RStudio</span>
-                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#F8F8F8] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-code text-ink-700"></i> VS Code</span>
-                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#F8F8F8] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-database text-sage-800"></i> Google BigQuery</span>
+                            <div class="flex flex-wrap gap-1.5 sm:gap-2">
+                                <span class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg bg-[#F8F8F8] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-file-excel text-sage-700"></i> MS Excel</span>
+                                <span class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg bg-[#F8F8F8] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-table-cells text-sage-700"></i> Google Sheets</span>
+                                <span class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg bg-[#F8F8F8] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-code-branch text-brass-700"></i> Google Colab</span>
+                                <span class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg bg-[#F8F8F8] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-laptop-code text-sage-800"></i> RStudio</span>
+                                <span class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg bg-[#F8F8F8] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-code text-ink-700"></i> VS Code</span>
+                                <span class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg bg-[#F8F8F8] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-database text-sage-800"></i> Google BigQuery</span>
                             </div>
                         </div>
 
                         <!-- Visualization Tools -->
-                        <div class="bg-white p-6 rounded-3xl border border-vintage-200 shadow-2xs">
-                            <div class="flex items-center gap-3 mb-5">
-                                <div class="w-9 h-9 rounded-xl bg-sage-100 text-sage-800 flex items-center justify-center text-sm shadow-2xs">
+                        <div class="bg-white p-5 sm:p-6 rounded-2xl sm:rounded-3xl border border-vintage-200 shadow-2xs">
+                            <div class="flex items-center gap-3 mb-4 sm:mb-5">
+                                <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-sage-100 text-sage-800 flex items-center justify-center text-xs sm:text-sm shadow-2xs">
                                     <i class="fas fa-chart-pie"></i>
                                 </div>
-                                <h3 class="font-serif text-base font-bold text-ink-900">Visualization & BI</h3>
+                                <h3 class="font-serif text-sm sm:text-base font-bold text-ink-900">Visualization & BI</h3>
                             </div>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#F8F8F8] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-chart-area text-brass-700"></i> Tableau</span>
-                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#F8F8F8] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-chart-line text-sage-700"></i> Looker Studio</span>
-                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#F8F8F8] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-chart-pie text-sage-800"></i> R Shiny</span>
-                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#F8F8F8] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-paint-brush text-brass-800"></i> ggplot2</span>
-                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#F8F8F8] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-chart-simple text-ink-700"></i> Plotly</span>
-                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#F8F8F8] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-bezier-curve text-sage-700"></i> Seaborn</span>
-                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#F8F8F8] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-chart-area text-sage-800"></i> Matplotlib</span>
-                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#F8F8F8] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-file-excel text-brass-700"></i> Excel Charts</span>
+                            <div class="flex flex-wrap gap-1.5 sm:gap-2">
+                                <span class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg bg-[#F8F8F8] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-chart-area text-brass-700"></i> Tableau</span>
+                                <span class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg bg-[#F8F8F8] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-chart-line text-sage-700"></i> Looker Studio</span>
+                                <span class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg bg-[#F8F8F8] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-chart-pie text-sage-800"></i> R Shiny</span>
+                                <span class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg bg-[#F8F8F8] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-paint-brush text-brass-800"></i> ggplot2</span>
+                                <span class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg bg-[#F8F8F8] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-chart-simple text-ink-700"></i> Plotly</span>
+                                <span class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg bg-[#F8F8F8] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-bezier-curve text-sage-700"></i> Seaborn</span>
+                                <span class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg bg-[#F8F8F8] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-chart-area text-sage-800"></i> Matplotlib</span>
+                                <span class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg bg-[#F8F8F8] border border-vintage-300/80 text-xs font-medium text-ink-800 shadow-2xs"><i class="fas fa-file-excel text-brass-700"></i> Excel Charts</span>
                             </div>
                         </div>
 
@@ -859,26 +867,26 @@
         </section>
 
         <!-- ================= PROJECTS SECTION (VINTAGE ELEGANT) ================= -->
-        <section id="projects" class="py-20 lg:py-28 bg-[#F8F8F8] border-b border-vintage-200/80">
+        <section id="projects" class="relative overflow-hidden py-14 sm:py-20 lg:py-28 bg-[#F8F8F8] border-b border-vintage-200/80">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
-                <div class="text-center max-w-3xl mx-auto mb-12" data-aos="fade-up">
+                <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-12" data-aos="fade-up">
                     <span class="text-xs font-bold uppercase tracking-widest text-brass-700 mb-2 block">Portfolio Showcase</span>
                     <h2 class="font-serif text-3xl sm:text-4xl font-bold text-ink-900 tracking-tight">Featured Data Projects</h2>
                     <div class="w-16 h-0.5 bg-brass-600 mx-auto mt-4"></div>
-                    <p class="text-sm text-ink-600 mt-4">Explore interactive business intelligence dashboards, statistical models, and end-to-end data analytics solutions.</p>
+                    <p class="text-xs sm:text-sm text-ink-600 mt-3 sm:mt-4">Explore interactive business intelligence dashboards, statistical models, and end-to-end data analytics solutions.</p>
                 </div>
 
-                <!-- Filter Controls -->
-                <div class="flex flex-wrap items-center justify-center gap-2 mb-12" data-aos="fade-up">
-                    <button type="button" class="project-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-sage-800 text-vintage-50 shadow-2xs transition-all" data-filter="all">All Projects</button>
-                    <button type="button" class="project-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-ink-700 border border-vintage-300 hover:bg-vintage-100 transition-all" data-filter="tableau">Tableau</button>
-                    <button type="button" class="project-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-ink-700 border border-vintage-300 hover:bg-vintage-100 transition-all" data-filter="powerbi">Power BI</button>
-                    <button type="button" class="project-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-ink-700 border border-vintage-300 hover:bg-vintage-100 transition-all" data-filter="python">Python & ML</button>
+                <!-- Filter Controls with horizontal scroll on mobile -->
+                <div class="flex items-center sm:justify-center overflow-x-auto no-scrollbar gap-2 mb-8 sm:mb-12 pb-2 -mx-4 px-4 sm:mx-0 sm:px-0" data-aos="fade-up">
+                    <button type="button" class="project-filter-btn whitespace-nowrap px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs font-semibold bg-sage-800 text-vintage-50 shadow-2xs transition-all shrink-0 min-h-[40px]" data-filter="all">All Projects</button>
+                    <button type="button" class="project-filter-btn whitespace-nowrap px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs font-semibold bg-white text-ink-700 border border-vintage-300 hover:bg-vintage-100 transition-all shrink-0 min-h-[40px]" data-filter="tableau">Tableau</button>
+                    <button type="button" class="project-filter-btn whitespace-nowrap px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs font-semibold bg-white text-ink-700 border border-vintage-300 hover:bg-vintage-100 transition-all shrink-0 min-h-[40px]" data-filter="powerbi">Power BI</button>
+                    <button type="button" class="project-filter-btn whitespace-nowrap px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs font-semibold bg-white text-ink-700 border border-vintage-300 hover:bg-vintage-100 transition-all shrink-0 min-h-[40px]" data-filter="python">Python & ML</button>
                 </div>
 
                 <!-- Projects Cards Grid (Interactive Pagination via script.js) -->
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8 mb-8 sm:mb-12">
                     
                     <!-- Card 1: Trading & Analytics -->
                     <div class="project-card flex flex-col bg-white rounded-2xl border border-vintage-200 shadow-2xs overflow-hidden hover:shadow-md hover:border-sage-600/40 transition-all duration-300 group" data-category="tableau sql" data-aos="fade-up">
@@ -886,17 +894,17 @@
                             <img src="Images/ProjectTrading.webp" alt="Trading & Analytics Dashboard" width="640" height="360" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full text-[11px] font-bold font-serif bg-[#F8F8F8]/95 backdrop-blur-xs text-sage-900 border border-vintage-200/60 shadow-2xs">Tableau</span>
                         </div>
-                        <div class="p-6 flex flex-col flex-grow justify-between">
+                        <div class="p-5 sm:p-6 flex flex-col flex-grow justify-between">
                             <div>
-                                <h4 class="font-serif text-base font-bold text-ink-900 mb-2 group-hover:text-sage-800 transition-colors">Trading & Analytics Dashboard</h4>
+                                <h4 class="font-serif text-base font-bold text-ink-900 mb-2 group-hover:text-sage-800 transition-colors leading-snug">Trading & Analytics Dashboard</h4>
                                 <p class="text-xs text-ink-600 leading-relaxed mb-4">An interactive dashboard to visualize trading data, track performance metrics, and identify key trends in financial markets.</p>
-                                <div class="flex flex-wrap gap-1.5 mb-6">
+                                <div class="flex flex-wrap gap-1.5 mb-5 sm:mb-6">
                                     <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-[#F8F8F8] text-ink-800 border border-vintage-200">SQL</span>
                                     <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-sage-100 text-sage-800 border border-sage-200">Tableau</span>
                                     <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-[#F8F8F8] text-ink-800 border border-vintage-200">Financial Analysis</span>
                                 </div>
                             </div>
-                            <a href="https://public.tableau.com/app/profile/muhammad.haris.fariyano/vizzes" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#F8F8F8] border border-vintage-300 hover:bg-sage-800 hover:border-sage-800 hover:text-vintage-50 text-xs font-semibold text-ink-800 shadow-2xs transition-all">
+                            <a href="https://public.tableau.com/app/profile/muhammad.haris.fariyano/vizzes" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:py-3 rounded-xl bg-[#F8F8F8] border border-vintage-300 hover:bg-sage-800 hover:border-sage-800 hover:text-vintage-50 text-xs font-semibold text-ink-800 shadow-2xs transition-all min-h-[44px]">
                                 <i class="fas fa-chart-area"></i> View on Tableau Public
                             </a>
                         </div>
@@ -908,17 +916,17 @@
                             <img src="Images/ProjectSales.webp" alt="Sales Performance Dashboard" width="640" height="360" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full text-[11px] font-bold font-serif bg-[#F8F8F8]/95 backdrop-blur-xs text-sage-900 border border-vintage-200/60 shadow-2xs">Tableau</span>
                         </div>
-                        <div class="p-6 flex flex-col flex-grow justify-between">
+                        <div class="p-5 sm:p-6 flex flex-col flex-grow justify-between">
                             <div>
-                                <h4 class="font-serif text-base font-bold text-ink-900 mb-2 group-hover:text-sage-800 transition-colors">Sales Performance Dashboard</h4>
+                                <h4 class="font-serif text-base font-bold text-ink-900 mb-2 group-hover:text-sage-800 transition-colors leading-snug">Sales Performance Dashboard</h4>
                                 <p class="text-xs text-ink-600 leading-relaxed mb-4">Interactive dashboard built to track key sales metrics, identify trends, and provide actionable insights for decision-makers.</p>
-                                <div class="flex flex-wrap gap-1.5 mb-6">
+                                <div class="flex flex-wrap gap-1.5 mb-5 sm:mb-6">
                                     <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-[#F8F8F8] text-ink-800 border border-vintage-200">SQL</span>
                                     <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-sage-100 text-sage-800 border border-sage-200">Tableau</span>
                                     <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-[#F8F8F8] text-ink-800 border border-vintage-200">Sales Analytics</span>
                                 </div>
                             </div>
-                            <a href="https://public.tableau.com/app/profile/muhammad.haris.fariyano/vizzes" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#F8F8F8] border border-vintage-300 hover:bg-sage-800 hover:border-sage-800 hover:text-vintage-50 text-xs font-semibold text-ink-800 shadow-2xs transition-all">
+                            <a href="https://public.tableau.com/app/profile/muhammad.haris.fariyano/vizzes" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:py-3 rounded-xl bg-[#F8F8F8] border border-vintage-300 hover:bg-sage-800 hover:border-sage-800 hover:text-vintage-50 text-xs font-semibold text-ink-800 shadow-2xs transition-all min-h-[44px]">
                                 <i class="fas fa-chart-area"></i> View on Tableau Public
                             </a>
                         </div>
@@ -930,11 +938,11 @@
                             <img src="Images/ProjectRegional.webp" alt="Regional Performance Summary" width="640" height="360" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full text-[11px] font-bold font-serif bg-[#F8F8F8]/95 backdrop-blur-xs text-sage-900 border border-vintage-200/60 shadow-2xs">Tableau</span>
                         </div>
-                        <div class="p-6 flex flex-col flex-grow justify-between">
+                        <div class="p-5 sm:p-6 flex flex-col flex-grow justify-between">
                             <div>
-                                <h4 class="font-serif text-base font-bold text-ink-900 mb-2 group-hover:text-sage-800 transition-colors">Regional Performance Summary</h4>
+                                <h4 class="font-serif text-base font-bold text-ink-900 mb-2 group-hover:text-sage-800 transition-colors leading-snug">Regional Performance Summary</h4>
                                 <p class="text-xs text-ink-600 leading-relaxed mb-4">A Tableau dashboard providing an overview of regional performance, highlighting key metrics and geographical insights.</p>
-                                <div class="flex flex-wrap gap-1.5 mb-6">
+                                <div class="flex flex-wrap gap-1.5 mb-5 sm:mb-6">
                                     <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-[#F8F8F8] text-ink-800 border border-vintage-200">Excel</span>
                                     <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-sage-100 text-sage-800 border border-sage-200">Tableau</span>
                                     <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-[#F8F8F8] text-ink-800 border border-vintage-200">Geospatial</span>
@@ -1117,7 +1125,7 @@
         </section>
 
         <!-- ================= CERTIFICATIONS SECTION (VINTAGE ELEGANT) ================= -->
-        <section id="certification" class="py-20 lg:py-28 bg-[#E5E0D8]/30 border-b border-vintage-200/80">
+        <section id="certification" class="relative overflow-hidden py-20 lg:py-28 bg-[#E5E0D8]/30 border-b border-vintage-200/80">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 <div class="text-center max-w-3xl mx-auto mb-12" data-aos="fade-up">
@@ -1309,51 +1317,51 @@
         </section>
 
         <!-- ================= CONTACT SECTION (VINTAGE ELEGANT) ================= -->
-        <section id="contact" class="py-20 lg:py-28 bg-[#F8F8F8]">
+        <section id="contact" class="relative overflow-hidden py-14 sm:py-20 lg:py-28 bg-[#F8F8F8]">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
-                <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16" data-aos="fade-up">
                     <span class="text-xs font-bold uppercase tracking-widest text-brass-700 mb-2 block">Let's Connect</span>
                     <h2 class="font-serif text-3xl sm:text-4xl font-bold text-ink-900 tracking-tight">Get In Touch</h2>
                     <div class="w-16 h-0.5 bg-brass-600 mx-auto mt-4"></div>
-                    <p class="text-sm text-ink-600 mt-4">Have an analytics project, business intelligence opportunity, or collaboration in mind? Feel free to reach out!</p>
+                    <p class="text-xs sm:text-sm text-ink-600 mt-3 sm:mt-4">Have an analytics project, business intelligence opportunity, or collaboration in mind? Feel free to reach out!</p>
                 </div>
 
-                <div class="grid lg:grid-cols-12 gap-8 items-start">
+                <div class="grid lg:grid-cols-12 gap-6 sm:gap-8 items-start">
                     
                     <!-- Contact Channels Left -->
-                    <div class="lg:col-span-5 space-y-4" data-aos="fade-right">
+                    <div class="lg:col-span-5 space-y-3.5 sm:space-y-4" data-aos="fade-right">
                         
                         <!-- Email Card -->
-                        <a href="mailto:Muhamamdharisfariyano@gmail.com" class="flex items-center gap-4 p-5 rounded-2xl bg-white border border-vintage-200 hover:border-sage-600/50 hover:shadow-md transition-all group">
-                            <div class="w-12 h-12 rounded-xl bg-sage-50 text-sage-800 border border-sage-200 flex items-center justify-center text-lg group-hover:bg-sage-800 group-hover:text-vintage-50 transition-colors">
+                        <a href="mailto:Muhamamdharisfariyano@gmail.com" class="flex items-center gap-3.5 sm:gap-4 p-4 sm:p-5 rounded-2xl bg-white border border-vintage-200 hover:border-sage-600/50 hover:shadow-md transition-all group min-h-[56px]">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-sage-50 text-sage-800 border border-sage-200 flex items-center justify-center text-base sm:text-lg group-hover:bg-sage-800 group-hover:text-vintage-50 transition-colors shrink-0">
                                 <i class="fas fa-envelope"></i>
                             </div>
-                            <div>
-                                <span class="block text-xs font-medium text-ink-400 uppercase tracking-wider">Email</span>
-                                <span class="text-sm font-semibold text-ink-900 group-hover:text-sage-800 transition-colors">Muhamamdharisfariyano@gmail.com</span>
+                            <div class="min-w-0">
+                                <span class="block text-[10px] sm:text-xs font-medium text-ink-400 uppercase tracking-wider">Email</span>
+                                <span class="text-xs sm:text-sm font-semibold text-ink-900 group-hover:text-sage-800 transition-colors truncate block">Muhamamdharisfariyano@gmail.com</span>
                             </div>
                         </a>
 
                         <!-- WhatsApp Card -->
-                        <a href="https://wa.me/6285892640801" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-5 rounded-2xl bg-white border border-vintage-200 hover:border-sage-600/50 hover:shadow-md transition-all group">
-                            <div class="w-12 h-12 rounded-xl bg-[#E5E0D8]/40 text-sage-800 border border-sage-200 flex items-center justify-center text-lg group-hover:bg-sage-800 group-hover:text-vintage-50 transition-colors">
+                        <a href="https://wa.me/6285892640801" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3.5 sm:gap-4 p-4 sm:p-5 rounded-2xl bg-white border border-vintage-200 hover:border-sage-600/50 hover:shadow-md transition-all group min-h-[56px]">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#E5E0D8]/40 text-sage-800 border border-sage-200 flex items-center justify-center text-base sm:text-lg group-hover:bg-sage-800 group-hover:text-vintage-50 transition-colors shrink-0">
                                 <i class="fab fa-whatsapp"></i>
                             </div>
-                            <div>
-                                <span class="block text-xs font-medium text-ink-400 uppercase tracking-wider">WhatsApp / Mobile</span>
-                                <span class="text-sm font-semibold text-ink-900 group-hover:text-sage-800 transition-colors">+62 858-9264-0801</span>
+                            <div class="min-w-0">
+                                <span class="block text-[10px] sm:text-xs font-medium text-ink-400 uppercase tracking-wider">WhatsApp / Mobile</span>
+                                <span class="text-xs sm:text-sm font-semibold text-ink-900 group-hover:text-sage-800 transition-colors truncate block">+62 858-9264-0801</span>
                             </div>
                         </a>
 
                         <!-- Location Card -->
-                        <div class="flex items-center gap-4 p-5 rounded-2xl bg-white border border-vintage-200">
-                            <div class="w-12 h-12 rounded-xl bg-vintage-100 text-brass-800 border border-vintage-300 flex items-center justify-center text-lg">
+                        <div class="flex items-center gap-3.5 sm:gap-4 p-4 sm:p-5 rounded-2xl bg-white border border-vintage-200 min-h-[56px]">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-vintage-100 text-brass-800 border border-vintage-300 flex items-center justify-center text-base sm:text-lg shrink-0">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
-                            <div>
-                                <span class="block text-xs font-medium text-ink-400 uppercase tracking-wider">Location</span>
-                                <span class="text-sm font-semibold text-ink-900">Brebes, Jawa Tengah, Indonesia</span>
+                            <div class="min-w-0">
+                                <span class="block text-[10px] sm:text-xs font-medium text-ink-400 uppercase tracking-wider">Location</span>
+                                <span class="text-xs sm:text-sm font-semibold text-ink-900 truncate block">Brebes, Jawa Tengah, Indonesia</span>
                             </div>
                         </div>
 
@@ -1361,22 +1369,22 @@
 
                     <!-- Quick Message Form Right -->
                     <div class="lg:col-span-7" data-aos="fade-left">
-                        <div class="bg-white p-8 rounded-3xl border border-vintage-200 shadow-sm">
-                            <h3 class="font-serif text-xl font-bold text-ink-900 mb-1">Quick Inquiries</h3>
-                            <p class="text-xs text-ink-500 mb-6">Send a direct message directly to my WhatsApp</p>
+                        <div class="bg-white p-5 sm:p-8 rounded-2xl sm:rounded-3xl border border-vintage-200 shadow-2xs">
+                            <h3 class="font-serif text-lg sm:text-xl font-bold text-ink-900 mb-1">Quick Inquiries</h3>
+                            <p class="text-xs text-ink-500 mb-5 sm:mb-6">Send a direct message directly to my WhatsApp</p>
 
                             <form id="quick-contact-form" class="space-y-4">
                                 <div>
                                     <label for="sender-name" class="block text-xs font-semibold text-ink-800 mb-1.5">Your Name / Company</label>
-                                    <input type="text" id="sender-name" required placeholder="e.g. John Doe / Tech Corp" class="w-full px-4 py-2.5 rounded-xl border border-vintage-200 bg-[#F8F8F8] text-ink-900 placeholder:text-ink-400 text-sm focus:outline-none focus:ring-2 focus:ring-sage-700/20 focus:border-sage-700 transition-all">
+                                    <input type="text" id="sender-name" required placeholder="e.g. John Doe / Tech Corp" class="w-full px-4 py-3 rounded-xl border border-vintage-200 bg-[#F8F8F8] text-ink-900 placeholder:text-ink-400 text-sm focus:outline-none focus:ring-2 focus:ring-sage-700/20 focus:border-sage-700 transition-all min-h-[44px]">
                                 </div>
                                 
                                 <div>
                                     <label for="sender-message" class="block text-xs font-semibold text-ink-800 mb-1.5">Message / Project Details</label>
-                                    <textarea id="sender-message" rows="4" required placeholder="Tell me about your data analytics needs, project scope, or opportunity..." class="w-full px-4 py-2.5 rounded-xl border border-vintage-200 bg-[#F8F8F8] text-ink-900 placeholder:text-ink-400 text-sm focus:outline-none focus:ring-2 focus:ring-sage-700/20 focus:border-sage-700 transition-all resize-none"></textarea>
+                                    <textarea id="sender-message" rows="4" required placeholder="Tell me about your data analytics needs, project scope, or opportunity..." class="w-full px-4 py-3 rounded-xl border border-vintage-200 bg-[#F8F8F8] text-ink-900 placeholder:text-ink-400 text-sm focus:outline-none focus:ring-2 focus:ring-sage-700/20 focus:border-sage-700 transition-all resize-none"></textarea>
                                 </div>
 
-                                <button type="submit" class="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-sage-800 text-vintage-50 text-sm font-semibold hover:bg-sage-900 shadow-sm hover:shadow-md transition-all border border-sage-900">
+                                <button type="submit" class="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-sage-800 text-vintage-50 text-sm font-semibold hover:bg-sage-900 shadow-sm hover:shadow-md transition-all border border-sage-900 min-h-[48px]">
                                     <i class="fab fa-whatsapp text-base"></i>
                                     <span>Send Directly via WhatsApp</span>
                                 </button>
@@ -1390,24 +1398,27 @@
     </main>
 
     <!-- ================= FOOTER (VINTAGE ELEGANT) ================= -->
-    <footer class="bg-[#241E1A] text-vintage-200 border-t border-vintage-800 py-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <footer class="relative overflow-hidden w-full max-w-full bg-[#241E1A] text-vintage-200 border-t border-vintage-800 py-8 sm:py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
             <div class="flex items-center">
                 <p class="text-xs text-vintage-300">&copy; 2025 Muhammad Haris Fariyano. All Rights Reserved.</p>
             </div>
 
-            <div class="flex items-center gap-4 text-xs font-medium text-vintage-300">
-                <a href="#home" class="hover:text-brass-300 transition-colors">Home</a>
-                <a href="#about" class="hover:text-brass-300 transition-colors">About</a>
-                <a href="#projects" class="hover:text-brass-300 transition-colors">Projects</a>
-                <a href="#certification" class="hover:text-brass-300 transition-colors">Certifications</a>
-                <a href="#contact" class="hover:text-brass-300 transition-colors">Contact</a>
+            <div class="flex flex-wrap justify-center items-center gap-3.5 sm:gap-4 text-xs font-medium text-vintage-300">
+                <a href="#home" class="hover:text-brass-300 transition-colors py-1">Home</a>
+                <a href="#about" class="hover:text-brass-300 transition-colors py-1">About</a>
+                <a href="#projects" class="hover:text-brass-300 transition-colors py-1">Projects</a>
+                <a href="#certification" class="hover:text-brass-300 transition-colors py-1">Certifications</a>
+                <a href="#contact" class="hover:text-brass-300 transition-colors py-1">Contact</a>
             </div>
         </div>
     </footer>
+    <!-- Deferred Typed.js for Typewriter Animation (Non-render-blocking) -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
 
-    <!-- AOS JS (Deferred) -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
+    <!-- Deferred AOS JS (Animate On Scroll) (Non-render-blocking) -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+
 
     <!-- Custom Script (Deferred) -->
     <script src="script.js" defer></script>
